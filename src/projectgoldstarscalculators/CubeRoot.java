@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import javax.swing.JOptionPane;
-public class CalcCubeRoot
+public class CubeRoot
 {
-    public CalcCubeRoot()
+    public CubeRoot()
     {
         cubeRoot();
     }

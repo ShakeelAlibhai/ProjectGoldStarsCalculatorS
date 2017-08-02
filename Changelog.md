@@ -1,0 +1,25 @@
+# Project GoldStars Calculator S
+### Changelog
+
+## Version 2.0.x
+### Version 2.0
+* Added a "Geometry" section to the main window.
+* Added the ability to add more than 10 numbers.
+* Added the ability to convert temperatures to and from Kelvin.
+* Added the ability to find the area and circumference of a circle.
+* Added the ability to find the area of a triangle.
+* Added the ability to multiply more than 10 numbers.
+* Added themes.
+* Combined the Celsius to Fahrenheit and Fahrenheit to Celsius conversions into a "Temperature Conversions" section with a new interface.
+* Combined the Degrees to Radians and Radians to Degrees conversions into an "Angle Conversions" section with a new interface.
+* Multiplication and division values now default to 1 rather than 0.
+* Renamed the Rectangle Information Calculator to Rectangles and moved it from Other Calculators to the Geometry section of the main window.
+* Slightly adjusted the default size of the Addition, Subtraction, Multiplication, and Division windows.
+* Updated the interface and text of the Disclaimer.
+* Updated the interface of the Pythagorean Triple Finder.
+* Updated the interface of the Rectangle Information Calculator.
+* Other minor changes.
+
+## Version 1.0.x
+### Version 1.0
+* This is Version 1.0 of Project GoldStars Calculator S!

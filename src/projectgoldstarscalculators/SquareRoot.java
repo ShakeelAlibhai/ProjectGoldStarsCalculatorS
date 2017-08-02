@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import javax.swing.JOptionPane;
-public class CalcSquareRoot
+public class SquareRoot
 {
-    public CalcSquareRoot()
+    public SquareRoot()
     {
         squareRoot();
     }

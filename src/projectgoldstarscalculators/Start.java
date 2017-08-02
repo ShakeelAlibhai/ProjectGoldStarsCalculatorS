@@ -1,14 +1,139 @@
 package projectgoldstarscalculators;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 public class Start
 {
     public Start()
     {
+        createFolder();
+        getTheme();
+        applyTheme();
         widthAndHeight();
         setFonts();
         new Window();
+    }
+    
+    private void createFolder()
+    {
+        //Make a Project GoldStars Calculator S folder if it does not exist yet.
+        if(!ProjectGoldStarsCalculatorS.projectGoldStarsCalculatorSFolder.exists())
+        {
+            ProjectGoldStarsCalculatorS.projectGoldStarsCalculatorSFolder.mkdir();
+        }
+    }
+    
+    /*
+     * Attempt to import the saved theme choice from the Project GoldStars Calculator S folder.
+     * If nothing has been saved, Project GoldStars Calculator S will use the "Project GoldStars Calculator S" theme
+     * and save this to the Project GoldStars Calculator S folder.
+     */
+    private static void getTheme()
+    {
+        File themeTemp = new File(ProjectGoldStarsCalculatorS.projectGoldStarsCalculatorSFolder, "theme.txt");
+        try
+        {
+            Scanner s15 = new Scanner(themeTemp).useDelimiter("\\Z");
+            ProjectGoldStarsCalculatorS.theme = s15.next();
+            s15.close();
+        }
+        catch(FileNotFoundException e)
+        {
+            ProjectGoldStarsCalculatorS.theme = "Project GoldStars Calculator S";
+            PrintWriter out;
+            try
+            {
+                File file = new File(ProjectGoldStarsCalculatorS.projectGoldStarsCalculatorSFolder, "theme.txt");
+                out = new PrintWriter(file);
+                out.println(ProjectGoldStarsCalculatorS.theme);
+                out.close();
+            }
+            catch(FileNotFoundException e2)
+            {
+                
+            }
+        }
+    }
+    
+    public static void applyTheme()
+    {
+        if("Dark".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = Color.black;
+            ProjectGoldStarsCalculatorS.color2 = Color.lightGray;
+            ProjectGoldStarsCalculatorS.standardColors = false;
+        }
+        if("Desert".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = new Color(255, 228, 181);
+            ProjectGoldStarsCalculatorS.color2 = new Color(255, 69, 0);
+            ProjectGoldStarsCalculatorS.standardColors = true;
+        }
+        if("Fire".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = Color.red;
+            ProjectGoldStarsCalculatorS.color2 = Color.yellow;
+            ProjectGoldStarsCalculatorS.standardColors = false;
+        }
+        if("Forest".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = new Color(0x00, 0x80, 0x00);
+            ProjectGoldStarsCalculatorS.color2 = Color.white;
+            ProjectGoldStarsCalculatorS.standardColors = false;
+        }
+        if("Grass".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = Color.green;
+            ProjectGoldStarsCalculatorS.color2 = new Color(0x00, 0x80, 0x00);
+            ProjectGoldStarsCalculatorS.standardColors = true;
+        }
+        if("Mountain".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = Color.darkGray;
+            ProjectGoldStarsCalculatorS.color2 = Color.white;
+            ProjectGoldStarsCalculatorS.standardColors = false;
+        }
+        if("Night".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = Color.black;
+            ProjectGoldStarsCalculatorS.color2 = Color.lightGray;
+            ProjectGoldStarsCalculatorS.standardColors = false;
+        }
+        if("Silver".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = Color.lightGray;
+            ProjectGoldStarsCalculatorS.color2 = Color.darkGray;
+            ProjectGoldStarsCalculatorS.standardColors = true;
+        }
+        if("Sky".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = Color.white;
+            ProjectGoldStarsCalculatorS.color2 = Color.blue;
+            ProjectGoldStarsCalculatorS.standardColors = true;
+        }
+        if("Snow".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = Color.white;
+            ProjectGoldStarsCalculatorS.color2 = Color.gray;
+            ProjectGoldStarsCalculatorS.standardColors = true;
+        }
+        if("Water".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = new Color(64, 224, 208);
+            ProjectGoldStarsCalculatorS.color2 = Color.blue;
+            ProjectGoldStarsCalculatorS.standardColors = false;
+        }
+        if("Project GoldStars Calculator S".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.color1 = Color.lightGray;
+            ProjectGoldStarsCalculatorS.color2 = new Color(0x00, 0x00, 0xC0);
+            ProjectGoldStarsCalculatorS.standardColors = true;
+        }
     }
     
     private void widthAndHeight()

@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import javax.swing.JOptionPane;
-public class CalcExponents
+public class Exponents
 {
-    public CalcExponents()
+    public Exponents()
     {
         exponent();
     }

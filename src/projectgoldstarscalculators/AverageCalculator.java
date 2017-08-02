@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import javax.swing.JOptionPane;
-public class CalcAverage
+public class AverageCalculator
 {
-    public CalcAverage()
+    public AverageCalculator()
     {
         calcAverage();
     }

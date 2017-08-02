@@ -2,7 +2,6 @@ package projectgoldstarscalculators;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -17,84 +16,110 @@ public class CalcSubtract implements ActionListener
     
     private void subtract()
     {
-        JFrame additionFrame = new JFrame("Subtraction");
-        additionFrame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);
-        additionFrame.setLayout(new GridLayout(11, 2));
-        additionFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 375 * ProjectGoldStarsCalculatorS.multiplier);
-        additionFrame.setIconImage(Icon.getImage());
-        JLabel number1 = new JLabel("Number #1:");
-        number1.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number1.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        JLabel number2 = new JLabel("Number #2:");
-        number2.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number2.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        JLabel number3 = new JLabel("Number #3:");
-        number3.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number3.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        JLabel number4 = new JLabel("Number #4:");
-        number4.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number4.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        JLabel number5 = new JLabel("Number #5:");
-        number5.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number5.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        JLabel number6 = new JLabel("Number #6:");
-        number6.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number6.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        JLabel number7 = new JLabel("Number #7:");
-        number7.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number7.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        JLabel number8 = new JLabel("Number #8:");
-        number8.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number8.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        JLabel number9 = new JLabel("Number #9:");
-        number9.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number9.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        JLabel number10 = new JLabel("Number #10:");
-        number10.setForeground(ProjectGoldStarsCalculatorS.color2);
-        number10.setFont(ProjectGoldStarsCalculatorS.bodyText1);
+        ProgramWindow frame = new ProgramWindow("Subtraction");
+        frame.setLayout(new GridLayout(11, 2));
+        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.add(numberLabel(1));
+        setupTF1();
+        frame.add(tf1);
+        frame.add(numberLabel(2));
+        setupTF2();
+        frame.add(tf2);
+        frame.add(numberLabel(3));
+        setupTF3();
+        frame.add(tf3);
+        frame.add(numberLabel(4));
+        setupTF4();
+        frame.add(tf4);
+        frame.add(numberLabel(5));
+        setupTF5();
+        frame.add(tf5);
+        frame.add(numberLabel(6));
+        setupTF6();
+        frame.add(tf6);
+        frame.add(numberLabel(7));
+        setupTF7();
+        frame.add(tf7);
+        frame.add(numberLabel(8));
+        setupTF8();
+        frame.add(tf8);
+        frame.add(numberLabel(9));
+        setupTF9();
+        frame.add(tf9);
+        frame.add(numberLabel(10));
+        setupTF10();
+        frame.add(tf10);
+        frame.add(new JLabel());
+        frame.add(Components.button2("Subtract", new SubtractListener()));
+        frame.makeVisible();
+    }
+    
+    private JLabel numberLabel(int number)
+    {
+        JLabel label = new JLabel("Number #" + number + ":");
+        label.setForeground(ProjectGoldStarsCalculatorS.color2);
+        label.setFont(ProjectGoldStarsCalculatorS.bodyText1);
+        return label;
+    }
+    
+    private void setupTF1()
+    {
         tf1 = new JTextField("0");
         tf1.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupTF2()
+    {
         tf2 = new JTextField("0");
         tf2.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupTF3()
+    {
         tf3 = new JTextField("0");
         tf3.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupTF4()
+    {
         tf4 = new JTextField("0");
         tf4.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupTF5()
+    {
         tf5 = new JTextField("0");
         tf5.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupTF6()
+    {
         tf6 = new JTextField("0");
         tf6.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupTF7()
+    {
         tf7 = new JTextField("0");
         tf7.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupTF8()
+    {
         tf8 = new JTextField("0");
         tf8.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupTF9()
+    {
         tf9 = new JTextField("0");
         tf9.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupTF10()
+    {
         tf10 = new JTextField("0");
         tf10.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-        additionFrame.add(number1);
-        additionFrame.add(tf1);
-        additionFrame.add(number2);
-        additionFrame.add(tf2);
-        additionFrame.add(number3);
-        additionFrame.add(tf3);
-        additionFrame.add(number4);
-        additionFrame.add(tf4);
-        additionFrame.add(number5);
-        additionFrame.add(tf5);
-        additionFrame.add(number6);
-        additionFrame.add(tf6);
-        additionFrame.add(number7);
-        additionFrame.add(tf7);
-        additionFrame.add(number8);
-        additionFrame.add(tf8);
-        additionFrame.add(number9);
-        additionFrame.add(tf9);
-        additionFrame.add(number10);
-        additionFrame.add(tf10);
-        additionFrame.add(new JLabel());
-        additionFrame.add(Components.button2("Subtract", new SubtractListener()));
-        additionFrame.setVisible(true);
     }
     
     private class SubtractListener implements ActionListener

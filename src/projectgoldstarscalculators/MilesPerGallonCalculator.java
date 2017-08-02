@@ -2,40 +2,37 @@ package projectgoldstarscalculators;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-public class CalcMilesPerGallon
+public class MilesPerGallonCalculator
 {
     public static JTextField mpg1, mpg2, mpg3;
     
-    public CalcMilesPerGallon()
+    public MilesPerGallonCalculator()
     {
         calcMilesPerGallon();
     }
     
     private void calcMilesPerGallon()
     {
-        JFrame qeFrame = new JFrame("Miles Per Gallon Calculator");
-        qeFrame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);
-        qeFrame.setLayout(new GridLayout(5, 2));
-        qeFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        qeFrame.setIconImage(Icon.getImage());
-        qeFrame.add(instructionsLabel());
-        qeFrame.add(new JLabel());
-        qeFrame.add(aLabel());
+        ProgramWindow frame = new ProgramWindow("Miles Per Gallon Calculator");
+        frame.setLayout(new GridLayout(5, 2));
+        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.add(instructionsLabel());
+        frame.add(new JLabel());
+        frame.add(aLabel());
         setupMPG1();
-        qeFrame.add(mpg1);
-        qeFrame.add(bLabel());
+        frame.add(mpg1);
+        frame.add(bLabel());
         setupMPG2();
-        qeFrame.add(mpg2);
-        qeFrame.add(cLabel());
+        frame.add(mpg2);
+        frame.add(cLabel());
         setupMPG3();
-        qeFrame.add(mpg3);
-        qeFrame.add(new JLabel());
-        qeFrame.add(Components.button2("Calculate", new CalculateMilesPerGallonListener()));
-        qeFrame.setVisible(true);
+        frame.add(mpg3);
+        frame.add(new JLabel());
+        frame.add(Components.button2("Calculate", new CalculateMilesPerGallonListener()));
+        frame.makeVisible();
     }
     
     private JLabel instructionsLabel()

@@ -2,28 +2,24 @@ package projectgoldstarscalculators;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-public class CalcQuadraticEquation implements ActionListener
+public class QuadraticEquationSolver implements ActionListener
 {
     public static JTextField af, bf, cf;
     
-    public CalcQuadraticEquation()
+    public QuadraticEquationSolver()
     {
         quadraticEquation();
     }
     
     private void quadraticEquation()
     {
-        JFrame qeFrame = new JFrame("Quadratic Equation Solver");
-        qeFrame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);
+        ProgramWindow qeFrame = new ProgramWindow("Quadratic Equation Solver");
         qeFrame.setLayout(new GridLayout(4, 2));
         qeFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        qeFrame.setIconImage(Icon.getImage());
-        qeFrame.setJMenuBar(menuBar());
+        qeFrame.setInstructionsMenuBar("Please enter the quadratic equation in the following form: ax^2 + bx + c");
         JLabel aLabel = new JLabel("a:");
         aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
         aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
@@ -33,7 +29,6 @@ public class CalcQuadraticEquation implements ActionListener
         JLabel cLabel = new JLabel("c:");
         cLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
         cLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        JLabel emptySpace = new JLabel("");
         af = new JTextField("0");
         af.setFont(ProjectGoldStarsCalculatorS.bodyText2);
         bf = new JTextField("0");
@@ -46,20 +41,9 @@ public class CalcQuadraticEquation implements ActionListener
         qeFrame.add(bf);
         qeFrame.add(cLabel);
         qeFrame.add(cf);
-        qeFrame.add(emptySpace);
+        qeFrame.add(new JLabel());
         qeFrame.add(Components.button2("Solve", new SolveQuadraticEquationListener()));
-        qeFrame.setVisible(true);
-    }
-    
-    private JMenuBar menuBar()
-    {
-        JMenuBar menuBar = new JMenuBar();
-        menuBar.setBackground(ProjectGoldStarsCalculatorS.color1);
-        JLabel instructionsLabel = new JLabel("Please enter the quadratic equation in the following form: ax^2 + bx + c");
-        instructionsLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        instructionsLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
-        menuBar.add(instructionsLabel);
-        return menuBar;
+        qeFrame.makeVisible();
     }
     
     public static class SolveQuadraticEquationListener implements ActionListener

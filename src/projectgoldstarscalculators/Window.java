@@ -24,7 +24,7 @@ public class Window extends JFrame
         frame.setSize(1100 * ProjectGoldStarsCalculatorS.multiplier, 500 * ProjectGoldStarsCalculatorS.multiplier);
         frame.setExtendedState(frame.MAXIMIZED_BOTH);
         frame.setIconImage(Icon.getImage());
-        frame.setLayout(new GridLayout(5, 5));
+        frame.setLayout(new GridLayout(6, 5));
         frame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);
         frame.setJMenuBar(menuBar());
         frame.add(headerLabel("Basic Calculations:"));
@@ -43,10 +43,15 @@ public class Window extends JFrame
         frame.add(new JLabel());
         frame.add(new JLabel());
         frame.add(headerLabel("Conversions:"));
-        frame.add(action("Celsius to Fahrenheit", new CelsiusToFahrenheitListener()));
-        frame.add(action("Fahrenheit to Celsius", new FahrenheitToCelsiusListener()));
-        frame.add(action("Degrees to Radians", new DegreesToRadiansListener()));
-        frame.add(action("Radians to Degrees", new RadiansToDegreesListener()));
+        frame.add(action("Angle Conversions", new AngleConversionsListener()));
+        frame.add(action("Temperature Conversions", new TemperatureConversionsListener()));
+        frame.add(new JLabel());
+        frame.add(new JLabel());
+        frame.add(headerLabel("Geometry:"));
+        frame.add(action("Circles", new CirclesListener()));
+        frame.add(action("Rectangles", new RectanglesListener()));
+        frame.add(action("Triangles", new TrianglesListener()));
+        frame.add(new JLabel());
         frame.add(headerLabel("Trigonometry:"));
         frame.add(action("Sine", new SineListener()));
         frame.add(action("Cosine", new CosineListener()));
@@ -63,7 +68,6 @@ public class Window extends JFrame
         otherCalculatorsMenu.add(standardMenuItem("Average Calculator", new AverageCalculatorListener()));
         otherCalculatorsMenu.add(standardMenuItem("Miles Per Gallon Calculator", new MilesPerGallonCalculatorListener()));
         otherCalculatorsMenu.add(standardMenuItem("Pythagorean Triple Finder", new PythagoreanTripleFinderListener()));
-        otherCalculatorsMenu.add(standardMenuItem("Rectangle Information Calculator", new RectangleInformationCalculatorListener()));
         return otherCalculatorsMenu;
     }
     
@@ -73,6 +77,7 @@ public class Window extends JFrame
         menuBar.setBackground(ProjectGoldStarsCalculatorS.color1);
         menuBar.add(Components.standardButton("About", new AboutListener()));
         menuBar.add(Components.standardButton("Disclaimer", new DisclaimerListener()));
+        menuBar.add(Components.standardButton("Themes", new ThemesListener()));
         menuBar.add(otherCalculatorsMenu());
         return menuBar;
     }
@@ -115,6 +120,14 @@ public class Window extends JFrame
         public void actionPerformed(ActionEvent e)
         {
             new Disclaimer();
+        }
+    }
+    
+    public static class ThemesListener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            new Themes();
         }
     }
     
@@ -250,7 +263,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcSquareRoot();
+            new SquareRoot();
         }
 
         @Override
@@ -282,7 +295,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcCubeRoot();
+            new CubeRoot();
         }
 
         @Override
@@ -314,7 +327,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcExponents();
+            new Exponents();
         }
 
         @Override
@@ -346,71 +359,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcQuadraticEquation();
-        }
-
-        @Override
-        public void mouseClicked(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e)
-        {
-            
-        }
-    }
-    
-    public static class DegreesToRadiansListener implements MouseListener
-    {
-        public void mousePressed(MouseEvent e)
-        {
-            new CalcDegreesToRadians();
-        }
-
-        @Override
-        public void mouseClicked(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e)
-        {
-            
-        }
-    }
-    
-    public static class RadiansToDegreesListener implements MouseListener
-    {
-        public void mousePressed(MouseEvent e)
-        {
-            new CalcRadiansToDegrees();
+            new QuadraticEquationSolver();
         }
 
         @Override
@@ -442,7 +391,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcLogBase10();
+            new LogBase10();
         }
 
         @Override
@@ -474,7 +423,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcNaturalLog();
+            new NaturalLog();
         }
 
         @Override
@@ -502,11 +451,11 @@ public class Window extends JFrame
         }
     }
     
-    public static class CelsiusToFahrenheitListener implements MouseListener
+    public static class AngleConversionsListener implements MouseListener
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcCelsiusToFahrenheit();
+            new AngleConversions();
         }
 
         @Override
@@ -534,11 +483,107 @@ public class Window extends JFrame
         }
     }
     
-    public static class FahrenheitToCelsiusListener implements MouseListener
+    public static class TemperatureConversionsListener implements MouseListener
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcFahrenheitToCelsius();
+            new TemperatureConversions();
+        }
+
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e)
+        {
+            
+        }
+    }
+    
+    public static class CirclesListener implements MouseListener
+    {
+        public void mousePressed(MouseEvent e)
+        {
+            new Circles();
+        }
+
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e)
+        {
+            
+        }
+    }
+    
+    public static class RectanglesListener implements MouseListener
+    {
+        public void mousePressed(MouseEvent e)
+        {
+            new Rectangles();
+        }
+
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e)
+        {
+            
+        }
+    }
+    
+    public static class TrianglesListener implements MouseListener
+    {
+        public void mousePressed(MouseEvent e)
+        {
+            new Triangles();
         }
 
         @Override
@@ -667,7 +712,7 @@ public class Window extends JFrame
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            new CalcAverage();
+            new AverageCalculator();
         }
     }
     
@@ -676,7 +721,7 @@ public class Window extends JFrame
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            new CalcMilesPerGallon();
+            new MilesPerGallonCalculator();
         }
     }
     
@@ -685,16 +730,7 @@ public class Window extends JFrame
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            new CalcPythagoreanTripleFinder();
-        }
-    }
-    
-    public static class RectangleInformationCalculatorListener implements ActionListener
-    {
-        @Override
-        public void actionPerformed(ActionEvent e)
-        {
-            new CalcRectangleInformation();
+            new PythagoreanTripleFinder();
         }
     }
 }

@@ -1,15 +1,19 @@
 package projectgoldstarscalculators;
 import java.awt.Color;
 import java.awt.Font;
+import java.io.File;
 public class ProjectGoldStarsCalculatorS
 {
-    public static final String name = "Project GoldStars Calculator S 1.0";
-    public static final String version = "Version 1.0";
-    public static Color color1 = Color.lightGray;
-    public static Color color2 = new Color(0x00, 0x00, 0xC0);
+    public static final String name = "Project GoldStars Calculator S 2.0";
+    public static final String version = "Version 2.0";
+    public static final File projectGoldStarsCalculatorSFolder = new File(System.getProperty("user.home"), "Project GoldStars Calculator S");
+    public static Color color1;
+    public static Color color2;
+    public static boolean standardColors;
     public static int height;
     public static int width;
     public static int multiplier;
+    public static String theme;
     
     //Fonts
     public static Font largeHeader;

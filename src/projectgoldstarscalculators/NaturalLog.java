@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import javax.swing.JOptionPane;
-public class CalcNaturalLog
+public class NaturalLog
 {
-    public CalcNaturalLog()
+    public NaturalLog()
     {
         naturalLog();
     }

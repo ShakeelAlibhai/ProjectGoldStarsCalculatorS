@@ -1,5 +1,4 @@
 package projectgoldstarscalculators;
-import javax.swing.JOptionPane;
 public class Disclaimer
 {
     public Disclaimer()
@@ -9,10 +8,14 @@ public class Disclaimer
     
     private void disclaimer()
     {
-        String output = "Neither Project GoldStars Calculator S, nor the programmer(s) of Project GoldStars Calculator S, nor the distributor(s) of Project GoldStars Calculator S,\n"
-                + "nor anyone or anything else that is involved with Project GoldStars Calculator S, are responsible for any misinformation, any inaccuracy,\n"
-                + "any problems, or any harm, whether physical or otherwise, caused by Project GoldStars Calculator S or as a result of using Project GoldStars Calculator S.\n"
-                + "Calculations and conversions made in Project GoldStars Calculator S are not guaranteed to be accurate.";
-        JOptionPane.showMessageDialog(null, output, "Disclaimer", JOptionPane.INFORMATION_MESSAGE);
+        InformationWindow disclaimerFrame = new InformationWindow("Disclaimer");
+        disclaimerFrame.setSize(900 * ProjectGoldStarsCalculatorS.multiplier, 500 * ProjectGoldStarsCalculatorS.multiplier);
+        String output = "1. Neither Project GoldStars Calculator S, nor the programmer(s) of Project GoldStars Calculator S, nor the distributor(s)\n"
+                + "of Project GoldStars Calculator S, nor anyone or anything else that is involved with Project GoldStars Calculator S,\n"
+                + "are responsible for any misinformation, any inaccuracy, any problems, or any harm, whether physical or otherwise,\n"
+                + "caused by Project GoldStars Calculator S or as a result of using Project GoldStars Calculator S.\n"
+                + "2. Calculations and conversions made in Project GoldStars Calculator S are not guaranteed to be accurate and/or exact.";
+        disclaimerFrame.addText(ProjectGoldStarsCalculatorS.bodyText1, output);
+        disclaimerFrame.makeVisible();
     }
 }

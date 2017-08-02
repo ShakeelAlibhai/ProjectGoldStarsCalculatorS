@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import javax.swing.JOptionPane;
-public class CalcLogBase10
+public class LogBase10
 {
-    public CalcLogBase10()
+    public LogBase10()
     {
         logBase10();
     }

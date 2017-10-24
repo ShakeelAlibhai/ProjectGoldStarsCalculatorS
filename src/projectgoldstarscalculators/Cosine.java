@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import javax.swing.JOptionPane;
-public class CalcCosine
+public class Cosine
 {
-    public CalcCosine()
+    public Cosine()
     {
         cosine();
     }

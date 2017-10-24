@@ -29,21 +29,36 @@ public class QuadraticEquationSolver implements ActionListener
         JLabel cLabel = new JLabel("c:");
         cLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
         cLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        af = new JTextField("0");
-        af.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-        bf = new JTextField("0");
-        bf.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-        cf = new JTextField("0");
-        cf.setFont(ProjectGoldStarsCalculatorS.bodyText2);
         qeFrame.add(aLabel);
+        setupAF();
         qeFrame.add(af);
         qeFrame.add(bLabel);
+        setupBF();
         qeFrame.add(bf);
         qeFrame.add(cLabel);
+        setupCF();
         qeFrame.add(cf);
         qeFrame.add(new JLabel());
         qeFrame.add(Components.button2("Solve", new SolveQuadraticEquationListener()));
         qeFrame.makeVisible();
+    }
+    
+    private void setupAF()
+    {
+        af = new JTextField("0");
+        af.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupBF()
+    {
+        bf = new JTextField("0");
+        bf.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+    }
+    
+    private void setupCF()
+    {
+        cf = new JTextField("0");
+        cf.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     public static class SolveQuadraticEquationListener implements ActionListener

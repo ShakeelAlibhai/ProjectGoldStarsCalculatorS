@@ -33,13 +33,13 @@ public class Window extends JFrame
         frame.add(action("Multiply", new Multiply2NumbersListener()));
         frame.add(action("Divide", new Divide2NumbersListener()));
         frame.add(headerLabel("Complex Calculations:"));
-        frame.add(action("Square Root", new SquareRootListener()));
-        frame.add(action("Cube Root", new CubeRootListener()));
+        frame.add(action("Square & Cube Roots", new SquareAndCubeRootsListener()));
         frame.add(action("Exponents", new ExponentsListener()));
         frame.add(action("Quadratic Equation Solver", new QuadraticEquationListener()));
-        frame.add(new JLabel());
         frame.add(action("Log Base 10", new LogBase10Listener()));
+        frame.add(new JLabel());
         frame.add(action("Natural Log", new NaturalLogListener()));
+        frame.add(new JLabel());
         frame.add(new JLabel());
         frame.add(new JLabel());
         frame.add(headerLabel("Conversions:"));
@@ -259,43 +259,11 @@ public class Window extends JFrame
         }
     }
     
-    public static class SquareRootListener implements MouseListener
+    public static class SquareAndCubeRootsListener implements MouseListener
     {
         public void mousePressed(MouseEvent e)
         {
-            new SquareRoot();
-        }
-
-        @Override
-        public void mouseClicked(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e)
-        {
-            
-        }
-    }
-    
-    public static class CubeRootListener implements MouseListener
-    {
-        public void mousePressed(MouseEvent e)
-        {
-            new CubeRoot();
+            new SquareAndCubeRoots();
         }
 
         @Override
@@ -615,7 +583,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcSine();
+            new Sine();
         }
 
         @Override
@@ -647,7 +615,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcCosine();
+            new Cosine();
         }
 
         @Override
@@ -679,7 +647,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcTangent();
+            new Tangent();
         }
 
         @Override

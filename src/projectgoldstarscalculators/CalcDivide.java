@@ -64,61 +64,61 @@ public class CalcDivide implements ActionListener
     
     private void setupTF1()
     {
-        tf1 = new JTextField("0");
+        tf1 = new JTextField("1");
         tf1.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF2()
     {
-        tf2 = new JTextField("0");
+        tf2 = new JTextField("1");
         tf2.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF3()
     {
-        tf3 = new JTextField("0");
+        tf3 = new JTextField("1");
         tf3.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF4()
     {
-        tf4 = new JTextField("0");
+        tf4 = new JTextField("1");
         tf4.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF5()
     {
-        tf5 = new JTextField("0");
+        tf5 = new JTextField("1");
         tf5.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF6()
     {
-        tf6 = new JTextField("0");
+        tf6 = new JTextField("1");
         tf6.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF7()
     {
-        tf7 = new JTextField("0");
+        tf7 = new JTextField("1");
         tf7.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF8()
     {
-        tf8 = new JTextField("0");
+        tf8 = new JTextField("1");
         tf8.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF9()
     {
-        tf9 = new JTextField("0");
+        tf9 = new JTextField("1");
         tf9.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF10()
     {
-        tf10 = new JTextField("0");
+        tf10 = new JTextField("1");
         tf10.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     

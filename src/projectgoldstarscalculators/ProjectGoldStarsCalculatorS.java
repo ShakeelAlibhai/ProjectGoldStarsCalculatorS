@@ -4,8 +4,8 @@ import java.awt.Font;
 import java.io.File;
 public class ProjectGoldStarsCalculatorS
 {
-    public static final String name = "Project GoldStars Calculator S 2.0";
-    public static final String version = "Version 2.0";
+    public static final String name = "Project GoldStars Calculator S 2.1";
+    public static final String version = "Version 2.1";
     public static final File projectGoldStarsCalculatorSFolder = new File(System.getProperty("user.home"), "Project GoldStars Calculator S");
     public static Color color1;
     public static Color color2;

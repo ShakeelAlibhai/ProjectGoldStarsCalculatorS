@@ -1,6 +1,14 @@
 # Project GoldStars Calculator S
 ### Changelog
 
+## Version 2.1.x
+### Version 2.1
+* Changed the title of the "About" window from "About Project GoldStars Calculator S" to "About."
+* Multiplication and division defaults are now set to 1 rather than 0.
+* Replaced the "Square Root" and "Cube Root" windows with a new "Square & Cube Roots" window.
+* Slightly adjusted the default size of the "About" window.
+* Other minor changes.
+
 ## Version 2.0.x
 ### Version 2.0
 * Added a "Geometry" section to the main window.

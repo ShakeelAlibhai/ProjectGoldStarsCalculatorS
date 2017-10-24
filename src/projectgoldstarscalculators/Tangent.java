@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import javax.swing.JOptionPane;
-public class CalcTangent
+public class Tangent
 {
-    public CalcTangent()
+    public Tangent()
     {
         tangent();
     }

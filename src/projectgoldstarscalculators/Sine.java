@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import javax.swing.JOptionPane;
-public class CalcSine
+public class Sine
 {
-    public CalcSine()
+    public Sine()
     {
         sine();
     }

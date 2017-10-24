@@ -12,8 +12,8 @@ public class About
     
     private void about()
     {
-        JFrame aboutFrame = new JFrame("About Project GoldStars Calculator S");
-        aboutFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 375 * ProjectGoldStarsCalculatorS.multiplier);
+        JFrame aboutFrame = new JFrame("About");
+        aboutFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
         aboutFrame.setIconImage(Icon.getImage());
         aboutFrame.setLayout(new GridLayout(2, 1));
         aboutFrame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);

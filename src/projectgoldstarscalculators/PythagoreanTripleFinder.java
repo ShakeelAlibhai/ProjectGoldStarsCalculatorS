@@ -17,27 +17,18 @@ public class PythagoreanTripleFinder
     private void pythagoreanTripleFinder()
     {
         ProgramWindow frame = new ProgramWindow("Pythagorean Triple Finder");
-        frame.setLayout(new GridLayout(4, 2));
-        frame.setSize(900 * ProjectGoldStarsCalculatorS.multiplier, 500 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.add(instructionsLabelA());
-        frame.add(new JLabel());
+        frame.setLayout(new GridLayout(3, 2));
+        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setInstructionsMenuBar("Please enter 2 numbers, then press Calculate to find a Pythagorean Triple:");
         frame.add(aLabel());
         setupMPG1();
         frame.add(length);
         frame.add(bLabel());
         setupMPG2();
         frame.add(width);
-        frame.add(instructionsLabelB());
+        frame.add(new JLabel());
         frame.add(Components.button2("Calculate", new CalculateRectangleInformationListener()));
         frame.makeVisible();
-    }
-    
-    private JLabel instructionsLabelA()
-    {
-        JLabel instructionsLabel = new JLabel("Please enter 2 numbers:");
-        instructionsLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
-        instructionsLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        return instructionsLabel;
     }
     
     private JLabel aLabel()
@@ -66,14 +57,6 @@ public class PythagoreanTripleFinder
     {
         width = new JTextField("0");
         width.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-    }
-    
-    private JLabel instructionsLabelB()
-    {
-        JLabel instructionsLabel = new JLabel("Then press Calculate to find a Pythagorean Triple:");
-        instructionsLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
-        instructionsLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        return instructionsLabel;
     }
     
     public static class CalculateRectangleInformationListener implements ActionListener

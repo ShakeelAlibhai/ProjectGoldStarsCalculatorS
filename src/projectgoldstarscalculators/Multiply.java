@@ -6,18 +6,18 @@ import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-public class CalcAdd implements ActionListener
+public class Multiply implements ActionListener
 {
     public static JTextField tf1, tf2, tf3, tf4, tf5, tf6, tf7, tf8, tf9, tf10;
     
-    public CalcAdd()
+    public Multiply()
     {
-        add();
+        multiply();
     }
     
-    private void add()
+    private void multiply()
     {
-        ProgramWindow frame = new ProgramWindow("Addition");
+        ProgramWindow frame = new ProgramWindow("Multiplication");
         frame.setLayout(new GridLayout(11, 2));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
         frame.setJMenuBar(menuBar());
@@ -52,7 +52,7 @@ public class CalcAdd implements ActionListener
         setupTF10();
         frame.add(tf10);
         frame.add(new JLabel());
-        frame.add(Components.button2("Add", new AddListener()));
+        frame.add(Components.button2("Multiply", new MultiplyListener()));
         frame.makeVisible();
     }
     
@@ -60,7 +60,7 @@ public class CalcAdd implements ActionListener
     {
         JMenuBar menuBar = new JMenuBar();
         menuBar.setBackground(ProjectGoldStarsCalculatorS.color1);
-        menuBar.add(Components.standardButton("Add More Than 10 Numbers", new AddMoreThan10NumbersListener()));
+        menuBar.add(Components.standardButton("Multiply More Than 10 Numbers", new MultiplyMoreThan10NumbersListener()));
         return menuBar;
     }
     
@@ -74,65 +74,65 @@ public class CalcAdd implements ActionListener
     
     private void setupTF1()
     {
-        tf1 = new JTextField("0");
+        tf1 = new JTextField("1");
         tf1.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF2()
     {
-        tf2 = new JTextField("0");
+        tf2 = new JTextField("1");
         tf2.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF3()
     {
-        tf3 = new JTextField("0");
+        tf3 = new JTextField("1");
         tf3.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF4()
     {
-        tf4 = new JTextField("0");
+        tf4 = new JTextField("1");
         tf4.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF5()
     {
-        tf5 = new JTextField("0");
+        tf5 = new JTextField("1");
         tf5.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF6()
     {
-        tf6 = new JTextField("0");
+        tf6 = new JTextField("1");
         tf6.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF7()
     {
-        tf7 = new JTextField("0");
+        tf7 = new JTextField("1");
         tf7.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF8()
     {
-        tf8 = new JTextField("0");
+        tf8 = new JTextField("1");
         tf8.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF9()
     {
-        tf9 = new JTextField("0");
+        tf9 = new JTextField("1");
         tf9.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupTF10()
     {
-        tf10 = new JTextField("0");
+        tf10 = new JTextField("1");
         tf10.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private class AddListener implements ActionListener
+    private class MultiplyListener implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -159,25 +159,25 @@ public class CalcAdd implements ActionListener
                     
                 }
             }
-            double sum = 0;
+            double sum = 1;
             for(int i = 0; i < nums.length; i++)
             {
-                sum += nums[i];
+                sum *= nums[i];
             }
-            JOptionPane.showMessageDialog(null, sum, "Addition", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, sum, "Multiplication", JOptionPane.INFORMATION_MESSAGE);
         }
     }
     
-    private class AddMoreThan10NumbersListener implements ActionListener
+    private class MultiplyMoreThan10NumbersListener implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
         {
             String output;
             boolean continuePrompt = true;
             boolean firstPrompt = true;
-            double sum = 0.0;
+            double product = 1.0;
             double previousNumber = 0.0;
-            double previousSum = 0.0;
+            double previousProduct = 1.0;
             while(continuePrompt)
             {
                 String displayText;
@@ -187,11 +187,11 @@ public class CalcAdd implements ActionListener
                 }
                 else
                 {
-                    displayText = previousSum + " + " + previousNumber + " = " + sum + "\n"
-                            + "Please enter the number to add to " + sum + " or enter X to quit.";
+                    displayText = previousProduct + " * " + previousNumber + " = " + product + "\n"
+                            + "Please enter the number to multiply to " + product + " or enter X to quit.";
                 }
                 firstPrompt = false;
-                output = JOptionPane.showInputDialog(null, displayText, "Addition", JOptionPane.QUESTION_MESSAGE);
+                output = JOptionPane.showInputDialog(null, displayText, "Multiplication", JOptionPane.QUESTION_MESSAGE);
                 if(output == null || output.equals("x") || output.equals("X"))
                 {
                     return;
@@ -203,12 +203,12 @@ public class CalcAdd implements ActionListener
                 }
                 catch(Exception error)
                 {
-                    JOptionPane.showMessageDialog(null, "ERROR", "Addition", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "ERROR", "Multiplication", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
-                previousSum = sum;
+                previousProduct = product;
                 previousNumber = input;
-                sum += input;
+                product *= input;
             }
         }
     }

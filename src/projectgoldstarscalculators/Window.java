@@ -24,7 +24,7 @@ public class Window extends JFrame
         frame.setSize(1100 * ProjectGoldStarsCalculatorS.multiplier, 500 * ProjectGoldStarsCalculatorS.multiplier);
         frame.setExtendedState(frame.MAXIMIZED_BOTH);
         frame.setIconImage(Icon.getImage());
-        frame.setLayout(new GridLayout(6, 5));
+        frame.setLayout(new GridLayout(5, 5));
         frame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);
         frame.setJMenuBar(menuBar());
         frame.add(headerLabel("Basic Calculations:"));
@@ -35,13 +35,8 @@ public class Window extends JFrame
         frame.add(headerLabel("Complex Calculations:"));
         frame.add(action("Square & Cube Roots", new SquareAndCubeRootsListener()));
         frame.add(action("Exponents", new ExponentsListener()));
+        frame.add(action("Logarithms", new LogarithmsListener()));
         frame.add(action("Quadratic Equation Solver", new QuadraticEquationListener()));
-        frame.add(action("Log Base 10", new LogBase10Listener()));
-        frame.add(new JLabel());
-        frame.add(action("Natural Log", new NaturalLogListener()));
-        frame.add(new JLabel());
-        frame.add(new JLabel());
-        frame.add(new JLabel());
         frame.add(headerLabel("Conversions:"));
         frame.add(action("Angle Conversions", new AngleConversionsListener()));
         frame.add(action("Temperature Conversions", new TemperatureConversionsListener()));
@@ -135,7 +130,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcAdd();
+            new Add();
         }
 
         @Override
@@ -167,7 +162,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcSubtract();
+            new Subtract();
         }
 
         @Override
@@ -199,7 +194,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcMultiply();
+            new Multiply();
         }
 
         @Override
@@ -231,7 +226,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            new CalcDivide();
+            new Divide();
         }
 
         @Override
@@ -323,75 +318,43 @@ public class Window extends JFrame
         }
     }
     
+    public static class LogarithmsListener implements MouseListener
+    {
+        public void mousePressed(MouseEvent e)
+        {
+            new Logarithms();
+        }
+
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e)
+        {
+            
+        }
+    }
+    
     public static class QuadraticEquationListener implements MouseListener
     {
         public void mousePressed(MouseEvent e)
         {
             new QuadraticEquationSolver();
-        }
-
-        @Override
-        public void mouseClicked(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e)
-        {
-            
-        }
-    }
-    
-    public static class LogBase10Listener implements MouseListener
-    {
-        public void mousePressed(MouseEvent e)
-        {
-            new LogBase10();
-        }
-
-        @Override
-        public void mouseClicked(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e)
-        {
-            
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e)
-        {
-            
-        }
-    }
-    
-    public static class NaturalLogListener implements MouseListener
-    {
-        public void mousePressed(MouseEvent e)
-        {
-            new NaturalLog();
         }
 
         @Override

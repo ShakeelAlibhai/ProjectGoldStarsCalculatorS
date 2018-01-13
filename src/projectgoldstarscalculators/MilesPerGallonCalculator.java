@@ -17,10 +17,9 @@ public class MilesPerGallonCalculator
     private void calcMilesPerGallon()
     {
         ProgramWindow frame = new ProgramWindow("Miles Per Gallon Calculator");
-        frame.setLayout(new GridLayout(5, 2));
+        frame.setLayout(new GridLayout(4, 2));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.add(instructionsLabel());
-        frame.add(new JLabel());
+        frame.setInstructionsMenuBar("Please enter the following information:");
         frame.add(aLabel());
         setupMPG1();
         frame.add(mpg1);
@@ -33,14 +32,6 @@ public class MilesPerGallonCalculator
         frame.add(new JLabel());
         frame.add(Components.button2("Calculate", new CalculateMilesPerGallonListener()));
         frame.makeVisible();
-    }
-    
-    private JLabel instructionsLabel()
-    {
-        JLabel instructionsLabel = new JLabel("Please enter the following information:");
-        instructionsLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
-        instructionsLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        return instructionsLabel;
     }
     
     private JLabel aLabel()

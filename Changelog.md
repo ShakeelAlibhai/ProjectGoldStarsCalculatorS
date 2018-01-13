@@ -1,6 +1,13 @@
 # Project GoldStars Calculator S
 ### Changelog
 
+## Version 2.2.x
+### Version 2.2
+* Replaced the "Log Base 10" and "Natural Log" windows with a new "Logarithms" window.
+* Updated the Miles Per Gallon Calculator.
+* Updated the Pythagorean Triple Finder.
+* Other minor changes.
+
 ## Version 2.1.x
 ### Version 2.1
 * Changed the title of the "About" window from "About Project GoldStars Calculator S" to "About."

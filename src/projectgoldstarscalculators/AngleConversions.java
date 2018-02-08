@@ -19,7 +19,7 @@ public class AngleConversions
         ProgramWindow additionFrame = new ProgramWindow("Angle Conversions");
         additionFrame.setLayout(new GridLayout(2, 3));
         additionFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 375 * ProjectGoldStarsCalculatorS.multiplier);
-        additionFrame.setInstructionsMenuBar("Please fill one of the fields and then press the button to convert to the other angles.");
+        additionFrame.setInstructionsMenuBar("Please fill one of the fields and then press the button to convert to the other unit.");
         additionFrame.add(descriptionLabel("Degrees:"));
         setupTF1();
         additionFrame.add(tf1);

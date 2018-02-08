@@ -2,6 +2,11 @@
 ### Changelog
 
 ## Version 2.2.x
+### Version 2.2.1
+* Updated the instructions in the Quadratic Equation Solver.
+* Updated the instructions in the "Angle Conversions" window.
+* Updated the instructions in the "Temperature Conversions" window.
+
 ### Version 2.2
 * Replaced the "Log Base 10" and "Natural Log" windows with a new "Logarithms" window.
 * Updated the Miles Per Gallon Calculator.

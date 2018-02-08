@@ -19,7 +19,7 @@ public class QuadraticEquationSolver implements ActionListener
         ProgramWindow qeFrame = new ProgramWindow("Quadratic Equation Solver");
         qeFrame.setLayout(new GridLayout(4, 2));
         qeFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        qeFrame.setInstructionsMenuBar("Please enter the quadratic equation in the following form: ax^2 + bx + c");
+        qeFrame.setInstructionsMenuBar("Please enter the quadratic equation in the following form: ax^2 + bx + c = 0");
         JLabel aLabel = new JLabel("a:");
         aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
         aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);

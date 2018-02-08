@@ -19,7 +19,7 @@ public class TemperatureConversions
         ProgramWindow additionFrame = new ProgramWindow("Temperature Conversions");
         additionFrame.setLayout(new GridLayout(3, 3));
         additionFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 375 * ProjectGoldStarsCalculatorS.multiplier);
-        additionFrame.setInstructionsMenuBar("Please fill one of the fields and then press the button to convert to the other temperatures.");
+        additionFrame.setInstructionsMenuBar("Please fill one of the fields and then press the button to convert to the other units.");
         JLabel number1 = new JLabel("Celsius:");
         number1.setForeground(ProjectGoldStarsCalculatorS.color2);
         number1.setFont(ProjectGoldStarsCalculatorS.bodyText1);

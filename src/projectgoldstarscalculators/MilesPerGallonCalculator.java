@@ -7,14 +7,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class MilesPerGallonCalculator
 {
-    public static JTextField mpg1, mpg2, mpg3;
+    public static JTextField beginningField, endingField, gallonsField;
     
     public MilesPerGallonCalculator()
     {
-        calcMilesPerGallon();
+        milesPerGallonCalculator();
     }
     
-    private void calcMilesPerGallon()
+    private void milesPerGallonCalculator()
     {
         ProgramWindow frame = new ProgramWindow("Miles Per Gallon Calculator");
         frame.setLayout(new GridLayout(4, 2));
@@ -22,13 +22,13 @@ public class MilesPerGallonCalculator
         frame.setInstructionsMenuBar("Please enter the following information:");
         frame.add(aLabel());
         setupMPG1();
-        frame.add(mpg1);
+        frame.add(beginningField);
         frame.add(bLabel());
         setupMPG2();
-        frame.add(mpg2);
+        frame.add(endingField);
         frame.add(cLabel());
         setupMPG3();
-        frame.add(mpg3);
+        frame.add(gallonsField);
         frame.add(new JLabel());
         frame.add(Components.button2("Calculate", new CalculateMilesPerGallonListener()));
         frame.makeVisible();
@@ -44,8 +44,8 @@ public class MilesPerGallonCalculator
     
     private void setupMPG1()
     {
-        mpg1 = new JTextField("0");
-        mpg1.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        beginningField = new JTextField("0");
+        beginningField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private JLabel bLabel()
@@ -58,8 +58,8 @@ public class MilesPerGallonCalculator
     
     private void setupMPG2()
     {
-        mpg2 = new JTextField("0");
-        mpg2.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        endingField = new JTextField("0");
+        endingField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private JLabel cLabel()
@@ -72,8 +72,8 @@ public class MilesPerGallonCalculator
     
     private void setupMPG3()
     {
-        mpg3 = new JTextField("0");
-        mpg3.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        gallonsField = new JTextField("0");
+        gallonsField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     public static class CalculateMilesPerGallonListener implements ActionListener
@@ -81,9 +81,9 @@ public class MilesPerGallonCalculator
         public void actionPerformed(ActionEvent e)
         {
             String output;
-            String mpgs1 = mpg1.getText();
-            String mpgs2 = mpg2.getText();
-            String mpgs3 = mpg3.getText();
+            String mpgs1 = beginningField.getText();
+            String mpgs2 = endingField.getText();
+            String mpgs3 = gallonsField.getText();
             double input1, input2, input3;
             try
             {

@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class AngleConversions
 {
-    public static JTextField tf1, tf2;
+    public static JTextField degreesField, radiansField;
     
     public AngleConversions()
     {
@@ -16,19 +16,19 @@ public class AngleConversions
     
     private void angleConversions()
     {
-        ProgramWindow additionFrame = new ProgramWindow("Angle Conversions");
-        additionFrame.setLayout(new GridLayout(2, 3));
-        additionFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 375 * ProjectGoldStarsCalculatorS.multiplier);
-        additionFrame.setInstructionsMenuBar("Please fill one of the fields and then press the button to convert to the other unit.");
-        additionFrame.add(descriptionLabel("Degrees:"));
-        setupTF1();
-        additionFrame.add(tf1);
-        additionFrame.add(Components.button2("Convert From Degrees", new ConvertFromDegreesListener()));
-        additionFrame.add(descriptionLabel("Radians:"));
-        setupTF2();
-        additionFrame.add(tf2);
-        additionFrame.add(Components.button2("Convert From Radians", new ConvertFromRadiansListener()));
-        additionFrame.makeVisible();
+        ProgramWindow frame = new ProgramWindow("Angle Conversions");
+        frame.setLayout(new GridLayout(2, 3));
+        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 375 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setInstructionsMenuBar("Please fill one of the fields and then press the button to convert to the other unit.");
+        frame.add(descriptionLabel("Degrees:"));
+        setupDegreesField();
+        frame.add(degreesField);
+        frame.add(Components.button2("Convert From Degrees", new ConvertFromDegreesListener()));
+        frame.add(descriptionLabel("Radians:"));
+        setupRadiansField();
+        frame.add(radiansField);
+        frame.add(Components.button2("Convert From Radians", new ConvertFromRadiansListener()));
+        frame.makeVisible();
     }
     
     private JLabel descriptionLabel(String text)
@@ -39,18 +39,23 @@ public class AngleConversions
         return descriptionLabel;
     }
     
-    private void setupTF1()
+    private void setupDegreesField()
     {
-        tf1 = new JTextField("0");
-        tf1.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        degreesField = new JTextField("0");
+        degreesField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private void setupTF2()
+    private void setupRadiansField()
     {
-        tf2 = new JTextField("0");
-        tf2.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        radiansField = new JTextField("0");
+        radiansField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
+    /*
+    This is executed when the user attempts to convert from degrees.
+    It attempts to convert the value in the degrees text field to radians,
+    and then updates the radians text field to equal the value in the degrees text field.
+    */
     private class ConvertFromDegreesListener implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
@@ -58,7 +63,7 @@ public class AngleConversions
             double d = 0.0, r = 0.0;
             try
             {
-                String temp = tf1.getText();
+                String temp = degreesField.getText();
                 d = Double.parseDouble(temp);
             }
             catch(Exception e2)
@@ -68,10 +73,15 @@ public class AngleConversions
             }
             r = Math.toRadians(d);
             String temp2 = "" + r;
-            tf2.setText(temp2);
+            radiansField.setText(temp2);
         }
     }
     
+    /*
+    This is executed when the user attempts to convert from radians.
+    It attempts to convert the value in the radians text field to degrees,
+    and then updates the degrees text field to equal the value in the radians text field.
+    */
     private class ConvertFromRadiansListener implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
@@ -79,7 +89,7 @@ public class AngleConversions
             double d = 0.0, r = 0.0;
             try
             {
-                String temp = tf2.getText();
+                String temp = radiansField.getText();
                 r = Double.parseDouble(temp);
             }
             catch(Exception e2)
@@ -89,7 +99,7 @@ public class AngleConversions
             }
             d = Math.toDegrees(r);
             String temp2 = "" + d;
-            tf1.setText(temp2);
+            degreesField.setText(temp2);
         }
     }
 }

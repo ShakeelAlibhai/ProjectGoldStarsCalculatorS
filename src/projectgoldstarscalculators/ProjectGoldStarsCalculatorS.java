@@ -4,9 +4,9 @@ import java.awt.Font;
 import java.io.File;
 public class ProjectGoldStarsCalculatorS
 {
-    public static final String name = "Project GoldStars Calculator S 2.2 Update 1";
-    public static final String version = "Version 2.2.1";
-    public static final File projectGoldStarsCalculatorSFolder = new File(System.getProperty("user.home"), "Project GoldStars Calculator S");
+    public static final String NAME = "Project GoldStars Calculator S 2.3";
+    public static final String VERSION = "Version 2.3";
+    public static final File FOLDER = new File(System.getProperty("user.home"), "Project GoldStars Calculator S");
     public static Color color1;
     public static Color color2;
     public static boolean standardColors;
@@ -25,13 +25,13 @@ public class ProjectGoldStarsCalculatorS
     public static Font bodyText2;
 
     //Font Sizes
-    public static final int largeHeaderSize = 22;
-    public static final int mediumHeaderSize = 20;
-    public static final int mediumText1Size = 16;
-    public static final int mediumText2Size = 16;
-    public static final int mediumText3Size = 12;
-    public static final int bodyText1Size = 14;
-    public static final int bodyText2Size = 14;
+    public static final int LARGE_HEADER_SIZE = 22;
+    public static final int MEDIUM_HEADER_SIZE = 20;
+    public static final int MEDIUM_TEXT_SIZE1 = 16;
+    public static final int MEDIUM_TEXT_SIZE2 = 16;
+    public static final int MEDIUM_TEXT_SIZE3 = 12;
+    public static final int BODY_TEXT_SIZE1 = 14;
+    public static final int BODY_TEXT_SIZE2 = 14;
     
     public static void main(String[] args)
     {

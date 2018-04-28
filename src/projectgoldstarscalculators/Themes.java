@@ -11,22 +11,22 @@ public class Themes
     
     private void themes()
     {
-        ProgramWindow themeFrame = new ProgramWindow("Themes");
-        themeFrame.setLayout(new GridLayout(11, 1));
-        themeFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        themeFrame.setInstructionsMenuBar("Please choose a theme:");
-        themeFrame.add(darkTheme());
-        themeFrame.add(desertTheme());
-        themeFrame.add(fireTheme());
-        themeFrame.add(forestTheme());
-        themeFrame.add(grassTheme());
-        themeFrame.add(mountainTheme());
-        themeFrame.add(silverTheme());
-        themeFrame.add(skyTheme());
-        themeFrame.add(snowTheme());
-        themeFrame.add(waterTheme());
-        themeFrame.add(projectGoldStarsCalculatorSTheme());
-        themeFrame.makeVisible();
+        ProgramWindow frame = new ProgramWindow("Themes");
+        frame.setLayout(new GridLayout(11, 1));
+        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setInstructionsMenuBar("Please choose a theme:");
+        frame.add(darkTheme());
+        frame.add(desertTheme());
+        frame.add(fireTheme());
+        frame.add(forestTheme());
+        frame.add(grassTheme());
+        frame.add(mountainTheme());
+        frame.add(silverTheme());
+        frame.add(skyTheme());
+        frame.add(snowTheme());
+        frame.add(waterTheme());
+        frame.add(projectGoldStarsCalculatorSTheme());
+        frame.makeVisible();
     }
     
     private JButton darkTheme()

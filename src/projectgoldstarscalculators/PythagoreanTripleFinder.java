@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class PythagoreanTripleFinder
 {
-    public static JTextField length, width;
+    public static JTextField firstNumberField, secondNumberField;
     
     public PythagoreanTripleFinder()
     {
@@ -20,43 +20,27 @@ public class PythagoreanTripleFinder
         frame.setLayout(new GridLayout(3, 2));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
         frame.setInstructionsMenuBar("Please enter 2 numbers, then press Calculate to find a Pythagorean Triple:");
-        frame.add(aLabel());
+        frame.add(Components.standardLabel("First Number:"));
         setupMPG1();
-        frame.add(length);
-        frame.add(bLabel());
+        frame.add(firstNumberField);
+        frame.add(Components.standardLabel("Second Number:"));
         setupMPG2();
-        frame.add(width);
+        frame.add(secondNumberField);
         frame.add(new JLabel());
         frame.add(Components.button2("Calculate", new CalculateRectangleInformationListener()));
         frame.makeVisible();
     }
     
-    private JLabel aLabel()
-    {
-        JLabel aLabel = new JLabel("First Number:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
-    }
-    
     private void setupMPG1()
     {
-        length = new JTextField("0");
-        length.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-    }
-    
-    private JLabel bLabel()
-    {
-        JLabel bLabel = new JLabel("Second Number:");
-        bLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        bLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return bLabel;
+        firstNumberField = new JTextField("0");
+        firstNumberField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupMPG2()
     {
-        width = new JTextField("0");
-        width.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        secondNumberField = new JTextField("0");
+        secondNumberField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     public static class CalculateRectangleInformationListener implements ActionListener
@@ -64,8 +48,10 @@ public class PythagoreanTripleFinder
         public void actionPerformed(ActionEvent e)
         {
             String output;
-            String lengthStr = length.getText();
-            String widthStr = width.getText();
+            //Get the contents of the first number field and store it in a String
+            String lengthStr = firstNumberField.getText();
+            //Get the contents of the second number field and store it in a String
+            String widthStr = secondNumberField.getText();
             int input1, input2;
             //Attempt to convert the first number from a String to an int.
             //If the conversion fails, display an error message and exit the method.
@@ -89,7 +75,7 @@ public class PythagoreanTripleFinder
                 JOptionPane.showMessageDialog(null, "ERROR", "Pythagorean Triple Finder", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            //If the first number is less than 1, display an error message and exit the method.
+            //If the first number is less than 1, display an error message and exit the method
             if(input1 < 1)
             {
                 output = "ERROR:\n"
@@ -97,7 +83,7 @@ public class PythagoreanTripleFinder
                 JOptionPane.showMessageDialog(null, output, "Pythagorean Triple Finder", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            //If the second number number is less than 1, display an error message and exit the method.
+            //If the second number number is less than 1, display an error message and exit the method
             if(input2 < 1)
             {
                 output = "ERROR:\n"
@@ -105,6 +91,7 @@ public class PythagoreanTripleFinder
                 JOptionPane.showMessageDialog(null, output, "Pythagorean Triple Finder", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            //If the second number is larger than the first number, switch the first and second numbers
             if(input2 > input1)
             {
                 int temp;
@@ -112,6 +99,7 @@ public class PythagoreanTripleFinder
                 input1 = input2;
                 input2 = temp;
             }
+            //Calculate and display the Pythagorean triple
             int a, b, c;
             a = (int)(Math.pow(input1, 2) - Math.pow(input2, 2));
             b = 2 * input1 * input2;

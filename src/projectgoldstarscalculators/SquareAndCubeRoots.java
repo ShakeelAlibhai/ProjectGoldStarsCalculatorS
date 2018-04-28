@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class SquareAndCubeRoots implements ActionListener
 {
-    public static JTextField tf1, tf2, tf3;
+    public static JTextField numberField, squareRootField, cubeRootField;
     
     public SquareAndCubeRoots()
     {
@@ -19,63 +19,40 @@ public class SquareAndCubeRoots implements ActionListener
         ProgramWindow frame = new ProgramWindow("Square & Cube Roots");
         frame.setLayout(new GridLayout(3, 3));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.add(aLabel());
-        setupTF1();
-        frame.add(tf1);
+        frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find the square and cube roots:");
+        frame.add(Components.standardLabel("Number:"));
+        setupNumberField();
+        frame.add(numberField);
         frame.add(Components.button2("Compute", new ComputeListener()));
-        frame.add(bLabel());
-        setupTF2();
-        frame.add(tf2);
+        frame.add(Components.standardLabel("Square Root:"));
+        setupSquareRootField();
+        frame.add(squareRootField);
         frame.add(new JLabel());
-        frame.add(cLabel());
-        setupTF3();
-        frame.add(tf3);
+        frame.add(Components.standardLabel("Cube Root:"));
+        setupCubeRootField();
+        frame.add(cubeRootField);
         frame.add(new JLabel());
         frame.makeVisible();
     }
     
-    private JLabel aLabel()
+    private void setupNumberField()
     {
-        JLabel aLabel = new JLabel("Number:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
+        numberField = new JTextField("0");
+        numberField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private JLabel bLabel()
+    private void setupSquareRootField()
     {
-        JLabel aLabel = new JLabel("Square Root:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
+        squareRootField = new JTextField("0");
+        squareRootField.setEditable(false);
+        squareRootField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private JLabel cLabel()
+    private void setupCubeRootField()
     {
-        JLabel aLabel = new JLabel("Cube Root:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
-    }
-    
-    private void setupTF1()
-    {
-        tf1 = new JTextField("0");
-        tf1.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-    }
-    
-    private void setupTF2()
-    {
-        tf2 = new JTextField("0");
-        tf2.setEditable(false);
-        tf2.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-    }
-    
-    private void setupTF3()
-    {
-        tf3 = new JTextField("0");
-        tf3.setEditable(false);
-        tf3.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        cubeRootField = new JTextField("0");
+        cubeRootField.setEditable(false);
+        cubeRootField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private class ComputeListener implements ActionListener
@@ -85,7 +62,7 @@ public class SquareAndCubeRoots implements ActionListener
             double input = 0.0;
             try
             {
-                String temp = tf1.getText();
+                String temp = numberField.getText();
                 input = Double.parseDouble(temp);
             }
             catch(Exception e2)
@@ -93,8 +70,8 @@ public class SquareAndCubeRoots implements ActionListener
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            tf2.setText("" + Math.sqrt(input));
-            tf3.setText("" + Math.cbrt(input));
+            squareRootField.setText("" + Math.sqrt(input));
+            cubeRootField.setText("" + Math.cbrt(input));
         }
     }
     

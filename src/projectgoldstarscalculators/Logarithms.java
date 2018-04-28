@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Logarithms implements ActionListener
 {
-    public static JTextField tf1, tf2, tf3;
+    public static JTextField numberField, logBase10Field, logBaseEField;
     
     public Logarithms()
     {
@@ -19,73 +19,52 @@ public class Logarithms implements ActionListener
         ProgramWindow frame = new ProgramWindow("Logarithms");
         frame.setLayout(new GridLayout(3, 3));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.add(aLabel());
-        setupTF1();
-        frame.add(tf1);
+        frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find the Log Base 10 and Log Base e:");
+        frame.add(Components.standardLabel("Number:"));
+        setupNumberField();
+        frame.add(numberField);
         frame.add(Components.button2("Compute", new ComputeListener()));
-        frame.add(bLabel());
-        setupTF2();
-        frame.add(tf2);
+        frame.add(Components.standardLabel("Log Base 10:"));
+        setupLogBase10Field();
+        frame.add(logBase10Field);
         frame.add(new JLabel());
-        frame.add(cLabel());
-        setupTF3();
-        frame.add(tf3);
+        frame.add(Components.standardLabel("Log Base e:"));
+        setupLogBaseEField();
+        frame.add(logBaseEField);
         frame.add(new JLabel());
         frame.makeVisible();
     }
     
-    private JLabel aLabel()
+    private void setupNumberField()
     {
-        JLabel aLabel = new JLabel("Number:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
+        numberField = new JTextField("0");
+        numberField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private JLabel bLabel()
+    private void setupLogBase10Field()
     {
-        JLabel aLabel = new JLabel("Log Base 10:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
+        logBase10Field = new JTextField("0");
+        logBase10Field.setEditable(false);
+        logBase10Field.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private JLabel cLabel()
+    private void setupLogBaseEField()
     {
-        JLabel aLabel = new JLabel("Log Base e:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
-    }
-    
-    private void setupTF1()
-    {
-        tf1 = new JTextField("0");
-        tf1.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-    }
-    
-    private void setupTF2()
-    {
-        tf2 = new JTextField("0");
-        tf2.setEditable(false);
-        tf2.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-    }
-    
-    private void setupTF3()
-    {
-        tf3 = new JTextField("0");
-        tf3.setEditable(false);
-        tf3.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        logBaseEField = new JTextField("0");
+        logBaseEField.setEditable(false);
+        logBaseEField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private class ComputeListener implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
         {
-            double input = 0.0;
+            String temp = numberField.getText();
+            double input;
+            //Attempt to convert the user's input from a String to a double.
+            //If the conversion fails, display an error message and exit the method.
             try
             {
-                String temp = tf1.getText();
                 input = Double.parseDouble(temp);
             }
             catch(Exception e2)
@@ -93,8 +72,8 @@ public class Logarithms implements ActionListener
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            tf2.setText("" + Math.log10(input));
-            tf3.setText("" + Math.log(input));
+            logBase10Field.setText("" + Math.log10(input));
+            logBaseEField.setText("" + Math.log(input));
         }
     }
     

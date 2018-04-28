@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Circles
 {
-    public static JTextField radius;
+    public static JTextField radiusField;
     
     public Circles()
     {
@@ -17,38 +17,21 @@ public class Circles
     private void circles()
     {
         ProgramWindow frame = new ProgramWindow("Circles");
-        frame.setLayout(new GridLayout(3, 2));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.add(instructionsLabel());
-        frame.add(new JLabel());
-        frame.add(aLabel());
-        setupMPG1();
-        frame.add(radius);
+        frame.setLayout(new GridLayout(2, 2));
+        frame.setSize(650 * ProjectGoldStarsCalculatorS.multiplier, 350 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setInstructionsMenuBar("Please enter the following information:");
+        frame.add(Components.standardLabel("Radius:"));
+        setupRadiusField();
+        frame.add(radiusField);
         frame.add(new JLabel());
         frame.add(Components.button2("Calculate", new CalculateListener()));
         frame.makeVisible();
     }
     
-    private JLabel instructionsLabel()
+    private void setupRadiusField()
     {
-        JLabel instructionsLabel = new JLabel("Please enter the following information:");
-        instructionsLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
-        instructionsLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        return instructionsLabel;
-    }
-    
-    private JLabel aLabel()
-    {
-        JLabel aLabel = new JLabel("Radius:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
-    }
-    
-    private void setupMPG1()
-    {
-        radius = new JTextField("0");
-        radius.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        radiusField = new JTextField("0");
+        radiusField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener
@@ -56,7 +39,9 @@ public class Circles
         public void actionPerformed(ActionEvent e)
         {
             String output;
-            String radiusStr = radius.getText();
+            //Get the user's input from the radius text field and store it in radiusStr
+            String radiusStr = radiusField.getText();
+            //Attempt to convert radiusStr to a double; if it cannot be converted, display an error message
             double radiusD;
             try
             {
@@ -67,6 +52,7 @@ public class Circles
                 JOptionPane.showMessageDialog(null, "ERROR", "Circles", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            //Print an error message if the value entered is less than or equal to 0
             if(radiusD <= 0)
             {
                 output = "ERROR:\n"

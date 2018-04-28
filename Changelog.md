@@ -1,6 +1,15 @@
 # Project GoldStars Calculator S
 ### Changelog
 
+## Version 2.3.x
+### Version 2.3
+* Added instructions to the Logarithms window.
+* Added instructions to the Square & Cube Roots window.
+* Updated the Circles window.
+* Updated the Rectangles window.
+* Updated the Triangles window.
+* Other minor changes.
+
 ## Version 2.2.x
 ### Version 2.2.1
 * Updated the instructions in the Quadratic Equation Solver.

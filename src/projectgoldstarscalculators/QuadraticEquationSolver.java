@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class QuadraticEquationSolver implements ActionListener
 {
-    public static JTextField af, bf, cf;
+    public static JTextField aField, bField, cField;
     
     public QuadraticEquationSolver()
     {
@@ -16,49 +16,40 @@ public class QuadraticEquationSolver implements ActionListener
     
     private void quadraticEquation()
     {
-        ProgramWindow qeFrame = new ProgramWindow("Quadratic Equation Solver");
-        qeFrame.setLayout(new GridLayout(4, 2));
-        qeFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        qeFrame.setInstructionsMenuBar("Please enter the quadratic equation in the following form: ax^2 + bx + c = 0");
-        JLabel aLabel = new JLabel("a:");
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        JLabel bLabel = new JLabel("b:");
-        bLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        bLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        JLabel cLabel = new JLabel("c:");
-        cLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        cLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        qeFrame.add(aLabel);
+        ProgramWindow frame = new ProgramWindow("Quadratic Equation Solver");
+        frame.setLayout(new GridLayout(4, 2));
+        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setInstructionsMenuBar("Please enter the quadratic equation in the following form: ax^2 + bx + c = 0");
+        frame.add(Components.standardLabel("a:"));
         setupAF();
-        qeFrame.add(af);
-        qeFrame.add(bLabel);
+        frame.add(aField);
+        frame.add(Components.standardLabel("b:"));
         setupBF();
-        qeFrame.add(bf);
-        qeFrame.add(cLabel);
+        frame.add(bField);
+        frame.add(Components.standardLabel("c:"));
         setupCF();
-        qeFrame.add(cf);
-        qeFrame.add(new JLabel());
-        qeFrame.add(Components.button2("Solve", new SolveQuadraticEquationListener()));
-        qeFrame.makeVisible();
+        frame.add(cField);
+        frame.add(new JLabel());
+        frame.add(Components.button2("Solve", new SolveQuadraticEquationListener()));
+        frame.makeVisible();
     }
     
     private void setupAF()
     {
-        af = new JTextField("0");
-        af.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        aField = new JTextField("0");
+        aField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupBF()
     {
-        bf = new JTextField("0");
-        bf.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        bField = new JTextField("0");
+        bField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     private void setupCF()
     {
-        cf = new JTextField("0");
-        cf.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        cField = new JTextField("0");
+        cField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     public static class SolveQuadraticEquationListener implements ActionListener
@@ -66,9 +57,9 @@ public class QuadraticEquationSolver implements ActionListener
         public void actionPerformed(ActionEvent e)
         {
             String a, b, c, output;
-            a = af.getText();
-            b = bf.getText();
-            c = cf.getText();
+            a = aField.getText();
+            b = bField.getText();
+            c = cField.getText();
             Double aNum, bNum, cNum;
             try
             {

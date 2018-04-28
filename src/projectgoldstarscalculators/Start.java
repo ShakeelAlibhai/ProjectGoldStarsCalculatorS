@@ -22,9 +22,9 @@ public class Start
     private void createFolder()
     {
         //Make a Project GoldStars Calculator S folder if it does not exist yet.
-        if(!ProjectGoldStarsCalculatorS.projectGoldStarsCalculatorSFolder.exists())
+        if(!ProjectGoldStarsCalculatorS.FOLDER.exists())
         {
-            ProjectGoldStarsCalculatorS.projectGoldStarsCalculatorSFolder.mkdir();
+            ProjectGoldStarsCalculatorS.FOLDER.mkdir();
         }
     }
     
@@ -35,7 +35,7 @@ public class Start
      */
     private static void getTheme()
     {
-        File themeTemp = new File(ProjectGoldStarsCalculatorS.projectGoldStarsCalculatorSFolder, "theme.txt");
+        File themeTemp = new File(ProjectGoldStarsCalculatorS.FOLDER, "theme.txt");
         try
         {
             Scanner s15 = new Scanner(themeTemp).useDelimiter("\\Z");
@@ -48,7 +48,7 @@ public class Start
             PrintWriter out;
             try
             {
-                File file = new File(ProjectGoldStarsCalculatorS.projectGoldStarsCalculatorSFolder, "theme.txt");
+                File file = new File(ProjectGoldStarsCalculatorS.FOLDER, "theme.txt");
                 out = new PrintWriter(file);
                 out.println(ProjectGoldStarsCalculatorS.theme);
                 out.close();
@@ -158,12 +158,12 @@ public class Start
     
     private void setFonts()
     {
-        ProjectGoldStarsCalculatorS.largeHeader = new java.awt.Font("Open Sans Extrabold", Font.PLAIN, ProjectGoldStarsCalculatorS.largeHeaderSize * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.mediumHeader = new java.awt.Font("Open Sans Extrabold", Font.PLAIN, ProjectGoldStarsCalculatorS.mediumHeaderSize * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.mediumText1 = new java.awt.Font("Open Sans Bold", Font.PLAIN, ProjectGoldStarsCalculatorS.mediumText1Size * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.mediumText2 = new java.awt.Font("Open Sans Semibold", Font.PLAIN, ProjectGoldStarsCalculatorS.mediumText2Size * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.mediumText3 = new java.awt.Font("Open Sans Bold", Font.PLAIN, ProjectGoldStarsCalculatorS.mediumText3Size * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.bodyText1 = new java.awt.Font("Open Sans Semibold", Font.PLAIN, ProjectGoldStarsCalculatorS.bodyText1Size * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.bodyText2 = new java.awt.Font("Open Sans", Font.PLAIN, ProjectGoldStarsCalculatorS.bodyText2Size * ProjectGoldStarsCalculatorS.multiplier);
+        ProjectGoldStarsCalculatorS.largeHeader = new java.awt.Font("Open Sans Extrabold", Font.PLAIN, ProjectGoldStarsCalculatorS.LARGE_HEADER_SIZE * ProjectGoldStarsCalculatorS.multiplier);
+        ProjectGoldStarsCalculatorS.mediumHeader = new java.awt.Font("Open Sans Extrabold", Font.PLAIN, ProjectGoldStarsCalculatorS.MEDIUM_HEADER_SIZE * ProjectGoldStarsCalculatorS.multiplier);
+        ProjectGoldStarsCalculatorS.mediumText1 = new java.awt.Font("Open Sans Bold", Font.PLAIN, ProjectGoldStarsCalculatorS.MEDIUM_TEXT_SIZE1 * ProjectGoldStarsCalculatorS.multiplier);
+        ProjectGoldStarsCalculatorS.mediumText2 = new java.awt.Font("Open Sans Semibold", Font.PLAIN, ProjectGoldStarsCalculatorS.MEDIUM_TEXT_SIZE2 * ProjectGoldStarsCalculatorS.multiplier);
+        ProjectGoldStarsCalculatorS.mediumText3 = new java.awt.Font("Open Sans Bold", Font.PLAIN, ProjectGoldStarsCalculatorS.MEDIUM_TEXT_SIZE3 * ProjectGoldStarsCalculatorS.multiplier);
+        ProjectGoldStarsCalculatorS.bodyText1 = new java.awt.Font("Open Sans Semibold", Font.PLAIN, ProjectGoldStarsCalculatorS.BODY_TEXT_SIZE1 * ProjectGoldStarsCalculatorS.multiplier);
+        ProjectGoldStarsCalculatorS.bodyText2 = new java.awt.Font("Open Sans", Font.PLAIN, ProjectGoldStarsCalculatorS.BODY_TEXT_SIZE2 * ProjectGoldStarsCalculatorS.multiplier);
     }
 }

@@ -12,19 +12,19 @@ public class About
     
     private void about()
     {
-        JFrame aboutFrame = new JFrame("About");
-        aboutFrame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        aboutFrame.setIconImage(Icon.getImage());
-        aboutFrame.setLayout(new GridLayout(2, 1));
-        aboutFrame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);
-        aboutFrame.getContentPane().add(titleLabel());
-        aboutFrame.getContentPane().add(versionLabel());
-        aboutFrame.setVisible(true);
+        JFrame frame = new JFrame("About");
+        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setIconImage(Icon.getImage());
+        frame.setLayout(new GridLayout(2, 1));
+        frame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);
+        frame.getContentPane().add(titleLabel());
+        frame.getContentPane().add(versionLabel());
+        frame.setVisible(true);
     }
     
     private JLabel titleLabel()
     {
-        JLabel titleLabel = new JLabel(ProjectGoldStarsCalculatorS.name, SwingConstants.CENTER);
+        JLabel titleLabel = new JLabel(ProjectGoldStarsCalculatorS.NAME, SwingConstants.CENTER);
         titleLabel.setFont(ProjectGoldStarsCalculatorS.largeHeader);
         titleLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
         return titleLabel;
@@ -32,7 +32,7 @@ public class About
     
     private JLabel versionLabel()
     {
-        JLabel versionLabel = new JLabel(ProjectGoldStarsCalculatorS.version, SwingConstants.CENTER);
+        JLabel versionLabel = new JLabel(ProjectGoldStarsCalculatorS.VERSION, SwingConstants.CENTER);
         versionLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
         versionLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
         return versionLabel;

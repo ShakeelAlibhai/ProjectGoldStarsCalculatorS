@@ -1,6 +1,7 @@
 package projectgoldstarscalculators;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 public class Components
 {
     public static JButton standardButton(String displayText, ActionListener actionListener)
@@ -21,5 +22,13 @@ public class Components
         button.setFont(ProjectGoldStarsCalculatorS.mediumText2);
         button.addActionListener(actionListener);
         return button;
+    }
+    
+    public static JLabel standardLabel(String displayText)
+    {
+        JLabel questionHeaderLabel = new JLabel(displayText);
+        questionHeaderLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
+        questionHeaderLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
+        return questionHeaderLabel;
     }
 }

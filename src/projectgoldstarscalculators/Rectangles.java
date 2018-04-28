@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Rectangles
 {
-    public static JTextField length, width;
+    public static JTextField lengthField, widthField;
     
     public Rectangles()
     {
@@ -17,55 +17,30 @@ public class Rectangles
     private void calcRectangleInformation()
     {
         ProgramWindow frame = new ProgramWindow("Rectangles");
-        frame.setLayout(new GridLayout(4, 2));
+        frame.setLayout(new GridLayout(3, 2));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.add(instructionsLabel());
-        frame.add(new JLabel());
-        frame.add(aLabel());
-        setupMPG1();
-        frame.add(length);
-        frame.add(bLabel());
-        setupMPG2();
-        frame.add(width);
+        frame.setInstructionsMenuBar("Please enter the following information:");
+        frame.add(Components.standardLabel("Length:"));
+        setupLengthField();
+        frame.add(lengthField);
+        frame.add(Components.standardLabel("Width:"));
+        setupWidthField();
+        frame.add(widthField);
         frame.add(new JLabel());
         frame.add(Components.button2("Calculate", new CalculateListener()));
         frame.makeVisible();
     }
     
-    private JLabel instructionsLabel()
+    private void setupLengthField()
     {
-        JLabel instructionsLabel = new JLabel("Please enter the following information:");
-        instructionsLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
-        instructionsLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        return instructionsLabel;
+        lengthField = new JTextField("0");
+        lengthField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private JLabel aLabel()
+    private void setupWidthField()
     {
-        JLabel aLabel = new JLabel("Length:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
-    }
-    
-    private void setupMPG1()
-    {
-        length = new JTextField("0");
-        length.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-    }
-    
-    private JLabel bLabel()
-    {
-        JLabel bLabel = new JLabel("Width:");
-        bLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        bLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return bLabel;
-    }
-    
-    private void setupMPG2()
-    {
-        width = new JTextField("0");
-        width.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        widthField = new JTextField("0");
+        widthField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener
@@ -73,8 +48,8 @@ public class Rectangles
         public void actionPerformed(ActionEvent e)
         {
             String output;
-            String lengthStr = length.getText();
-            String widthStr = width.getText();
+            String lengthStr = lengthField.getText();
+            String widthStr = widthField.getText();
             double lengthD, widthD;
             try
             {

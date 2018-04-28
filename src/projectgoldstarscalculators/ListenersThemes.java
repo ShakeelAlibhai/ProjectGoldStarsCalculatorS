@@ -113,7 +113,7 @@ public class ListenersThemes
         PrintWriter out;
         try
         {
-            File file = new File(ProjectGoldStarsCalculatorS.projectGoldStarsCalculatorSFolder, "theme.txt");
+            File file = new File(ProjectGoldStarsCalculatorS.FOLDER, "theme.txt");
             out = new PrintWriter(file);
             out.append(ProjectGoldStarsCalculatorS.theme);
             out.close();

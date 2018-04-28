@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Triangles
 {
-    public static JTextField base, height;
+    public static JTextField baseField, heightField;
     
     public Triangles()
     {
@@ -17,55 +17,30 @@ public class Triangles
     private void calcRectangleInformation()
     {
         ProgramWindow frame = new ProgramWindow("Triangles");
-        frame.setLayout(new GridLayout(4, 2));
+        frame.setLayout(new GridLayout(3, 2));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.add(instructionsLabel());
-        frame.add(new JLabel());
-        frame.add(aLabel());
-        setupMPG1();
-        frame.add(base);
-        frame.add(bLabel());
-        setupMPG2();
-        frame.add(height);
+        frame.setInstructionsMenuBar("Please enter the following information:");
+        frame.add(Components.standardLabel("Base:"));
+        setupBaseField();
+        frame.add(baseField);
+        frame.add(Components.standardLabel("Height:"));
+        setupHeightField();
+        frame.add(heightField);
         frame.add(new JLabel());
         frame.add(Components.button2("Calculate", new CalculateListener()));
         frame.makeVisible();
     }
     
-    private JLabel instructionsLabel()
+    private void setupBaseField()
     {
-        JLabel instructionsLabel = new JLabel("Please enter the following information:");
-        instructionsLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
-        instructionsLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        return instructionsLabel;
+        baseField = new JTextField("0");
+        baseField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private JLabel aLabel()
+    private void setupHeightField()
     {
-        JLabel aLabel = new JLabel("Base:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
-    }
-    
-    private void setupMPG1()
-    {
-        base = new JTextField("0");
-        base.setFont(ProjectGoldStarsCalculatorS.bodyText2);
-    }
-    
-    private JLabel bLabel()
-    {
-        JLabel bLabel = new JLabel("Height:");
-        bLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        bLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return bLabel;
-    }
-    
-    private void setupMPG2()
-    {
-        height = new JTextField("0");
-        height.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        heightField = new JTextField("0");
+        heightField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener
@@ -73,8 +48,8 @@ public class Triangles
         public void actionPerformed(ActionEvent e)
         {
             String output;
-            String baseStr = base.getText();
-            String heightStr = height.getText();
+            String baseStr = baseField.getText();
+            String heightStr = heightField.getText();
             double baseD, heightD;
             try
             {

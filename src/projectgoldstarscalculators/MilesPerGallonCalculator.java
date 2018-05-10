@@ -19,58 +19,34 @@ public class MilesPerGallonCalculator
         ProgramWindow frame = new ProgramWindow("Miles Per Gallon Calculator");
         frame.setLayout(new GridLayout(4, 2));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.setInstructionsMenuBar("Please enter the following information:");
-        frame.add(aLabel());
-        setupMPG1();
+        frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the results:");
+        frame.add(Components.standardLabel("Beginning Odometer Reading:"));
+        setupBeginningField();
         frame.add(beginningField);
-        frame.add(bLabel());
-        setupMPG2();
+        frame.add(Components.standardLabel("Ending Odometer Reading:"));
+        setupEndingField();
         frame.add(endingField);
-        frame.add(cLabel());
-        setupMPG3();
+        frame.add(Components.standardLabel("Gallons of Gas Used:"));
+        setupGallonsField();
         frame.add(gallonsField);
         frame.add(new JLabel());
         frame.add(Components.button2("Calculate", new CalculateMilesPerGallonListener()));
         frame.makeVisible();
     }
     
-    private JLabel aLabel()
-    {
-        JLabel aLabel = new JLabel("Beginning Odometer Reading:");
-        aLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        aLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return aLabel;
-    }
-    
-    private void setupMPG1()
+    private void setupBeginningField()
     {
         beginningField = new JTextField("0");
         beginningField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private JLabel bLabel()
-    {
-        JLabel bLabel = new JLabel("Ending Odometer Reading");
-        bLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        bLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return bLabel;
-    }
-    
-    private void setupMPG2()
+    private void setupEndingField()
     {
         endingField = new JTextField("0");
         endingField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private JLabel cLabel()
-    {
-        JLabel cLabel = new JLabel("Gallons of Gas Used:");
-        cLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
-        cLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return cLabel;
-    }
-    
-    private void setupMPG3()
+    private void setupGallonsField()
     {
         gallonsField = new JTextField("0");
         gallonsField.setFont(ProjectGoldStarsCalculatorS.bodyText2);

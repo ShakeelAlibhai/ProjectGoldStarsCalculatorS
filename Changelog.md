@@ -2,6 +2,10 @@
 ### Changelog
 
 ## Version 2.3.x
+### Version 2.3.2
+* Updated the Disclaimer/Disclaimer window.
+* Other minor changes.
+
 ### Version 2.3.1
 * Updated the instructions in the Miles Per Gallon Calculator.
 * Updated the instructions in the Pythagorean Triple Finder.

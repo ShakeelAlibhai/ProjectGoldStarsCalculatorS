@@ -21,32 +21,32 @@ public class QuadraticEquationSolver implements ActionListener
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
         frame.setInstructionsMenuBar("Please enter the quadratic equation in the following form: ax^2 + bx + c = 0");
         frame.add(Components.standardLabel("a:"));
-        setupAF();
+        setupAField();
         frame.add(aField);
         frame.add(Components.standardLabel("b:"));
-        setupBF();
+        setupBField();
         frame.add(bField);
         frame.add(Components.standardLabel("c:"));
-        setupCF();
+        setupCField();
         frame.add(cField);
         frame.add(new JLabel());
         frame.add(Components.button2("Solve", new SolveQuadraticEquationListener()));
         frame.makeVisible();
     }
     
-    private void setupAF()
+    private void setupAField()
     {
         aField = new JTextField("0");
         aField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private void setupBF()
+    private void setupBField()
     {
         bField = new JTextField("0");
         bField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
     }
     
-    private void setupCF()
+    private void setupCField()
     {
         cField = new JTextField("0");
         cField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
@@ -95,7 +95,7 @@ public class QuadraticEquationSolver implements ActionListener
             x2 = x2 - quadSqrt;
             x1 = x1 / (2 * aNum);
             x2 = x2 / (2 * aNum);
-            if(x1 == x2)
+            if(x1 == x2)    //If there is one unique solution
             {
                 output = "Solving the quadratic equation " + a + "x^2 + " + b + "x + " + c + " = 0...\n"
                         + "There is 1 possible solution: " + x1;

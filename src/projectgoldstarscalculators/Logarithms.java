@@ -39,6 +39,7 @@ public class Logarithms implements ActionListener
     {
         numberField = new JTextField("0");
         numberField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        numberField.addActionListener(new ComputeListener());
     }
     
     private void setupLogBase10Field()

@@ -17,8 +17,8 @@ public class TemperatureConversions
     {
         ProgramWindow frame = new ProgramWindow("Temperature Conversions");
         frame.setLayout(new GridLayout(3, 3));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 375 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.setInstructionsMenuBar("Please fill one of the fields and then press the button to convert to the other units.");
+        frame.setSize(875 * ProjectGoldStarsCalculatorS.multiplier, 475 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setInstructionsMenuBar("Please fill in one of the fields, and then press the corresponding button to convert to the other units.");
         setupCelsiusField();
         setupFahrenheitField();
         setupKelvinField();

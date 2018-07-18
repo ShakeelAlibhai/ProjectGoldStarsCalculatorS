@@ -57,10 +57,12 @@ public class QuadraticEquationSolver implements ActionListener
         public void actionPerformed(ActionEvent e)
         {
             String a, b, c, output;
+            //Get the values of aField, bField, and CField and store them in Strings a, b, and c, respectively
             a = aField.getText();
             b = bField.getText();
             c = cField.getText();
-            Double aNum, bNum, cNum;
+            //Attempt to convert Strings a, b, and c to doubles and store them in aNum, bNum, and cNum, respectively
+            double aNum, bNum, cNum;
             try
             {
                 aNum = Double.parseDouble(a);

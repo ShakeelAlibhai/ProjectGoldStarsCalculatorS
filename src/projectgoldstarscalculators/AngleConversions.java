@@ -34,7 +34,7 @@ public class AngleConversions
     private JLabel descriptionLabel(String text)
     {
         JLabel descriptionLabel = new JLabel(text);
-        descriptionLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
+        descriptionLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
         descriptionLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
         return descriptionLabel;
     }

@@ -57,9 +57,11 @@ public class MilesPerGallonCalculator
         public void actionPerformed(ActionEvent e)
         {
             String output;
+            //Get the values of beginningField, endingField, and gallonsField and store them in Strings mpg1, mpg2, and mpg3, respectively.
             String mpgs1 = beginningField.getText();
             String mpgs2 = endingField.getText();
             String mpgs3 = gallonsField.getText();
+            //Attempt to convert mpg1, mpg2, and mpg3 and store them in input1, input2, and input3, respectively.
             double input1, input2, input3;
             try
             {

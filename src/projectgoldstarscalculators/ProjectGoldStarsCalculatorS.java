@@ -4,16 +4,19 @@ import java.awt.Font;
 import java.io.File;
 public class ProjectGoldStarsCalculatorS
 {
-    public static final String NAME = "Project GoldStars Calculator S 2.3 Update 2";
-    public static final String VERSION = "Version 2.3.2";
+    public static final String NAME = "Project GoldStars Calculator S 2.4";
+    public static final String VERSION = "Version 2.4";
     public static final File FOLDER = new File(System.getProperty("user.home"), "Project GoldStars Calculator S");
-    public static Color color1;
-    public static Color color2;
-    public static boolean standardColors;
     public static int height;
     public static int width;
     public static int multiplier;
     public static String theme;
+    
+    //Color Variables
+    public static Color mainColor;
+    public static Color secondaryColor;
+    public static Color textBackgroundColor;
+    public static boolean standardColors;
     
     //Fonts
     public static Font largeHeader;

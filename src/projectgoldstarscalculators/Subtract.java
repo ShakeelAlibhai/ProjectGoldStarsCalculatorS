@@ -57,7 +57,7 @@ public class Subtract implements ActionListener
     private JLabel numberLabel(int number)
     {
         JLabel label = new JLabel("Number #" + number + ":");
-        label.setForeground(ProjectGoldStarsCalculatorS.color2);
+        label.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
         label.setFont(ProjectGoldStarsCalculatorS.bodyText1);
         return label;
     }

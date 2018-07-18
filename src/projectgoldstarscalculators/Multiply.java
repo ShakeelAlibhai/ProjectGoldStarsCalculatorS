@@ -59,7 +59,7 @@ public class Multiply implements ActionListener
     private JMenuBar menuBar()
     {
         JMenuBar menuBar = new JMenuBar();
-        menuBar.setBackground(ProjectGoldStarsCalculatorS.color1);
+        menuBar.setBackground(ProjectGoldStarsCalculatorS.mainColor);
         menuBar.add(Components.standardButton("Multiply More Than 10 Numbers", new MultiplyMoreThan10NumbersListener()));
         return menuBar;
     }
@@ -67,7 +67,7 @@ public class Multiply implements ActionListener
     private JLabel numberLabel(int number)
     {
         JLabel label = new JLabel("Number #" + number + ":");
-        label.setForeground(ProjectGoldStarsCalculatorS.color2);
+        label.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
         label.setFont(ProjectGoldStarsCalculatorS.bodyText1);
         return label;
     }

@@ -62,76 +62,78 @@ public class Start
     
     public static void applyTheme()
     {
+        ProjectGoldStarsCalculatorS.textBackgroundColor = Color.white;
         if("Dark".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = Color.black;
-            ProjectGoldStarsCalculatorS.color2 = Color.lightGray;
+            ProjectGoldStarsCalculatorS.mainColor = Color.black;
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.lightGray;
+            ProjectGoldStarsCalculatorS.textBackgroundColor = new Color(224, 224, 224);
             ProjectGoldStarsCalculatorS.standardColors = false;
         }
         if("Desert".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = new Color(255, 228, 181);
-            ProjectGoldStarsCalculatorS.color2 = new Color(255, 69, 0);
+            ProjectGoldStarsCalculatorS.mainColor = new Color(255, 228, 181);
+            ProjectGoldStarsCalculatorS.secondaryColor = new Color(255, 69, 0);
             ProjectGoldStarsCalculatorS.standardColors = true;
         }
         if("Fire".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = Color.red;
-            ProjectGoldStarsCalculatorS.color2 = Color.yellow;
+            ProjectGoldStarsCalculatorS.mainColor = Color.red;
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.yellow;
             ProjectGoldStarsCalculatorS.standardColors = false;
         }
         if("Forest".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = new Color(0x00, 0x80, 0x00);
-            ProjectGoldStarsCalculatorS.color2 = Color.white;
+            ProjectGoldStarsCalculatorS.mainColor = new Color(0x00, 0x80, 0x00);
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.white;
             ProjectGoldStarsCalculatorS.standardColors = false;
         }
         if("Grass".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = Color.green;
-            ProjectGoldStarsCalculatorS.color2 = new Color(0x00, 0x80, 0x00);
+            ProjectGoldStarsCalculatorS.mainColor = Color.green;
+            ProjectGoldStarsCalculatorS.secondaryColor = new Color(0x00, 0x80, 0x00);
             ProjectGoldStarsCalculatorS.standardColors = true;
         }
         if("Mountain".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = Color.darkGray;
-            ProjectGoldStarsCalculatorS.color2 = Color.white;
+            ProjectGoldStarsCalculatorS.mainColor = Color.darkGray;
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.white;
             ProjectGoldStarsCalculatorS.standardColors = false;
         }
         if("Night".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = Color.black;
-            ProjectGoldStarsCalculatorS.color2 = Color.lightGray;
+            ProjectGoldStarsCalculatorS.mainColor = Color.black;
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.lightGray;
             ProjectGoldStarsCalculatorS.standardColors = false;
         }
         if("Silver".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = Color.lightGray;
-            ProjectGoldStarsCalculatorS.color2 = Color.darkGray;
+            ProjectGoldStarsCalculatorS.mainColor = Color.lightGray;
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.darkGray;
             ProjectGoldStarsCalculatorS.standardColors = true;
         }
         if("Sky".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = Color.white;
-            ProjectGoldStarsCalculatorS.color2 = Color.blue;
+            ProjectGoldStarsCalculatorS.mainColor = Color.white;
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.blue;
             ProjectGoldStarsCalculatorS.standardColors = true;
         }
         if("Snow".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = Color.white;
-            ProjectGoldStarsCalculatorS.color2 = Color.gray;
+            ProjectGoldStarsCalculatorS.mainColor = Color.white;
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.gray;
             ProjectGoldStarsCalculatorS.standardColors = true;
         }
         if("Water".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = new Color(64, 224, 208);
-            ProjectGoldStarsCalculatorS.color2 = Color.blue;
+            ProjectGoldStarsCalculatorS.mainColor = new Color(64, 224, 208);
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.blue;
             ProjectGoldStarsCalculatorS.standardColors = false;
         }
         if("Project GoldStars Calculator S".equals(ProjectGoldStarsCalculatorS.theme))
         {
-            ProjectGoldStarsCalculatorS.color1 = Color.lightGray;
-            ProjectGoldStarsCalculatorS.color2 = new Color(0x00, 0x00, 0xC0);
+            ProjectGoldStarsCalculatorS.mainColor = Color.lightGray;
+            ProjectGoldStarsCalculatorS.secondaryColor = new Color(0x00, 0x00, 0xC0);
             ProjectGoldStarsCalculatorS.standardColors = true;
         }
     }

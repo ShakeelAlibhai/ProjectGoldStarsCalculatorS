@@ -16,7 +16,7 @@ public class About
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
         frame.setIconImage(Icon.getImage());
         frame.setLayout(new GridLayout(2, 1));
-        frame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);
+        frame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.mainColor);
         frame.getContentPane().add(titleLabel());
         frame.getContentPane().add(versionLabel());
         frame.setVisible(true);
@@ -26,7 +26,7 @@ public class About
     {
         JLabel titleLabel = new JLabel(ProjectGoldStarsCalculatorS.NAME, SwingConstants.CENTER);
         titleLabel.setFont(ProjectGoldStarsCalculatorS.largeHeader);
-        titleLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
+        titleLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
         return titleLabel;
     }
     
@@ -34,7 +34,7 @@ public class About
     {
         JLabel versionLabel = new JLabel(ProjectGoldStarsCalculatorS.VERSION, SwingConstants.CENTER);
         versionLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
-        versionLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
+        versionLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
         return versionLabel;
     }
 }

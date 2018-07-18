@@ -25,7 +25,7 @@ public class Window extends JFrame
         frame.setExtendedState(frame.MAXIMIZED_BOTH);
         frame.setIconImage(Icon.getImage());
         frame.setLayout(new GridLayout(5, 5));
-        frame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.color1);
+        frame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.mainColor);
         frame.setJMenuBar(menuBar());
         frame.add(headerLabel("Basic Calculations:"));
         frame.add(action("Add", new Add2NumbersListener()));
@@ -57,8 +57,8 @@ public class Window extends JFrame
     private JMenu otherCalculatorsMenu()
     {
         JMenu otherCalculatorsMenu = new JMenu("Other Calculators");
-        otherCalculatorsMenu.setBackground(ProjectGoldStarsCalculatorS.color1);
-        otherCalculatorsMenu.setForeground(ProjectGoldStarsCalculatorS.color2);
+        otherCalculatorsMenu.setBackground(ProjectGoldStarsCalculatorS.mainColor);
+        otherCalculatorsMenu.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
         otherCalculatorsMenu.setFont(ProjectGoldStarsCalculatorS.mediumText1);
         otherCalculatorsMenu.add(standardMenuItem("Average Calculator", new AverageCalculatorListener()));
         otherCalculatorsMenu.add(standardMenuItem("Miles Per Gallon Calculator", new MilesPerGallonCalculatorListener()));
@@ -69,7 +69,7 @@ public class Window extends JFrame
     private JMenuBar menuBar()
     {
         JMenuBar menuBar = new JMenuBar();
-        menuBar.setBackground(ProjectGoldStarsCalculatorS.color1);
+        menuBar.setBackground(ProjectGoldStarsCalculatorS.mainColor);
         menuBar.add(Components.standardButton("About", new AboutListener()));
         menuBar.add(Components.standardButton("Disclaimer", new DisclaimerListener()));
         menuBar.add(Components.standardButton("Themes", new ThemesListener()));
@@ -88,7 +88,7 @@ public class Window extends JFrame
     private JLabel headerLabel(String displayText)
     {
         JLabel titleLabel = new JLabel(displayText, SwingConstants.CENTER);
-        titleLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
+        titleLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
         titleLabel.setFont(ProjectGoldStarsCalculatorS.mediumHeader);
         return titleLabel;
     }
@@ -96,7 +96,7 @@ public class Window extends JFrame
     private JLabel action(String actionName, MouseListener mouseListener)
     {
         JLabel action = new JLabel(actionName, SwingConstants.CENTER);
-        action.setForeground(ProjectGoldStarsCalculatorS.color2);
+        action.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
         action.setFont(ProjectGoldStarsCalculatorS.mediumText2);
         action.addMouseListener(mouseListener);
         return action;

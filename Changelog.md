@@ -1,17 +1,24 @@
-# Project GoldStars Calculator S
-### Changelog
+# Project GoldStars Calculator S Changelog
+
+## Version 2.4.x
+### Version 2.4 (July 18, 2018)
+* In the "Logarithms" and "Square & Cube Roots" windows, pressing Enter in the Number field has the same effect as clicking the Compute button.
+* Updated Temperature Conversions.
+* Updated the interface of Exponents.
+* When the Dark theme is enabled, the background of the text area in the Disclaimer is now very light gray instead of white.
+* Other minor changes.
 
 ## Version 2.3.x
-### Version 2.3.2
+### Version 2.3.2 (June 17, 2018)
 * Updated the Disclaimer/Disclaimer window.
 * Other minor changes.
 
-### Version 2.3.1
+### Version 2.3.1 (May 10, 2018)
 * Updated the instructions in the Miles Per Gallon Calculator.
 * Updated the instructions in the Pythagorean Triple Finder.
 * Other minor changes.
 
-### Version 2.3
+### Version 2.3 (April 28, 2018)
 * Added instructions to the Logarithms window.
 * Added instructions to the Square & Cube Roots window.
 * Updated the Circles window.
@@ -20,19 +27,19 @@
 * Other minor changes.
 
 ## Version 2.2.x
-### Version 2.2.1
+### Version 2.2.1 (February 8, 2018)
 * Updated the instructions in the Quadratic Equation Solver.
 * Updated the instructions in the "Angle Conversions" window.
 * Updated the instructions in the "Temperature Conversions" window.
 
-### Version 2.2
+### Version 2.2 (January 13, 2018)
 * Replaced the "Log Base 10" and "Natural Log" windows with a new "Logarithms" window.
 * Updated the Miles Per Gallon Calculator.
 * Updated the Pythagorean Triple Finder.
 * Other minor changes.
 
 ## Version 2.1.x
-### Version 2.1
+### Version 2.1 (October 24, 2017)
 * Changed the title of the "About" window from "About Project GoldStars Calculator S" to "About."
 * Multiplication and division defaults are now set to 1 rather than 0.
 * Replaced the "Square Root" and "Cube Root" windows with a new "Square & Cube Roots" window.
@@ -40,7 +47,7 @@
 * Other minor changes.
 
 ## Version 2.0.x
-### Version 2.0
+### Version 2.0 (August 2, 2017)
 * Added a "Geometry" section to the main window.
 * Added the ability to add more than 10 numbers.
 * Added the ability to convert temperatures to and from Kelvin.
@@ -59,5 +66,5 @@
 * Other minor changes.
 
 ## Version 1.0.x
-### Version 1.0
+### Version 1.0 (May 23, 2017)
 * This is Version 1.0 of Project GoldStars Calculator S!

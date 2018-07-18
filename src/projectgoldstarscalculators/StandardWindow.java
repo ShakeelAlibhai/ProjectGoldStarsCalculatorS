@@ -41,7 +41,7 @@ public class StandardWindow
     private JMenuBar instructionsMenuBar(String instructions)
     {
         JMenuBar menuBar = new JMenuBar();
-        menuBar.setBackground(ProjectGoldStarsCalculatorS.color1);
+        menuBar.setBackground(ProjectGoldStarsCalculatorS.mainColor);
         menuBar.add(instructionsLabel(instructions));
         return menuBar;
     }
@@ -49,7 +49,7 @@ public class StandardWindow
     private JLabel instructionsLabel(String instructions)
     {
         JLabel instructionsLabel = new JLabel(instructions);
-        instructionsLabel.setForeground(ProjectGoldStarsCalculatorS.color2);
+        instructionsLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
         instructionsLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
         return instructionsLabel;
     }

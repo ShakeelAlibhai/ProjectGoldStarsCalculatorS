@@ -1,5 +1,12 @@
 # Project GoldStars Calculator S Changelog
 
+## Version 2.5.x
+### Version 2.5
+* Added an error message dialog in the Quadratic Equation Solver that appears when at least one of the three inputs cannot be converted to a number.
+* In the "Circles" window, pressing Enter in the Radius field has the same effect as clicking the Calculate button.
+* The color of the text in the Disclaimer window is now based on the theme.
+* Updated the Forest theme.
+
 ## Version 2.4.x
 ### Version 2.4 (July 18, 2018)
 * In the "Logarithms" and "Square & Cube Roots" windows, pressing Enter in the Number field has the same effect as clicking the Compute button.

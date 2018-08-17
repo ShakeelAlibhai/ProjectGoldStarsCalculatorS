@@ -85,7 +85,7 @@ public class Start
         if("Forest".equals(ProjectGoldStarsCalculatorS.theme))
         {
             ProjectGoldStarsCalculatorS.mainColor = new Color(0x00, 0x80, 0x00);
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.white;
+            ProjectGoldStarsCalculatorS.secondaryColor = new Color(222, 184, 135);
             ProjectGoldStarsCalculatorS.standardColors = false;
         }
         if("Grass".equals(ProjectGoldStarsCalculatorS.theme))

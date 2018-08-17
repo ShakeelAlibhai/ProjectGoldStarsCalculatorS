@@ -16,6 +16,14 @@ public class InformationWindow extends StandardWindow
         textArea.setBackground(ProjectGoldStarsCalculatorS.textBackgroundColor);
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
+        if(ProjectGoldStarsCalculatorS.standardColors)
+        {
+            textArea.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
+        }
+        else
+        {
+            textArea.setForeground(ProjectGoldStarsCalculatorS.mainColor);
+        }
         frame.add(textArea);
     }
 }

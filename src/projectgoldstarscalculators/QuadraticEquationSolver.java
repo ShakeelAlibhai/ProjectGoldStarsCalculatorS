@@ -69,6 +69,7 @@ public class QuadraticEquationSolver implements ActionListener
             }
             catch(Exception e2)
             {
+                JOptionPane.showMessageDialog(null, "ERROR", "Quadratic Equation Solver", JOptionPane.ERROR_MESSAGE);
                 return;
             }
             try
@@ -77,6 +78,7 @@ public class QuadraticEquationSolver implements ActionListener
             }
             catch(Exception e2)
             {
+                JOptionPane.showMessageDialog(null, "ERROR", "Quadratic Equation Solver", JOptionPane.ERROR_MESSAGE);
                 return;
             }
             try
@@ -85,6 +87,7 @@ public class QuadraticEquationSolver implements ActionListener
             }
             catch(Exception e2)
             {
+                JOptionPane.showMessageDialog(null, "ERROR", "Quadratic Equation Solver", JOptionPane.ERROR_MESSAGE);
                 return;
             }
             double x1, x2, quadSqrt;

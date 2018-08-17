@@ -32,6 +32,7 @@ public class Circles
     {
         radiusField = new JTextField("0");
         radiusField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        radiusField.addActionListener(new CalculateListener());
     }
     
     public static class CalculateListener implements ActionListener

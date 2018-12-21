@@ -4,11 +4,11 @@ import java.awt.Font;
 import java.io.File;
 public class ProjectGoldStarsCalculatorS
 {
-    public static final String NAME = "Project GoldStars Calculator S 2.5";
-    public static final String VERSION = "Version 2.5";
+    public static final String NAME = "Project GoldStars Calculator S 2.5 Update 1";
+    public static final String VERSION = "Version 2.5.1";
     public static final File FOLDER = new File(System.getProperty("user.home"), "Project GoldStars Calculator S");
-    public static int height;
-    public static int width;
+    public static int height;   //Height of the screen (in pixels)
+    public static int width;    //Width of the screen (in pixels)
     public static int multiplier;
     public static String theme;
     

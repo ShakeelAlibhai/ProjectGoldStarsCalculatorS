@@ -2,6 +2,7 @@ package projectgoldstarscalculators;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 public class Components
 {
     public static JButton standardButton(String displayText, ActionListener actionListener)
@@ -26,9 +27,17 @@ public class Components
     
     public static JLabel standardLabel(String displayText)
     {
-        JLabel questionHeaderLabel = new JLabel(displayText);
-        questionHeaderLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
-        questionHeaderLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
-        return questionHeaderLabel;
+        JLabel label = new JLabel(displayText);
+        label.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
+        label.setFont(ProjectGoldStarsCalculatorS.bodyText1);
+        return label;
+    }
+    
+    public static JLabel disclaimerLabel(String displayText)
+    {
+        JLabel label = new JLabel(displayText, SwingConstants.CENTER);
+        label.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
+        label.setFont(ProjectGoldStarsCalculatorS.mediumText3);
+        return label;
     }
 }

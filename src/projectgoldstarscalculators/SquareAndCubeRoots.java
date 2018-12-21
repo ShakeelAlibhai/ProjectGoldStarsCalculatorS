@@ -19,7 +19,7 @@ public class SquareAndCubeRoots implements ActionListener
         ProgramWindow frame = new ProgramWindow("Square & Cube Roots");
         frame.setLayout(new GridLayout(3, 3));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find the square and cube roots:");
+        frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find its square and cube roots:");
         frame.add(Components.standardLabel("Number:"));
         setupNumberField();
         frame.add(numberField);
@@ -31,7 +31,7 @@ public class SquareAndCubeRoots implements ActionListener
         frame.add(Components.standardLabel("Cube Root:"));
         setupCubeRootField();
         frame.add(cubeRootField);
-        frame.add(new JLabel());
+        frame.add(Components.disclaimerLabel("Note: Values may not be exact."));
         frame.makeVisible();
     }
     

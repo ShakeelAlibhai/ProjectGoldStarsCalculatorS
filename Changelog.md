@@ -1,5 +1,12 @@
 # Project GoldStars Calculator S Changelog
 
+## Version 2.6.x
+### Version 2.6 (January 10, 2019)
+* Updated the "Circles" window.
+* Updated the instructions in the "Triangles" window.
+* Updated the "Logarithms" window.
+* Updated the "Rectangles" window.
+
 ## Version 2.5.x
 ### Version 2.5.1 (December 21, 2018)
 * Updated the "Square & Cube Roots" window.

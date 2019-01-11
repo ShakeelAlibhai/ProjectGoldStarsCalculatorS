@@ -18,8 +18,8 @@ public class Rectangles
     {
         ProgramWindow frame = new ProgramWindow("Rectangles");
         frame.setLayout(new GridLayout(3, 2));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.setInstructionsMenuBar("Please enter the following information:");
+        frame.setSize(800 * ProjectGoldStarsCalculatorS.multiplier, 425 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the area and perimeter:");
         frame.add(Components.standardLabel("Length:"));
         setupLengthField();
         frame.add(lengthField);

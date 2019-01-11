@@ -18,8 +18,8 @@ public class Logarithms implements ActionListener
     {
         ProgramWindow frame = new ProgramWindow("Logarithms");
         frame.setLayout(new GridLayout(3, 3));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find the Log Base 10 and Log Base e:");
+        frame.setSize(850 * ProjectGoldStarsCalculatorS.multiplier, 475 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find the log base 10 and log base e of that number:");
         frame.add(Components.standardLabel("Number:"));
         setupNumberField();
         frame.add(numberField);
@@ -31,7 +31,7 @@ public class Logarithms implements ActionListener
         frame.add(Components.standardLabel("Log Base e:"));
         setupLogBaseEField();
         frame.add(logBaseEField);
-        frame.add(new JLabel());
+        frame.add(Components.disclaimerLabel("Note: Values may not be exact."));
         frame.makeVisible();
     }
     

@@ -19,7 +19,7 @@ public class Triangles
         ProgramWindow frame = new ProgramWindow("Triangles");
         frame.setLayout(new GridLayout(3, 2));
         frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
-        frame.setInstructionsMenuBar("Please enter the following information:");
+        frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the area:");
         frame.add(Components.standardLabel("Base:"));
         setupBaseField();
         frame.add(baseField);

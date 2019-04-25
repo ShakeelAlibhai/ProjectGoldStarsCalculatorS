@@ -1,6 +1,9 @@
 # Project GoldStars Calculator S Changelog
 
 ## Version 2.6.x
+### Version 2.6.1 (April 25, 2019)
+* Improved support for negative numbers in the "Square & Cube Roots" window.
+
 ### Version 2.6 (January 10, 2019)
 * Updated the "Circles" window.
 * Updated the instructions in the "Triangles" window.

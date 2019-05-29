@@ -38,12 +38,14 @@ public class Exponents
     {
         baseField = new JTextField("0");
         baseField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        baseField.addActionListener(new CalculateListener());
     }
     
     private void setupExponentField()
     {
         exponentField = new JTextField("0");
         exponentField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        exponentField.addActionListener(new CalculateListener());
     }
     
     private void setupResultField()
@@ -57,7 +59,6 @@ public class Exponents
     {
         public void actionPerformed(ActionEvent e)
         {
-            String output;
             String baseStr = baseField.getText();
             String exponentStr = exponentField.getText();
             double baseD, exponentD;

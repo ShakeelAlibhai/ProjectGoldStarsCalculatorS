@@ -61,7 +61,7 @@ public class SquareAndCubeRoots implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
         {
-            double input = 0.0;
+            double input;
             try
             {
                 String temp = numberField.getText();

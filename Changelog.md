@@ -1,6 +1,10 @@
 # Project GoldStars Calculator S Changelog
 
 ## Version 2.6.x
+### Version 2.6.2 (May 29, 2019)
+* In the "Exponents" window, pressing Enter in one of the input fields has the same effect as clicking the Calculate button.
+* Other minor changes.
+
 ### Version 2.6.1 (April 25, 2019)
 * Improved support for negative numbers in the "Square & Cube Roots" window.
 

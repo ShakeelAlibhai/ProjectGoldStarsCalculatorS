@@ -3,6 +3,7 @@
 ## Version 3.0.x
 ### Version 3.0
 * Add a new theme, "Dawn".
+* Update the interface of the Quadratic Equation Solver.
 
 ## Version 2.6.x
 ### Version 2.6.2 (May 29, 2019)

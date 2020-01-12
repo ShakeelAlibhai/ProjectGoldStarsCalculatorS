@@ -12,9 +12,10 @@ public class Themes
     private void themes()
     {
         ProgramWindow frame = new ProgramWindow("Themes");
-        frame.setLayout(new GridLayout(11, 1));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setLayout(new GridLayout(12, 1));
+        frame.setSize(775 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
         frame.setInstructionsMenuBar("Please choose a theme:");
+        frame.add(dawnTheme());
         frame.add(darkTheme());
         frame.add(desertTheme());
         frame.add(fireTheme());
@@ -27,6 +28,16 @@ public class Themes
         frame.add(waterTheme());
         frame.add(projectGoldStarsCalculatorSTheme());
         frame.makeVisible();
+    }
+    
+    private JButton dawnTheme()
+    {
+        JButton darkTheme = new JButton("Dawn");
+        darkTheme.setFont(ProjectGoldStarsCalculatorS.mediumText2);
+        darkTheme.setBackground(new Color(102, 0, 153));
+        darkTheme.setForeground(Color.yellow);
+        darkTheme.addActionListener(new ListenersThemes.DawnThemeListener());
+        return darkTheme;
     }
     
     private JButton darkTheme()

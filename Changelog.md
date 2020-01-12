@@ -1,5 +1,9 @@
 # Project GoldStars Calculator S Changelog
 
+## Version 3.0.x
+### Version 3.0
+* Add a new theme, "Dawn".
+
 ## Version 2.6.x
 ### Version 2.6.2 (May 29, 2019)
 * In the "Exponents" window, pressing Enter in one of the input fields has the same effect as clicking the Calculate button.

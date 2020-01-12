@@ -7,6 +7,15 @@ import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 public class ListenersThemes
 {
+    public static class DawnThemeListener implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            processThemeChoice("Dawn");
+        }
+    }
+    
     public static class DarkThemeListener implements ActionListener
     {
         @Override

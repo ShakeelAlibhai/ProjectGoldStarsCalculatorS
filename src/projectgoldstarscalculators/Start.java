@@ -63,6 +63,12 @@ public class Start
     public static void applyTheme()
     {
         ProjectGoldStarsCalculatorS.textBackgroundColor = Color.white;
+        if("Dawn".equals(ProjectGoldStarsCalculatorS.theme))
+        {
+            ProjectGoldStarsCalculatorS.mainColor = new Color(102, 0, 153);
+            ProjectGoldStarsCalculatorS.secondaryColor = Color.yellow;
+            ProjectGoldStarsCalculatorS.standardColors = false;
+        }
         if("Dark".equals(ProjectGoldStarsCalculatorS.theme))
         {
             ProjectGoldStarsCalculatorS.mainColor = Color.black;

@@ -39,8 +39,8 @@ public class Window extends JFrame
         frame.add(action("Quadratic Equation Solver", new QuadraticEquationListener()));
         frame.add(headerLabel("Conversions:"));
         frame.add(action("Angle Conversions", new AngleConversionsListener()));
+        frame.add(action("Distance Conversions", new DistanceConversionsListener()));
         frame.add(action("Temperature Conversions", new TemperatureConversionsListener()));
-        frame.add(new JLabel());
         frame.add(new JLabel());
         frame.add(headerLabel("Geometry:"));
         frame.add(action("Circles", new CirclesListener()));
@@ -387,6 +387,38 @@ public class Window extends JFrame
         public void mousePressed(MouseEvent e)
         {
             new AngleConversions();
+        }
+
+        @Override
+        public void mouseClicked(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e)
+        {
+            
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e)
+        {
+            
+        }
+    }
+    
+    public static class DistanceConversionsListener implements MouseListener
+    {
+        public void mousePressed(MouseEvent e)
+        {
+            System.out.println("Work in Progress");
         }
 
         @Override

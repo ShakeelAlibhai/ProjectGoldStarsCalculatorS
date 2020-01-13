@@ -13,16 +13,16 @@ public class InformationWindow extends StandardWindow
         JTextArea textArea = new JTextArea(s);
         textArea.setEditable(false);
         textArea.setFont(f);
-        textArea.setBackground(ProjectGoldStarsCalculatorS.textBackgroundColor);
+        textArea.setBackground(Main.textBackgroundColor);
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
-        if(ProjectGoldStarsCalculatorS.standardColors)
+        if(Main.standardColors)
         {
-            textArea.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
+            textArea.setForeground(Main.secondaryColor);
         }
         else
         {
-            textArea.setForeground(ProjectGoldStarsCalculatorS.mainColor);
+            textArea.setForeground(Main.mainColor);
         }
         frame.add(textArea);
     }

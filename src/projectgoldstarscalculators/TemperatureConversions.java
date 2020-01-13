@@ -17,7 +17,7 @@ public class TemperatureConversions
     {
         ProgramWindow frame = new ProgramWindow("Temperature Conversions");
         frame.setLayout(new GridLayout(3, 3));
-        frame.setSize(875 * ProjectGoldStarsCalculatorS.multiplier, 475 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(875 * Main.multiplier, 475 * Main.multiplier);
         frame.setInstructionsMenuBar("Please fill in one of the fields, and then press the corresponding button to convert to the other units.");
         setupCelsiusField();
         setupFahrenheitField();
@@ -37,19 +37,19 @@ public class TemperatureConversions
     private void setupCelsiusField()
     {
         celsiusField = new JTextField("0");
-        celsiusField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        celsiusField.setFont(Main.bodyText2);
     }
     
     private void setupFahrenheitField()
     {
         fahrenheitField = new JTextField("0");
-        fahrenheitField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        fahrenheitField.setFont(Main.bodyText2);
     }
     
     private void setupKelvinField()
     {
         kelvinField = new JTextField("0");
-        kelvinField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        kelvinField.setFont(Main.bodyText2);
     }
     
     /*

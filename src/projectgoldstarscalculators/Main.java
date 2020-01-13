@@ -2,7 +2,7 @@ package projectgoldstarscalculators;
 import java.awt.Color;
 import java.awt.Font;
 import java.io.File;
-public class ProjectGoldStarsCalculatorS
+public class Main
 {
     public static final String NAME = "Project GoldStars Calculator S 3.0 Development Build 2";
     public static final String VERSION = "Version 3.0";

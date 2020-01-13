@@ -18,7 +18,7 @@ public class Triangles
     {
         ProgramWindow frame = new ProgramWindow("Triangles");
         frame.setLayout(new GridLayout(3, 2));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the area:");
         frame.add(Components.standardLabel("Base:"));
         setupBaseField();
@@ -34,13 +34,13 @@ public class Triangles
     private void setupBaseField()
     {
         baseField = new JTextField("0");
-        baseField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        baseField.setFont(Main.bodyText2);
     }
     
     private void setupHeightField()
     {
         heightField = new JTextField("0");
-        heightField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        heightField.setFont(Main.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener

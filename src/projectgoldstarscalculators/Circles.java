@@ -18,7 +18,7 @@ public class Circles
     {
         ProgramWindow frame = new ProgramWindow("Circles");
         frame.setLayout(new GridLayout(3, 3));
-        frame.setSize(800 * ProjectGoldStarsCalculatorS.multiplier, 425 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(800 * Main.multiplier, 425 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the radius of the circle, and then press Calculate to find its area and circumference:");
         frame.add(Components.standardLabel("Radius:"));
         setupRadiusField();
@@ -38,7 +38,7 @@ public class Circles
     private void setupRadiusField()
     {
         radiusField = new JTextField("0");
-        radiusField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        radiusField.setFont(Main.bodyText2);
         radiusField.addActionListener(new CalculateListener());
     }
     
@@ -46,14 +46,14 @@ public class Circles
     {
         areaField = new JTextField("0");
         areaField.setEditable(false);
-        areaField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        areaField.setFont(Main.bodyText2);
     }
     
     private void setupCircumferenceField()
     {
         circumferenceField = new JTextField("0");
         circumferenceField.setEditable(false);
-        circumferenceField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        circumferenceField.setFont(Main.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener

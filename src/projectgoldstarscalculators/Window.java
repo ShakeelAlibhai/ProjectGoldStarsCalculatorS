@@ -21,11 +21,11 @@ public class Window extends JFrame
     {
         JFrame frame = new JFrame("Project GoldStars Calculator S");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1100 * ProjectGoldStarsCalculatorS.multiplier, 500 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(1100 * Main.multiplier, 500 * Main.multiplier);
         frame.setExtendedState(frame.MAXIMIZED_BOTH);
         frame.setIconImage(Icon.getImage());
         frame.setLayout(new GridLayout(5, 5));
-        frame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.mainColor);
+        frame.getContentPane().setBackground(Main.mainColor);
         frame.setJMenuBar(menuBar());
         frame.add(headerLabel("Basic Calculations:"));
         frame.add(action("Add", new Add2NumbersListener()));
@@ -57,9 +57,9 @@ public class Window extends JFrame
     private JMenu otherCalculatorsMenu()
     {
         JMenu otherCalculatorsMenu = new JMenu("Other Calculators");
-        otherCalculatorsMenu.setBackground(ProjectGoldStarsCalculatorS.mainColor);
-        otherCalculatorsMenu.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
-        otherCalculatorsMenu.setFont(ProjectGoldStarsCalculatorS.mediumText1);
+        otherCalculatorsMenu.setBackground(Main.mainColor);
+        otherCalculatorsMenu.setForeground(Main.secondaryColor);
+        otherCalculatorsMenu.setFont(Main.mediumText1);
         otherCalculatorsMenu.add(standardMenuItem("Average Calculator", new AverageCalculatorListener()));
         otherCalculatorsMenu.add(standardMenuItem("Miles Per Gallon Calculator", new MilesPerGallonCalculatorListener()));
         otherCalculatorsMenu.add(standardMenuItem("Pythagorean Triple Finder", new PythagoreanTripleFinderListener()));
@@ -69,7 +69,7 @@ public class Window extends JFrame
     private JMenuBar menuBar()
     {
         JMenuBar menuBar = new JMenuBar();
-        menuBar.setBackground(ProjectGoldStarsCalculatorS.mainColor);
+        menuBar.setBackground(Main.mainColor);
         menuBar.add(Components.standardButton("About", new AboutListener()));
         menuBar.add(Components.standardButton("Disclaimer", new DisclaimerListener()));
         menuBar.add(Components.standardButton("Themes", new ThemesListener()));
@@ -80,7 +80,7 @@ public class Window extends JFrame
     private JMenuItem standardMenuItem(String displayText, ActionListener actionListener)
     {
         JMenuItem menuItem = new JMenuItem(displayText);
-        menuItem.setFont(ProjectGoldStarsCalculatorS.mediumText3);
+        menuItem.setFont(Main.mediumText3);
         menuItem.addActionListener(actionListener);
         return menuItem;
     }
@@ -88,16 +88,16 @@ public class Window extends JFrame
     private JLabel headerLabel(String displayText)
     {
         JLabel titleLabel = new JLabel(displayText, SwingConstants.CENTER);
-        titleLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
-        titleLabel.setFont(ProjectGoldStarsCalculatorS.mediumHeader);
+        titleLabel.setForeground(Main.secondaryColor);
+        titleLabel.setFont(Main.mediumHeader);
         return titleLabel;
     }
     
     private JLabel action(String actionName, MouseListener mouseListener)
     {
         JLabel action = new JLabel(actionName, SwingConstants.CENTER);
-        action.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
-        action.setFont(ProjectGoldStarsCalculatorS.mediumText2);
+        action.setForeground(Main.secondaryColor);
+        action.setFont(Main.mediumText2);
         action.addMouseListener(mouseListener);
         return action;
     }

@@ -18,7 +18,7 @@ public class PythagoreanTripleFinder
     {
         ProgramWindow frame = new ProgramWindow("Pythagorean Triple Finder");
         frame.setLayout(new GridLayout(3, 2));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter 2 numbers, and then press Calculate to find a Pythagorean Triple:");
         frame.add(Components.standardLabel("First Number:"));
         setupFirstNumberField();
@@ -34,13 +34,13 @@ public class PythagoreanTripleFinder
     private void setupFirstNumberField()
     {
         firstNumberField = new JTextField("0");
-        firstNumberField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        firstNumberField.setFont(Main.bodyText2);
     }
     
     private void setupSecondNumberField()
     {
         secondNumberField = new JTextField("0");
-        secondNumberField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        secondNumberField.setFont(Main.bodyText2);
     }
     
     public static class CalculateRectangleInformationListener implements ActionListener

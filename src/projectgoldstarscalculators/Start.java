@@ -22,9 +22,9 @@ public class Start
     private void createFolder()
     {
         //Make a Project GoldStars Calculator S folder if it does not exist yet.
-        if(!ProjectGoldStarsCalculatorS.FOLDER.exists())
+        if(!Main.FOLDER.exists())
         {
-            ProjectGoldStarsCalculatorS.FOLDER.mkdir();
+            Main.FOLDER.mkdir();
         }
     }
     
@@ -35,22 +35,22 @@ public class Start
      */
     private static void getTheme()
     {
-        File themeTemp = new File(ProjectGoldStarsCalculatorS.FOLDER, "theme.txt");
+        File themeTemp = new File(Main.FOLDER, "theme.txt");
         try
         {
             Scanner s15 = new Scanner(themeTemp).useDelimiter("\\Z");
-            ProjectGoldStarsCalculatorS.theme = s15.next();
+            Main.theme = s15.next();
             s15.close();
         }
         catch(FileNotFoundException e)
         {
-            ProjectGoldStarsCalculatorS.theme = "Project GoldStars Calculator S";
+            Main.theme = "Project GoldStars Calculator S";
             PrintWriter out;
             try
             {
-                File file = new File(ProjectGoldStarsCalculatorS.FOLDER, "theme.txt");
+                File file = new File(Main.FOLDER, "theme.txt");
                 out = new PrintWriter(file);
-                out.println(ProjectGoldStarsCalculatorS.theme);
+                out.println(Main.theme);
                 out.close();
             }
             catch(FileNotFoundException e2)
@@ -62,85 +62,85 @@ public class Start
     
     public static void applyTheme()
     {
-        ProjectGoldStarsCalculatorS.textBackgroundColor = Color.white;
-        if("Dawn".equals(ProjectGoldStarsCalculatorS.theme))
+        Main.textBackgroundColor = Color.white;
+        if("Dawn".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = new Color(102, 0, 153);
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.yellow;
-            ProjectGoldStarsCalculatorS.standardColors = false;
+            Main.mainColor = new Color(102, 0, 153);
+            Main.secondaryColor = Color.yellow;
+            Main.standardColors = false;
         }
-        if("Dark".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Dark".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = Color.black;
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.lightGray;
-            ProjectGoldStarsCalculatorS.textBackgroundColor = new Color(224, 224, 224);
-            ProjectGoldStarsCalculatorS.standardColors = false;
+            Main.mainColor = Color.black;
+            Main.secondaryColor = Color.lightGray;
+            Main.textBackgroundColor = new Color(224, 224, 224);
+            Main.standardColors = false;
         }
-        if("Desert".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Desert".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = new Color(255, 228, 181);
-            ProjectGoldStarsCalculatorS.secondaryColor = new Color(255, 69, 0);
-            ProjectGoldStarsCalculatorS.standardColors = true;
+            Main.mainColor = new Color(255, 228, 181);
+            Main.secondaryColor = new Color(255, 69, 0);
+            Main.standardColors = true;
         }
-        if("Fire".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Fire".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = Color.red;
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.yellow;
-            ProjectGoldStarsCalculatorS.standardColors = false;
+            Main.mainColor = Color.red;
+            Main.secondaryColor = Color.yellow;
+            Main.standardColors = false;
         }
-        if("Forest".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Forest".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = new Color(0x00, 0x80, 0x00);
-            ProjectGoldStarsCalculatorS.secondaryColor = new Color(222, 184, 135);
-            ProjectGoldStarsCalculatorS.standardColors = false;
+            Main.mainColor = new Color(0x00, 0x80, 0x00);
+            Main.secondaryColor = new Color(222, 184, 135);
+            Main.standardColors = false;
         }
-        if("Grass".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Grass".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = Color.green;
-            ProjectGoldStarsCalculatorS.secondaryColor = new Color(0x00, 0x80, 0x00);
-            ProjectGoldStarsCalculatorS.standardColors = true;
+            Main.mainColor = Color.green;
+            Main.secondaryColor = new Color(0x00, 0x80, 0x00);
+            Main.standardColors = true;
         }
-        if("Mountain".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Mountain".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = Color.darkGray;
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.white;
-            ProjectGoldStarsCalculatorS.standardColors = false;
+            Main.mainColor = Color.darkGray;
+            Main.secondaryColor = Color.white;
+            Main.standardColors = false;
         }
-        if("Night".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Night".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = Color.black;
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.lightGray;
-            ProjectGoldStarsCalculatorS.standardColors = false;
+            Main.mainColor = Color.black;
+            Main.secondaryColor = Color.lightGray;
+            Main.standardColors = false;
         }
-        if("Silver".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Silver".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = Color.lightGray;
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.darkGray;
-            ProjectGoldStarsCalculatorS.standardColors = true;
+            Main.mainColor = Color.lightGray;
+            Main.secondaryColor = Color.darkGray;
+            Main.standardColors = true;
         }
-        if("Sky".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Sky".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = Color.white;
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.blue;
-            ProjectGoldStarsCalculatorS.standardColors = true;
+            Main.mainColor = Color.white;
+            Main.secondaryColor = Color.blue;
+            Main.standardColors = true;
         }
-        if("Snow".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Snow".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = Color.white;
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.gray;
-            ProjectGoldStarsCalculatorS.standardColors = true;
+            Main.mainColor = Color.white;
+            Main.secondaryColor = Color.gray;
+            Main.standardColors = true;
         }
-        if("Water".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Water".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = new Color(64, 224, 208);
-            ProjectGoldStarsCalculatorS.secondaryColor = Color.blue;
-            ProjectGoldStarsCalculatorS.standardColors = false;
+            Main.mainColor = new Color(64, 224, 208);
+            Main.secondaryColor = Color.blue;
+            Main.standardColors = false;
         }
-        if("Project GoldStars Calculator S".equals(ProjectGoldStarsCalculatorS.theme))
+        if("Project GoldStars Calculator S".equals(Main.theme))
         {
-            ProjectGoldStarsCalculatorS.mainColor = Color.lightGray;
-            ProjectGoldStarsCalculatorS.secondaryColor = new Color(0x00, 0x00, 0xC0);
-            ProjectGoldStarsCalculatorS.standardColors = true;
+            Main.mainColor = Color.lightGray;
+            Main.secondaryColor = new Color(0x00, 0x00, 0xC0);
+            Main.standardColors = true;
         }
     }
     
@@ -148,30 +148,30 @@ public class Start
     {
         Toolkit t = Toolkit.getDefaultToolkit();
         Dimension screenResolution = t.getScreenSize();
-        ProjectGoldStarsCalculatorS.width = screenResolution.width;
-        ProjectGoldStarsCalculatorS.height = screenResolution.height;
-        if(ProjectGoldStarsCalculatorS.width >= 3840 && ProjectGoldStarsCalculatorS.height >= 2160)
+        Main.width = screenResolution.width;
+        Main.height = screenResolution.height;
+        if(Main.width >= 3840 && Main.height >= 2160)
         {
-            ProjectGoldStarsCalculatorS.multiplier = 3;
+            Main.multiplier = 3;
         }
-        else if(ProjectGoldStarsCalculatorS.width > 1920 && ProjectGoldStarsCalculatorS.height > 1080)
+        else if(Main.width > 1920 && Main.height > 1080)
         {
-            ProjectGoldStarsCalculatorS.multiplier = 2;
+            Main.multiplier = 2;
         }
         else
         {
-            ProjectGoldStarsCalculatorS.multiplier = 1;
+            Main.multiplier = 1;
         }
     }
     
     private void setFonts()
     {
-        ProjectGoldStarsCalculatorS.largeHeader = new java.awt.Font("Open Sans Extrabold", Font.PLAIN, ProjectGoldStarsCalculatorS.LARGE_HEADER_SIZE * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.mediumHeader = new java.awt.Font("Open Sans Extrabold", Font.PLAIN, ProjectGoldStarsCalculatorS.MEDIUM_HEADER_SIZE * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.mediumText1 = new java.awt.Font("Open Sans Bold", Font.PLAIN, ProjectGoldStarsCalculatorS.MEDIUM_TEXT_SIZE1 * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.mediumText2 = new java.awt.Font("Open Sans Semibold", Font.PLAIN, ProjectGoldStarsCalculatorS.MEDIUM_TEXT_SIZE2 * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.mediumText3 = new java.awt.Font("Open Sans Bold", Font.PLAIN, ProjectGoldStarsCalculatorS.MEDIUM_TEXT_SIZE3 * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.bodyText1 = new java.awt.Font("Open Sans Semibold", Font.PLAIN, ProjectGoldStarsCalculatorS.BODY_TEXT_SIZE1 * ProjectGoldStarsCalculatorS.multiplier);
-        ProjectGoldStarsCalculatorS.bodyText2 = new java.awt.Font("Open Sans", Font.PLAIN, ProjectGoldStarsCalculatorS.BODY_TEXT_SIZE2 * ProjectGoldStarsCalculatorS.multiplier);
+        Main.largeHeader = new java.awt.Font("Open Sans Extrabold", Font.PLAIN, Main.LARGE_HEADER_SIZE * Main.multiplier);
+        Main.mediumHeader = new java.awt.Font("Open Sans Extrabold", Font.PLAIN, Main.MEDIUM_HEADER_SIZE * Main.multiplier);
+        Main.mediumText1 = new java.awt.Font("Open Sans Bold", Font.PLAIN, Main.MEDIUM_TEXT_SIZE1 * Main.multiplier);
+        Main.mediumText2 = new java.awt.Font("Open Sans Semibold", Font.PLAIN, Main.MEDIUM_TEXT_SIZE2 * Main.multiplier);
+        Main.mediumText3 = new java.awt.Font("Open Sans Bold", Font.PLAIN, Main.MEDIUM_TEXT_SIZE3 * Main.multiplier);
+        Main.bodyText1 = new java.awt.Font("Open Sans Semibold", Font.PLAIN, Main.BODY_TEXT_SIZE1 * Main.multiplier);
+        Main.bodyText2 = new java.awt.Font("Open Sans", Font.PLAIN, Main.BODY_TEXT_SIZE2 * Main.multiplier);
     }
 }

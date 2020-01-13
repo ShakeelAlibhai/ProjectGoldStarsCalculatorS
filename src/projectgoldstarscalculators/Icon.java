@@ -7,7 +7,7 @@ public class Icon
     //Returns the Project GoldStars Calculator S icon as an Image
     public static Image getImage()
     {
-        URL url = ProjectGoldStarsCalculatorS.class.getResource("/images/ProjectGoldStarsCalculatorSIcon.png");
+        URL url = Main.class.getResource("/images/ProjectGoldStarsCalculatorSIcon.png");
         Image image = Toolkit.getDefaultToolkit().getImage(url);
         return image;
     }

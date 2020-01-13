@@ -18,7 +18,7 @@ public class Exponents
     {
         ProgramWindow frame = new ProgramWindow("Exponents");
         frame.setLayout(new GridLayout(4, 2));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information:");
         frame.add(Components.standardLabel("Base:"));
         setupBaseField();
@@ -37,14 +37,14 @@ public class Exponents
     private void setupBaseField()
     {
         baseField = new JTextField("0");
-        baseField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        baseField.setFont(Main.bodyText2);
         baseField.addActionListener(new CalculateListener());
     }
     
     private void setupExponentField()
     {
         exponentField = new JTextField("0");
-        exponentField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        exponentField.setFont(Main.bodyText2);
         exponentField.addActionListener(new CalculateListener());
     }
     
@@ -52,7 +52,7 @@ public class Exponents
     {
         resultField = new JTextField("0");
         resultField.setEditable(false);
-        resultField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        resultField.setFont(Main.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener

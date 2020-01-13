@@ -18,7 +18,7 @@ public class QuadraticEquationSolver implements ActionListener
     {
         ProgramWindow frame = new ProgramWindow("Quadratic Equation Solver");
         frame.setLayout(new GridLayout(5, 2));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the quadratic equation in the following form: ax^2 + bx + c = 0");
         frame.add(Components.standardLabel("a:"));
         setupAField();
@@ -40,26 +40,26 @@ public class QuadraticEquationSolver implements ActionListener
     private void setupAField()
     {
         aField = new JTextField("0");
-        aField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        aField.setFont(Main.bodyText2);
     }
     
     private void setupBField()
     {
         bField = new JTextField("0");
-        bField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        bField.setFont(Main.bodyText2);
     }
     
     private void setupCField()
     {
         cField = new JTextField("0");
-        cField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        cField.setFont(Main.bodyText2);
     }
     
     private void setupSolutionField()
     {
         solutionField = new JTextField("0");
         solutionField.setEditable(false);
-        solutionField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        solutionField.setFont(Main.bodyText2);
     }
     
     public static class SolveQuadraticEquationListener implements ActionListener

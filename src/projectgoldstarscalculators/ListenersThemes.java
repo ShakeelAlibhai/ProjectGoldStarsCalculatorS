@@ -117,14 +117,14 @@ public class ListenersThemes
     
     private static void processThemeChoice(String themeName)
     {
-        ProjectGoldStarsCalculatorS.theme = themeName;
+        Main.theme = themeName;
         //Save the theme to the user's Project GoldStars Calculator S folder.
         PrintWriter out;
         try
         {
-            File file = new File(ProjectGoldStarsCalculatorS.FOLDER, "theme.txt");
+            File file = new File(Main.FOLDER, "theme.txt");
             out = new PrintWriter(file);
-            out.append(ProjectGoldStarsCalculatorS.theme);
+            out.append(Main.theme);
             out.close();
         }
         catch(FileNotFoundException e2)

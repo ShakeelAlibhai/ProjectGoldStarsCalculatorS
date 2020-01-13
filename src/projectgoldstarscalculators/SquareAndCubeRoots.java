@@ -19,7 +19,7 @@ public class SquareAndCubeRoots implements ActionListener
     {
         ProgramWindow frame = new ProgramWindow("Square & Cube Roots");
         frame.setLayout(new GridLayout(3, 3));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find its square and cube roots:");
         frame.add(Components.standardLabel("Number:"));
         setupNumberField();
@@ -39,7 +39,7 @@ public class SquareAndCubeRoots implements ActionListener
     private void setupNumberField()
     {
         numberField = new JTextField("0");
-        numberField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        numberField.setFont(Main.bodyText2);
         numberField.addActionListener(new ComputeListener());
     }
     
@@ -47,14 +47,14 @@ public class SquareAndCubeRoots implements ActionListener
     {
         squareRootField = new JTextField("0");
         squareRootField.setEditable(false);
-        squareRootField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        squareRootField.setFont(Main.bodyText2);
     }
     
     private void setupCubeRootField()
     {
         cubeRootField = new JTextField("0");
         cubeRootField.setEditable(false);
-        cubeRootField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        cubeRootField.setFont(Main.bodyText2);
     }
     
     private class ComputeListener implements ActionListener

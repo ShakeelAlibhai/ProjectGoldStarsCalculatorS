@@ -18,7 +18,7 @@ public class Subtract implements ActionListener
     {
         ProgramWindow frame = new ProgramWindow("Subtraction");
         frame.setLayout(new GridLayout(11, 2));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.add(numberLabel(1));
         setupTF1();
         frame.add(tf1);
@@ -57,69 +57,69 @@ public class Subtract implements ActionListener
     private JLabel numberLabel(int number)
     {
         JLabel label = new JLabel("Number #" + number + ":");
-        label.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
-        label.setFont(ProjectGoldStarsCalculatorS.bodyText1);
+        label.setForeground(Main.secondaryColor);
+        label.setFont(Main.bodyText1);
         return label;
     }
     
     private void setupTF1()
     {
         tf1 = new JTextField("0");
-        tf1.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf1.setFont(Main.bodyText2);
     }
     
     private void setupTF2()
     {
         tf2 = new JTextField("0");
-        tf2.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf2.setFont(Main.bodyText2);
     }
     
     private void setupTF3()
     {
         tf3 = new JTextField("0");
-        tf3.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf3.setFont(Main.bodyText2);
     }
     
     private void setupTF4()
     {
         tf4 = new JTextField("0");
-        tf4.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf4.setFont(Main.bodyText2);
     }
     
     private void setupTF5()
     {
         tf5 = new JTextField("0");
-        tf5.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf5.setFont(Main.bodyText2);
     }
     
     private void setupTF6()
     {
         tf6 = new JTextField("0");
-        tf6.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf6.setFont(Main.bodyText2);
     }
     
     private void setupTF7()
     {
         tf7 = new JTextField("0");
-        tf7.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf7.setFont(Main.bodyText2);
     }
     
     private void setupTF8()
     {
         tf8 = new JTextField("0");
-        tf8.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf8.setFont(Main.bodyText2);
     }
     
     private void setupTF9()
     {
         tf9 = new JTextField("0");
-        tf9.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf9.setFont(Main.bodyText2);
     }
     
     private void setupTF10()
     {
         tf10 = new JTextField("0");
-        tf10.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        tf10.setFont(Main.bodyText2);
     }
     
     private class SubtractListener implements ActionListener

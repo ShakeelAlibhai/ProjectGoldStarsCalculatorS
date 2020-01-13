@@ -18,7 +18,7 @@ public class AngleConversions
     {
         ProgramWindow frame = new ProgramWindow("Angle Conversions");
         frame.setLayout(new GridLayout(2, 3));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 375 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(750 * Main.multiplier, 375 * Main.multiplier);
         frame.setInstructionsMenuBar("Please fill one of the fields and then press the button to convert to the other unit.");
         frame.add(descriptionLabel("Degrees:"));
         setupDegreesField();
@@ -34,21 +34,21 @@ public class AngleConversions
     private JLabel descriptionLabel(String text)
     {
         JLabel descriptionLabel = new JLabel(text);
-        descriptionLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
-        descriptionLabel.setFont(ProjectGoldStarsCalculatorS.bodyText1);
+        descriptionLabel.setForeground(Main.secondaryColor);
+        descriptionLabel.setFont(Main.bodyText1);
         return descriptionLabel;
     }
     
     private void setupDegreesField()
     {
         degreesField = new JTextField("0");
-        degreesField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        degreesField.setFont(Main.bodyText2);
     }
     
     private void setupRadiansField()
     {
         radiansField = new JTextField("0");
-        radiansField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        radiansField.setFont(Main.bodyText2);
     }
     
     /*

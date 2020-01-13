@@ -13,10 +13,10 @@ public class About
     private void about()
     {
         JFrame frame = new JFrame("About");
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setIconImage(Icon.getImage());
         frame.setLayout(new GridLayout(2, 1));
-        frame.getContentPane().setBackground(ProjectGoldStarsCalculatorS.mainColor);
+        frame.getContentPane().setBackground(Main.mainColor);
         frame.getContentPane().add(titleLabel());
         frame.getContentPane().add(versionLabel());
         frame.setVisible(true);
@@ -24,17 +24,17 @@ public class About
     
     private JLabel titleLabel()
     {
-        JLabel titleLabel = new JLabel(ProjectGoldStarsCalculatorS.NAME, SwingConstants.CENTER);
-        titleLabel.setFont(ProjectGoldStarsCalculatorS.largeHeader);
-        titleLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
+        JLabel titleLabel = new JLabel(Main.NAME, SwingConstants.CENTER);
+        titleLabel.setFont(Main.largeHeader);
+        titleLabel.setForeground(Main.secondaryColor);
         return titleLabel;
     }
     
     private JLabel versionLabel()
     {
-        JLabel versionLabel = new JLabel(ProjectGoldStarsCalculatorS.VERSION, SwingConstants.CENTER);
-        versionLabel.setFont(ProjectGoldStarsCalculatorS.mediumText1);
-        versionLabel.setForeground(ProjectGoldStarsCalculatorS.secondaryColor);
+        JLabel versionLabel = new JLabel(Main.VERSION, SwingConstants.CENTER);
+        versionLabel.setFont(Main.mediumText1);
+        versionLabel.setForeground(Main.secondaryColor);
         return versionLabel;
     }
 }

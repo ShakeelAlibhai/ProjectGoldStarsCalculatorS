@@ -18,7 +18,7 @@ public class Rectangles
     {
         ProgramWindow frame = new ProgramWindow("Rectangles");
         frame.setLayout(new GridLayout(3, 2));
-        frame.setSize(800 * ProjectGoldStarsCalculatorS.multiplier, 425 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(800 * Main.multiplier, 425 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the area and perimeter:");
         frame.add(Components.standardLabel("Length:"));
         setupLengthField();
@@ -34,13 +34,13 @@ public class Rectangles
     private void setupLengthField()
     {
         lengthField = new JTextField("0");
-        lengthField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        lengthField.setFont(Main.bodyText2);
     }
     
     private void setupWidthField()
     {
         widthField = new JTextField("0");
-        widthField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        widthField.setFont(Main.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener

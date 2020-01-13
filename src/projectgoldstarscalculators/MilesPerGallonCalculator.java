@@ -18,7 +18,7 @@ public class MilesPerGallonCalculator
     {
         ProgramWindow frame = new ProgramWindow("Miles Per Gallon Calculator");
         frame.setLayout(new GridLayout(4, 2));
-        frame.setSize(750 * ProjectGoldStarsCalculatorS.multiplier, 400 * ProjectGoldStarsCalculatorS.multiplier);
+        frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the results:");
         frame.add(Components.standardLabel("Beginning Odometer Reading:"));
         setupBeginningField();
@@ -37,19 +37,19 @@ public class MilesPerGallonCalculator
     private void setupBeginningField()
     {
         beginningField = new JTextField("0");
-        beginningField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        beginningField.setFont(Main.bodyText2);
     }
     
     private void setupEndingField()
     {
         endingField = new JTextField("0");
-        endingField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        endingField.setFont(Main.bodyText2);
     }
     
     private void setupGallonsField()
     {
         gallonsField = new JTextField("0");
-        gallonsField.setFont(ProjectGoldStarsCalculatorS.bodyText2);
+        gallonsField.setFont(Main.bodyText2);
     }
     
     public static class CalculateMilesPerGallonListener implements ActionListener

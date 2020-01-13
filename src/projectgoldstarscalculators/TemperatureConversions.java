@@ -1,4 +1,5 @@
 package projectgoldstarscalculators;
+import converters.TemperatureConverter;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,6 +8,7 @@ import javax.swing.JTextField;
 public class TemperatureConversions
 {
     public static JTextField celsiusField, fahrenheitField, kelvinField;
+    private TemperatureConverter conv;
     
     public TemperatureConversions()
     {
@@ -15,6 +17,7 @@ public class TemperatureConversions
     
     private void temperatureConversions()
     {
+        conv = new TemperatureConverter();
         ProgramWindow frame = new ProgramWindow("Temperature Conversions");
         frame.setLayout(new GridLayout(3, 3));
         frame.setSize(875 * Main.multiplier, 475 * Main.multiplier);
@@ -72,9 +75,7 @@ public class TemperatureConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            f = c * 9;
-            f /= 5;
-            f += 32;
+            f = conv.toFahrenheit("Celsius", c);
             String temp2 = "" + f;
             fahrenheitField.setText(temp2);
             k = c + 273.15;
@@ -103,9 +104,7 @@ public class TemperatureConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            c = f - 32;
-            c *= 5;
-            c /= 9;
+            c = conv.toCelsius("Fahrenheit", f);
             String temp2 = "" + c;
             celsiusField.setText(temp2);
             k = c + 273.15;
@@ -134,12 +133,10 @@ public class TemperatureConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            c = k - 273.15;
+            c = conv.toCelsius("Kelvin", k);
             String temp2 = "" + c;
             celsiusField.setText(temp2);
-            f = c * 9;
-            f /= 5;
-            f += 32;
+            f = conv.toFahrenheit("Kelvin", k);
             temp2 = "" + f;
             fahrenheitField.setText(temp2);
         }

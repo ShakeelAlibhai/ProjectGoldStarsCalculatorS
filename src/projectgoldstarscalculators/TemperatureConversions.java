@@ -78,7 +78,7 @@ public class TemperatureConversions
             f = conv.toFahrenheit("Celsius", c);
             String temp2 = "" + f;
             fahrenheitField.setText(temp2);
-            k = c + 273.15;
+            k = conv.toKelvin("Celsius", c);
             temp2 = "" + k;
             kelvinField.setText(temp2);
         }
@@ -107,7 +107,7 @@ public class TemperatureConversions
             c = conv.toCelsius("Fahrenheit", f);
             String temp2 = "" + c;
             celsiusField.setText(temp2);
-            k = c + 273.15;
+            k = conv.toKelvin("Fahrenheit", f);
             temp2 = "" + k;
             kelvinField.setText(temp2);
         }

@@ -38,4 +38,20 @@ public class TemperatureConverter
         
         return f;
     }
+    
+    public double toKelvin(String fromType, double fromValue)
+    {
+        double k = 0.0;
+        
+        if(fromType.equals("Fahrenheit"))
+        {
+            fromValue = this.toCelsius("Fahrenheit", fromValue);
+        }
+        
+        //At this point, assume that fromValue is in Celsius
+        
+        k = fromValue + 273.15;
+        
+        return k;
+    }
 }

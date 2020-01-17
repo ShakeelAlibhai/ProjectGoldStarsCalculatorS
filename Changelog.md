@@ -4,6 +4,7 @@
 ### Version 3.0
 * Add a new theme, "Dawn".
 * Update the interface of the Quadratic Equation Solver.
+* Update the interface of the Triangles window.
 
 ## Version 2.6.x
 ### Version 2.6.2 (May 29, 2019)

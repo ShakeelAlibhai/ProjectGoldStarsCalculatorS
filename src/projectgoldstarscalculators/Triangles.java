@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Triangles
 {
-    public static JTextField baseField, heightField;
+    public static JTextField baseField, heightField, areaField;
     
     public Triangles()
     {
@@ -17,7 +17,7 @@ public class Triangles
     private void calcRectangleInformation()
     {
         ProgramWindow frame = new ProgramWindow("Triangles");
-        frame.setLayout(new GridLayout(3, 2));
+        frame.setLayout(new GridLayout(4, 2));
         frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the area:");
         frame.add(Components.standardLabel("Base:"));
@@ -28,6 +28,9 @@ public class Triangles
         frame.add(heightField);
         frame.add(new JLabel());
         frame.add(Components.button2("Calculate", new CalculateListener()));
+        frame.add(Components.standardLabel("Area"));
+        setupAreaField();
+        frame.add(areaField);
         frame.makeVisible();
     }
     
@@ -41,6 +44,13 @@ public class Triangles
     {
         heightField = new JTextField("0");
         heightField.setFont(Main.bodyText2);
+    }
+    
+    private void setupAreaField()
+    {
+        areaField = new JTextField("0");
+        areaField.setEditable(false);
+        areaField.setFont(Main.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener
@@ -86,8 +96,7 @@ public class Triangles
             //Calculate the area.
             double area = 0.5 * baseD * heightD;
             //Display the area.
-            output = "Area of the Triangle: " + area;
-            JOptionPane.showMessageDialog(null, output, "Triangles", JOptionPane.INFORMATION_MESSAGE);
+            areaField.setText("" + area);
         }
     }
 }

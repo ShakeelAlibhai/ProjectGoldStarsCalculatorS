@@ -1,4 +1,5 @@
 package projectgoldstarscalculators;
+import listeners.ThemeListeners;
 import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JButton;
@@ -36,7 +37,7 @@ public class Themes
         darkTheme.setFont(Main.mediumText2);
         darkTheme.setBackground(new Color(102, 0, 153));
         darkTheme.setForeground(Color.yellow);
-        darkTheme.addActionListener(new ListenersThemes.DawnThemeListener());
+        darkTheme.addActionListener(new ThemeListeners.DawnThemeListener());
         return darkTheme;
     }
     
@@ -46,7 +47,7 @@ public class Themes
         darkTheme.setFont(Main.mediumText2);
         darkTheme.setBackground(Color.black);
         darkTheme.setForeground(Color.lightGray);
-        darkTheme.addActionListener(new ListenersThemes.DarkThemeListener());
+        darkTheme.addActionListener(new ThemeListeners.DarkThemeListener());
         return darkTheme;
     }
     
@@ -56,7 +57,7 @@ public class Themes
         darkTheme.setFont(Main.mediumText2);
         darkTheme.setBackground(new Color(255, 228, 181));
         darkTheme.setForeground(new Color(255, 69, 0));
-        darkTheme.addActionListener(new ListenersThemes.DesertThemeListener());
+        darkTheme.addActionListener(new ThemeListeners.DesertThemeListener());
         return darkTheme;
     }
     
@@ -66,7 +67,7 @@ public class Themes
         fireTheme.setFont(Main.mediumText2);
         fireTheme.setBackground(Color.red);
         fireTheme.setForeground(Color.yellow);
-        fireTheme.addActionListener(new ListenersThemes.FireThemeListener());
+        fireTheme.addActionListener(new ThemeListeners.FireThemeListener());
         return fireTheme;
     }
     
@@ -76,7 +77,7 @@ public class Themes
         forestTheme.setFont(Main.mediumText2);
         forestTheme.setBackground(new Color(0x00, 0x80, 0x00));
         forestTheme.setForeground(new Color(222, 184, 135));
-        forestTheme.addActionListener(new ListenersThemes.ForestThemeListener());
+        forestTheme.addActionListener(new ThemeListeners.ForestThemeListener());
         return forestTheme;
     }
     
@@ -86,7 +87,7 @@ public class Themes
         grassTheme.setFont(Main.mediumText2);
         grassTheme.setBackground(Color.green);
         grassTheme.setForeground(new Color(0x00, 0x80, 0x00));
-        grassTheme.addActionListener(new ListenersThemes.GrassThemeListener());
+        grassTheme.addActionListener(new ThemeListeners.GrassThemeListener());
         return grassTheme;
     }
     
@@ -96,7 +97,7 @@ public class Themes
         mountainTheme.setFont(Main.mediumText2);
         mountainTheme.setBackground(Color.darkGray);
         mountainTheme.setForeground(Color.white);
-        mountainTheme.addActionListener(new ListenersThemes.MountainThemeListener());
+        mountainTheme.addActionListener(new ThemeListeners.MountainThemeListener());
         return mountainTheme;
     }
     
@@ -106,7 +107,7 @@ public class Themes
         skyTheme.setFont(Main.mediumText2);
         skyTheme.setBackground(Color.lightGray);
         skyTheme.setForeground(Color.darkGray);
-        skyTheme.addActionListener(new ListenersThemes.SilverThemeListener());
+        skyTheme.addActionListener(new ThemeListeners.SilverThemeListener());
         return skyTheme;
     }
     
@@ -116,7 +117,7 @@ public class Themes
         skyTheme.setFont(Main.mediumText2);
         skyTheme.setBackground(Color.white);
         skyTheme.setForeground(Color.blue);
-        skyTheme.addActionListener(new ListenersThemes.SkyThemeListener());
+        skyTheme.addActionListener(new ThemeListeners.SkyThemeListener());
         return skyTheme;
     }
     
@@ -126,7 +127,7 @@ public class Themes
         snowTheme.setFont(Main.mediumText2);
         snowTheme.setBackground(Color.white);
         snowTheme.setForeground(Color.gray);
-        snowTheme.addActionListener(new ListenersThemes.SnowThemeListener());
+        snowTheme.addActionListener(new ThemeListeners.SnowThemeListener());
         return snowTheme;
     }
     
@@ -136,7 +137,7 @@ public class Themes
         waterTheme.setFont(Main.mediumText2);
         waterTheme.setBackground(new Color(64, 224, 208));
         waterTheme.setForeground(Color.blue);
-        waterTheme.addActionListener(new ListenersThemes.WaterThemeListener());
+        waterTheme.addActionListener(new ThemeListeners.WaterThemeListener());
         return waterTheme;
     }
     
@@ -146,7 +147,7 @@ public class Themes
         projectGoldStarxCalculatorSTheme.setFont(Main.mediumText2);
         projectGoldStarxCalculatorSTheme.setBackground(Color.lightGray);
         projectGoldStarxCalculatorSTheme.setForeground(new Color(0x00, 0x00, 0xC0));
-        projectGoldStarxCalculatorSTheme.addActionListener(new ListenersThemes.ProjectGoldStarsCalculatorSThemeListener());
+        projectGoldStarxCalculatorSTheme.addActionListener(new ThemeListeners.ProjectGoldStarsCalculatorSThemeListener());
         return projectGoldStarxCalculatorSTheme;
     }
 }

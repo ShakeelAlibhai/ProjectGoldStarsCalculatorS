@@ -20,14 +20,14 @@ public class PythagoreanTripleFinder
         frame.setLayout(new GridLayout(3, 2));
         frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter 2 numbers, and then press Calculate to find a Pythagorean Triple:");
-        frame.add(Components.standardLabel("First Number:"));
+        frame.add(Labels.standardLabel("First Number:"));
         setupFirstNumberField();
         frame.add(firstNumberField);
-        frame.add(Components.standardLabel("Second Number:"));
+        frame.add(Labels.standardLabel("Second Number:"));
         setupSecondNumberField();
         frame.add(secondNumberField);
         frame.add(new JLabel());
-        frame.add(Components.button2("Calculate", new CalculateRectangleInformationListener()));
+        frame.add(Buttons.button2("Calculate", new CalculateRectangleInformationListener()));
         frame.makeVisible();
     }
     

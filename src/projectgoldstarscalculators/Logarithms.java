@@ -20,18 +20,18 @@ public class Logarithms implements ActionListener
         frame.setLayout(new GridLayout(3, 3));
         frame.setSize(850 * Main.multiplier, 475 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find the log base 10 and log base e of that number:");
-        frame.add(Components.standardLabel("Number:"));
+        frame.add(Labels.standardLabel("Number:"));
         setupNumberField();
         frame.add(numberField);
-        frame.add(Components.button2("Compute", new ComputeListener()));
-        frame.add(Components.standardLabel("Log Base 10:"));
+        frame.add(Buttons.button2("Compute", new ComputeListener()));
+        frame.add(Labels.standardLabel("Log Base 10:"));
         setupLogBase10Field();
         frame.add(logBase10Field);
         frame.add(new JLabel());
-        frame.add(Components.standardLabel("Log Base e:"));
+        frame.add(Labels.standardLabel("Log Base e:"));
         setupLogBaseEField();
         frame.add(logBaseEField);
-        frame.add(Components.disclaimerLabel("Note: Values may not be exact."));
+        frame.add(Labels.disclaimerLabel("Note: Values may not be exact."));
         frame.makeVisible();
     }
     

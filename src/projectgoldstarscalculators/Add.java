@@ -52,7 +52,7 @@ public class Add implements ActionListener
         setupTF10();
         frame.add(tf10);
         frame.add(new JLabel());
-        frame.add(Components.button2("Add", new AddListener()));
+        frame.add(Buttons.button2("Add", new AddListener()));
         frame.makeVisible();
     }
     
@@ -60,7 +60,7 @@ public class Add implements ActionListener
     {
         JMenuBar menuBar = new JMenuBar();
         menuBar.setBackground(Main.mainColor);
-        menuBar.add(Components.standardButton("Add More Than 10 Numbers", new AddMoreThan10NumbersListener()));
+        menuBar.add(Buttons.standardButton("Add More Than 10 Numbers", new AddMoreThan10NumbersListener()));
         return menuBar;
     }
     

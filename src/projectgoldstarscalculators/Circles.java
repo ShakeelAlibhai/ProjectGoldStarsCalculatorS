@@ -20,18 +20,18 @@ public class Circles
         frame.setLayout(new GridLayout(3, 3));
         frame.setSize(800 * Main.multiplier, 425 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the radius of the circle, and then press Calculate to find its area and circumference:");
-        frame.add(Components.standardLabel("Radius:"));
+        frame.add(Labels.standardLabel("Radius:"));
         setupRadiusField();
         frame.add(radiusField);
-        frame.add(Components.button2("Calculate", new CalculateListener()));
-        frame.add(Components.standardLabel("Area:"));
+        frame.add(Buttons.button2("Calculate", new CalculateListener()));
+        frame.add(Labels.standardLabel("Area:"));
         setupAreaField();
         frame.add(areaField);
         frame.add(new JLabel());
-        frame.add(Components.standardLabel("Circumference:"));
+        frame.add(Labels.standardLabel("Circumference:"));
         setupCircumferenceField();
         frame.add(circumferenceField);
-        frame.add(Components.disclaimerLabel("Note: Values may not be exact."));
+        frame.add(Labels.disclaimerLabel("Note: Values may not be exact."));
         frame.makeVisible();
     }
     

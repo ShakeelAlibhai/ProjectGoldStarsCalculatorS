@@ -52,7 +52,7 @@ public class Multiply implements ActionListener
         setupTF10();
         frame.add(tf10);
         frame.add(new JLabel());
-        frame.add(Components.button2("Multiply", new MultiplyListener()));
+        frame.add(Buttons.button2("Multiply", new MultiplyListener()));
         frame.makeVisible();
     }
     
@@ -60,7 +60,7 @@ public class Multiply implements ActionListener
     {
         JMenuBar menuBar = new JMenuBar();
         menuBar.setBackground(Main.mainColor);
-        menuBar.add(Components.standardButton("Multiply More Than 10 Numbers", new MultiplyMoreThan10NumbersListener()));
+        menuBar.add(Buttons.standardButton("Multiply More Than 10 Numbers", new MultiplyMoreThan10NumbersListener()));
         return menuBar;
     }
     

@@ -25,15 +25,15 @@ public class TemperatureConversions
         setupCelsiusField();
         setupFahrenheitField();
         setupKelvinField();
-        frame.add(Components.standardLabel("Celsius:"));
+        frame.add(Labels.standardLabel("Celsius:"));
         frame.add(celsiusField);
-        frame.add(Components.button2("Convert From Celsius", new ConvertFromCelsiusListener()));
-        frame.add(Components.standardLabel("Fahrenheit:"));
+        frame.add(Buttons.button2("Convert From Celsius", new ConvertFromCelsiusListener()));
+        frame.add(Labels.standardLabel("Fahrenheit:"));
         frame.add(fahrenheitField);
-        frame.add(Components.button2("Convert From Fahrenheit", new ConvertFromFahrenheitListener()));
-        frame.add(Components.standardLabel("Kelvin:"));
+        frame.add(Buttons.button2("Convert From Fahrenheit", new ConvertFromFahrenheitListener()));
+        frame.add(Labels.standardLabel("Kelvin:"));
         frame.add(kelvinField);
-        frame.add(Components.button2("Convert From Kelvin", new ConvertFromKelvinListener()));
+        frame.add(Buttons.button2("Convert From Kelvin", new ConvertFromKelvinListener()));
         frame.makeVisible();
     }
     

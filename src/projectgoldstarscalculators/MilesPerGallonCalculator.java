@@ -20,17 +20,17 @@ public class MilesPerGallonCalculator
         frame.setLayout(new GridLayout(4, 2));
         frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the results:");
-        frame.add(Components.standardLabel("Beginning Odometer Reading:"));
+        frame.add(Labels.standardLabel("Beginning Odometer Reading:"));
         setupBeginningField();
         frame.add(beginningField);
-        frame.add(Components.standardLabel("Ending Odometer Reading:"));
+        frame.add(Labels.standardLabel("Ending Odometer Reading:"));
         setupEndingField();
         frame.add(endingField);
-        frame.add(Components.standardLabel("Gallons of Gas Used:"));
+        frame.add(Labels.standardLabel("Gallons of Gas Used:"));
         setupGallonsField();
         frame.add(gallonsField);
         frame.add(new JLabel());
-        frame.add(Components.button2("Calculate", new CalculateMilesPerGallonListener()));
+        frame.add(Buttons.button2("Calculate", new CalculateMilesPerGallonListener()));
         frame.makeVisible();
     }
     

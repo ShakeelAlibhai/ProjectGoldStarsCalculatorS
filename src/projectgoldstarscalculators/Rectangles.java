@@ -20,14 +20,14 @@ public class Rectangles
         frame.setLayout(new GridLayout(3, 2));
         frame.setSize(800 * Main.multiplier, 425 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the area and perimeter:");
-        frame.add(Components.standardLabel("Length:"));
+        frame.add(Labels.standardLabel("Length:"));
         setupLengthField();
         frame.add(lengthField);
-        frame.add(Components.standardLabel("Width:"));
+        frame.add(Labels.standardLabel("Width:"));
         setupWidthField();
         frame.add(widthField);
         frame.add(new JLabel());
-        frame.add(Components.button2("Calculate", new CalculateListener()));
+        frame.add(Buttons.button2("Calculate", new CalculateListener()));
         frame.makeVisible();
     }
     

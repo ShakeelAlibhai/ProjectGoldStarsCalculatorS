@@ -23,11 +23,11 @@ public class AngleConversions
         frame.add(descriptionLabel("Degrees:"));
         setupDegreesField();
         frame.add(degreesField);
-        frame.add(Components.button2("Convert From Degrees", new ConvertFromDegreesListener()));
+        frame.add(Buttons.button2("Convert From Degrees", new ConvertFromDegreesListener()));
         frame.add(descriptionLabel("Radians:"));
         setupRadiansField();
         frame.add(radiansField);
-        frame.add(Components.button2("Convert From Radians", new ConvertFromRadiansListener()));
+        frame.add(Buttons.button2("Convert From Radians", new ConvertFromRadiansListener()));
         frame.makeVisible();
     }
     

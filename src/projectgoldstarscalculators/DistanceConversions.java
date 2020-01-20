@@ -25,15 +25,15 @@ public class DistanceConversions
         setupFeetField();
         setupMilesField();
         setupKilometersField();
-        frame.add(Components.standardLabel("Feet:"));
+        frame.add(Labels.standardLabel("Feet:"));
         frame.add(feetField);
-        frame.add(Components.button2("Convert From Feet", new ConvertFromFeetListener()));
-        frame.add(Components.standardLabel("Miles:"));
+        frame.add(Buttons.button2("Convert From Feet", new ConvertFromFeetListener()));
+        frame.add(Labels.standardLabel("Miles:"));
         frame.add(milesField);
-        frame.add(Components.button2("Convert From Miles", new ConvertFromMilesListener()));
-        frame.add(Components.standardLabel("Kilometers:"));
+        frame.add(Buttons.button2("Convert From Miles", new ConvertFromMilesListener()));
+        frame.add(Labels.standardLabel("Kilometers:"));
         frame.add(kilometersField);
-        frame.add(Components.button2("Convert From Kilometers", new ConvertFromKilometersListener()));
+        frame.add(Buttons.button2("Convert From Kilometers", new ConvertFromKilometersListener()));
         frame.makeVisible();
     }
     

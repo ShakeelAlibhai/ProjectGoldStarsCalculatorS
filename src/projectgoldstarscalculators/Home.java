@@ -69,9 +69,9 @@ public class Home extends JFrame
     {
         JMenuBar menuBar = new JMenuBar();
         menuBar.setBackground(Main.mainColor);
-        menuBar.add(Components.standardButton("About", new HomeListeners.AboutListener()));
-        menuBar.add(Components.standardButton("Disclaimer", new HomeListeners.DisclaimerListener()));
-        menuBar.add(Components.standardButton("Themes", new HomeListeners.ThemesListener()));
+        menuBar.add(Buttons.standardButton("About", new HomeListeners.AboutListener()));
+        menuBar.add(Buttons.standardButton("Disclaimer", new HomeListeners.DisclaimerListener()));
+        menuBar.add(Buttons.standardButton("Themes", new HomeListeners.ThemesListener()));
         menuBar.add(otherCalculatorsMenu());
         return menuBar;
     }

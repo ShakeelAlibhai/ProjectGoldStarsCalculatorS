@@ -50,7 +50,7 @@ public class Divide implements ActionListener
         setupTF10();
         frame.add(tf10);
         frame.add(new JLabel());
-        frame.add(Components.button2("Divide", new DivideListener()));
+        frame.add(Buttons.button2("Divide", new DivideListener()));
         frame.makeVisible();
     }
     

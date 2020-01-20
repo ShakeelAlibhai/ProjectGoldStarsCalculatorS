@@ -50,7 +50,7 @@ public class Subtract implements ActionListener
         setupTF10();
         frame.add(tf10);
         frame.add(new JLabel());
-        frame.add(Components.button2("Subtract", new SubtractListener()));
+        frame.add(Buttons.button2("Subtract", new SubtractListener()));
         frame.makeVisible();
     }
     

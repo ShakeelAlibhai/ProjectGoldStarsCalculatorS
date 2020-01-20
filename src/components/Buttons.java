@@ -1,6 +1,7 @@
-package projectgoldstarscalculators;
+package components;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import projectgoldstarscalculators.Main;
 public class Buttons
 {
     public static JButton standardButton(String displayText, ActionListener actionListener)

@@ -1,4 +1,5 @@
 package projectgoldstarscalculators;
+import components.Buttons;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;

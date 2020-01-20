@@ -1,4 +1,6 @@
 package projectgoldstarscalculators;
+import components.Buttons;
+import components.Labels;
 import converters.TemperatureConverter;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;

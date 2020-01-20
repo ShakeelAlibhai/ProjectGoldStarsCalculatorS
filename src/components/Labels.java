@@ -1,6 +1,7 @@
-package projectgoldstarscalculators;
+package components;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import projectgoldstarscalculators.Main;
 public class Labels
 {    
     public static JLabel standardLabel(String displayText)

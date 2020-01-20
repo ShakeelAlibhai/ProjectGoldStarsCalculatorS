@@ -21,7 +21,7 @@ public class QuadraticEquationSolver implements ActionListener
         ProgramWindow frame = new ProgramWindow("Quadratic Equation Solver");
         frame.setLayout(new GridLayout(5, 2));
         frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
-        frame.setInstructionsMenuBar("Please enter the quadratic equation in the following form: ax^2 + bx + c = 0");
+        frame.setInstructionsMenuBar("Please enter a quadratic equation in the following form: ax^2 + bx + c = 0");
         frame.add(Labels.standardLabel("a:"));
         setupAField();
         frame.add(aField);

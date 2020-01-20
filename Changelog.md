@@ -4,8 +4,10 @@
 ### Version 3.0
 * Add a new theme, "Dawn".
 * Add Distance Conversions.
+* Update the instructions in the Quadratic Equation Solver.
 * Update the interface of the Quadratic Equation Solver.
 * Update the interface of the Triangles window.
+* Many internal changes.
 
 ## Version 2.6.x
 ### Version 2.6.2 (May 29, 2019)

@@ -10,9 +10,9 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
-public class Window extends JFrame
+public class Home extends JFrame
 {
-    public Window()
+    public Home()
     {
         buildWindow();
     }

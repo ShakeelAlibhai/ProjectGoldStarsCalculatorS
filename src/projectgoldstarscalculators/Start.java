@@ -16,7 +16,7 @@ public class Start
         applyTheme();
         widthAndHeight();
         setFonts();
-        new Window();
+        new Home();
     }
     
     private void createFolder()

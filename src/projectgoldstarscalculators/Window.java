@@ -418,7 +418,7 @@ public class Window extends JFrame
     {
         public void mousePressed(MouseEvent e)
         {
-            System.out.println("Work in Progress");
+            new DistanceConversions();
         }
 
         @Override

@@ -41,7 +41,7 @@ public class Home extends JFrame
         frame.add(action("Angle Conversions", new HomeListeners.AngleConversionsListener()));
         frame.add(action("Distance Conversions", new HomeListeners.DistanceConversionsListener()));
         frame.add(action("Temperature Conversions", new HomeListeners.TemperatureConversionsListener()));
-        frame.add(new JLabel());
+        frame.add(action("Volume Conversions", new HomeListeners.VolumeConversionsListener()));
         frame.add(headerLabel("Geometry:"));
         frame.add(action("Circles", new HomeListeners.CirclesListener()));
         frame.add(action("Rectangles", new HomeListeners.RectanglesListener()));

@@ -1,4 +1,5 @@
 package projectgoldstarscalculators;
+import components.ProgramWindow;
 import components.Buttons;
 import components.Labels;
 import java.awt.GridLayout;

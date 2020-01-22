@@ -1,4 +1,7 @@
 package projectgoldstarscalculators;
+
+import components.InformationWindow;
+
 public class Disclaimer
 {
     public Disclaimer()

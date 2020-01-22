@@ -1,4 +1,5 @@
 package projectgoldstarscalculators;
+import components.ProgramWindow;
 import listeners.ThemeListeners;
 import java.awt.Color;
 import java.awt.GridLayout;

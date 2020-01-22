@@ -1,8 +1,10 @@
-package projectgoldstarscalculators;
+package components;
 import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
+import projectgoldstarscalculators.Icon;
+import projectgoldstarscalculators.Main;
 public class StandardWindow
 {
     protected JFrame frame;

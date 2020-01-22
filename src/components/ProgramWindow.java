@@ -1,8 +1,9 @@
-package projectgoldstarscalculators;
+package components;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import projectgoldstarscalculators.Main;
 public class ProgramWindow extends StandardWindow
 {
     public ProgramWindow(String title)

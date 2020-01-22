@@ -1,6 +1,7 @@
-package projectgoldstarscalculators;
+package components;
 import java.awt.Font;
 import javax.swing.JTextArea;
+import projectgoldstarscalculators.Main;
 public class InformationWindow extends StandardWindow
 {
     public InformationWindow(String title)

@@ -2,6 +2,7 @@ package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
 import components.Labels;
+import components.ResultField;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +11,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class QuadraticEquationSolver implements ActionListener
 {
-    public static JTextField aField, bField, cField, solutionField;
+    public static JTextField aField, bField, cField;
+    public static ResultField rf;
     
     public QuadraticEquationSolver()
     {
@@ -35,8 +37,8 @@ public class QuadraticEquationSolver implements ActionListener
         frame.add(new JLabel());
         frame.add(Buttons.button2("Solve", new SolveQuadraticEquationListener()));
         frame.add(Labels.standardLabel("Solution(s):"));
-        setupSolutionField();
-        frame.add(solutionField);
+        rf = new ResultField();
+        frame.add(rf);
         frame.makeVisible();
     }
     
@@ -56,13 +58,6 @@ public class QuadraticEquationSolver implements ActionListener
     {
         cField = new JTextField("0");
         cField.setFont(Main.bodyText2);
-    }
-    
-    private void setupSolutionField()
-    {
-        solutionField = new JTextField("0");
-        solutionField.setEditable(false);
-        solutionField.setFont(Main.bodyText2);
     }
     
     public static class SolveQuadraticEquationListener implements ActionListener
@@ -115,11 +110,11 @@ public class QuadraticEquationSolver implements ActionListener
             x2 = x2 / (2 * aNum);
             if(x1 == x2)    //If there is one unique solution
             {
-                solutionField.setText("There is 1 possible solution: " + x1);
+                rf.updateText("There is 1 possible solution: " + x1);
             }
             else
             {
-                solutionField.setText("There are 2 possible solutions: " + x1 + " and " + x2);
+                rf.updateText("There are 2 possible solutions: " + x1 + " and " + x2);
             }
         }
     }

@@ -2,6 +2,7 @@ package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
 import components.Labels;
+import components.ResultField;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +11,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Exponents
 {
-    public static JTextField baseField, exponentField, resultField;
+    public static JTextField baseField, exponentField;
+    private static ResultField rf;
     
     public Exponents()
     {
@@ -32,8 +34,8 @@ public class Exponents
         frame.add(new JLabel());
         frame.add(Buttons.button2("Calculate", new CalculateListener()));
         frame.add(Labels.standardLabel("Result:"));
-        setupResultField();
-        frame.add(resultField);
+        rf = new ResultField();
+        frame.add(rf);
         frame.makeVisible();
     }
     
@@ -49,13 +51,6 @@ public class Exponents
         exponentField = new JTextField("0");
         exponentField.setFont(Main.bodyText2);
         exponentField.addActionListener(new CalculateListener());
-    }
-    
-    private void setupResultField()
-    {
-        resultField = new JTextField("0");
-        resultField.setEditable(false);
-        resultField.setFont(Main.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener
@@ -83,7 +78,7 @@ public class Exponents
                 JOptionPane.showMessageDialog(null, "ERROR", "Exponents", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            resultField.setText("" + Math.pow(baseD, exponentD));
+            rf.updateText("" + Math.pow(baseD, exponentD));
         }
     }
 }

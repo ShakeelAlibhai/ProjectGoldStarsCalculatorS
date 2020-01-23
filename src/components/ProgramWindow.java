@@ -31,4 +31,9 @@ public class ProgramWindow extends StandardWindow
     {
         frame.add(textField);
     }
+    
+    public void add(ResultField resultField)
+    {
+        frame.add(resultField.getResultField());
+    }
 }

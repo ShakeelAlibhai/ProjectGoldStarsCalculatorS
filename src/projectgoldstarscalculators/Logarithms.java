@@ -2,6 +2,7 @@ package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
 import components.Labels;
+import components.ResultField;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +11,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Logarithms implements ActionListener
 {
-    public static JTextField numberField, logBase10Field, logBaseEField;
+    public static JTextField numberField;
+    private static ResultField logBase10Field, logBaseEField;
     
     public Logarithms()
     {
@@ -28,11 +30,11 @@ public class Logarithms implements ActionListener
         frame.add(numberField);
         frame.add(Buttons.button2("Compute", new ComputeListener()));
         frame.add(Labels.standardLabel("Log Base 10:"));
-        setupLogBase10Field();
+        logBase10Field = new ResultField();
         frame.add(logBase10Field);
         frame.add(new JLabel());
         frame.add(Labels.standardLabel("Log Base e:"));
-        setupLogBaseEField();
+        logBaseEField = new ResultField();
         frame.add(logBaseEField);
         frame.add(Labels.disclaimerLabel("Note: Values may not be exact."));
         frame.makeVisible();
@@ -43,20 +45,6 @@ public class Logarithms implements ActionListener
         numberField = new JTextField("0");
         numberField.setFont(Main.bodyText2);
         numberField.addActionListener(new ComputeListener());
-    }
-    
-    private void setupLogBase10Field()
-    {
-        logBase10Field = new JTextField("0");
-        logBase10Field.setEditable(false);
-        logBase10Field.setFont(Main.bodyText2);
-    }
-    
-    private void setupLogBaseEField()
-    {
-        logBaseEField = new JTextField("0");
-        logBaseEField.setEditable(false);
-        logBaseEField.setFont(Main.bodyText2);
     }
     
     private class ComputeListener implements ActionListener
@@ -76,8 +64,8 @@ public class Logarithms implements ActionListener
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            logBase10Field.setText("" + Math.log10(input));
-            logBaseEField.setText("" + Math.log(input));
+            logBase10Field.updateText("" + Math.log10(input));
+            logBaseEField.updateText("" + Math.log(input));
         }
     }
     

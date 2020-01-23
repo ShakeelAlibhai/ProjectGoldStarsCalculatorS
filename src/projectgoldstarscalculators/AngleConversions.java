@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class AngleConversions
 {
-    public static JTextField degreesField, radiansField;
+    private static JTextField degreesField, radiansField;
     
     public AngleConversions()
     {

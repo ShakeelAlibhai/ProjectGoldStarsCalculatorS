@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Exponents
 {
-    public static JTextField baseField, exponentField;
+    private static JTextField baseField, exponentField;
     private static ResultField rf;
     
     public Exponents()

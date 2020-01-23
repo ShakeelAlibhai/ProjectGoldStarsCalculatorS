@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Circles
 {
-    public static JTextField radiusField, areaField, circumferenceField;
+    private static JTextField radiusField, areaField, circumferenceField;
     
     public Circles()
     {

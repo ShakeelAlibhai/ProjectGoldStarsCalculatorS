@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Rectangles
 {
-    public static JTextField lengthField, widthField;
+    private static JTextField lengthField, widthField;
     
     public Rectangles()
     {

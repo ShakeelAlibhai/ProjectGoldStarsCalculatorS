@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class PythagoreanTripleFinder
 {
-    public static JTextField firstNumberField, secondNumberField;
+    private static JTextField firstNumberField, secondNumberField;
     
     public PythagoreanTripleFinder()
     {

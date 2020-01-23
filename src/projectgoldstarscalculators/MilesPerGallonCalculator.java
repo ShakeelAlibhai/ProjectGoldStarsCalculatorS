@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class MilesPerGallonCalculator
 {
-    public static JTextField beginningField, endingField, gallonsField;
+    private static JTextField beginningField, endingField, gallonsField;
     
     public MilesPerGallonCalculator()
     {

@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class SquareAndCubeRoots implements ActionListener
 {
-    public static JTextField numberField, squareRootField, cubeRootField;
+    private static JTextField numberField, squareRootField, cubeRootField;
     
     public SquareAndCubeRoots()
     {

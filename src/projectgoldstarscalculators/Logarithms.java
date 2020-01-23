@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Logarithms implements ActionListener
 {
-    public static JTextField numberField;
+    private static JTextField numberField;
     private static ResultField logBase10Field, logBaseEField;
     
     public Logarithms()

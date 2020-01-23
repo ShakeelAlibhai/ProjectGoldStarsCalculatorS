@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Triangles
 {
-    public static JTextField baseField, heightField, areaField;
+    private static JTextField baseField, heightField, areaField;
     
     public Triangles()
     {
@@ -31,7 +31,7 @@ public class Triangles
         frame.add(heightField);
         frame.add(new JLabel());
         frame.add(Buttons.button2("Calculate", new CalculateListener()));
-        frame.add(Labels.standardLabel("Area"));
+        frame.add(Labels.standardLabel("Area:"));
         setupAreaField();
         frame.add(areaField);
         frame.makeVisible();

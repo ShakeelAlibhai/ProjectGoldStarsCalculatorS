@@ -11,8 +11,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class QuadraticEquationSolver implements ActionListener
 {
-    public static JTextField aField, bField, cField;
-    public static ResultField rf;
+    private static JTextField aField, bField, cField;
+    private static ResultField rf;
     
     public QuadraticEquationSolver()
     {

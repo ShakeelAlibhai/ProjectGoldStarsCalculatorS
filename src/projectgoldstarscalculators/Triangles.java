@@ -2,6 +2,7 @@ package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
 import components.Labels;
+import components.ResultField;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +11,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Triangles
 {
-    private static JTextField baseField, heightField, areaField;
+    private static JTextField baseField, heightField;
+    private static ResultField areaField;
     
     public Triangles()
     {
@@ -32,7 +34,7 @@ public class Triangles
         frame.add(new JLabel());
         frame.add(Buttons.button2("Calculate", new CalculateListener()));
         frame.add(Labels.standardLabel("Area:"));
-        setupAreaField();
+        areaField = new ResultField();
         frame.add(areaField);
         frame.makeVisible();
     }
@@ -47,13 +49,6 @@ public class Triangles
     {
         heightField = new JTextField("0");
         heightField.setFont(Main.bodyText2);
-    }
-    
-    private void setupAreaField()
-    {
-        areaField = new JTextField("0");
-        areaField.setEditable(false);
-        areaField.setFont(Main.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener
@@ -99,7 +94,7 @@ public class Triangles
             //Calculate the area.
             double area = 0.5 * baseD * heightD;
             //Display the area.
-            areaField.setText("" + area);
+            areaField.updateText("" + area);
         }
     }
 }

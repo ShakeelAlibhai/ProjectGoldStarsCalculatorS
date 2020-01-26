@@ -46,29 +46,34 @@ public class QuadraticEquationSolver implements ActionListener
     {
         aField = new JTextField("0");
         aField.setFont(Main.bodyText2);
+        aField.addActionListener(new SolveQuadraticEquationListener());
     }
     
     private void setupBField()
     {
         bField = new JTextField("0");
         bField.setFont(Main.bodyText2);
+        bField.addActionListener(new SolveQuadraticEquationListener());
     }
     
     private void setupCField()
     {
         cField = new JTextField("0");
         cField.setFont(Main.bodyText2);
+        cField.addActionListener(new SolveQuadraticEquationListener());
     }
     
     public static class SolveQuadraticEquationListener implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
         {
-            String a, b, c, output;
+            String a, b, c;
+            
             //Get the values of aField, bField, and CField and store them in Strings a, b, and c, respectively
             a = aField.getText();
             b = bField.getText();
             c = cField.getText();
+            
             //Attempt to convert Strings a, b, and c to doubles and store them in aNum, bNum, and cNum, respectively
             double aNum, bNum, cNum;
             try
@@ -98,6 +103,7 @@ public class QuadraticEquationSolver implements ActionListener
                 JOptionPane.showMessageDialog(null, "ERROR", "Quadratic Equation Solver", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            
             double x1, x2, quadSqrt;
             quadSqrt = bNum * bNum;
             quadSqrt = quadSqrt - (4 * aNum * cNum);
@@ -108,6 +114,7 @@ public class QuadraticEquationSolver implements ActionListener
             x2 = x2 - quadSqrt;
             x1 = x1 / (2 * aNum);
             x2 = x2 / (2 * aNum);
+            
             if(x1 == x2)    //If there is one unique solution
             {
                 rf.updateText("There is 1 possible solution: " + x1);

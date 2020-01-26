@@ -36,4 +36,9 @@ public class ProgramWindow extends StandardWindow
     {
         frame.add(resultField.getResultField());
     }
+    
+    public void add(ThemeButton button)
+    {
+        frame.add(button.getButton());
+    }
 }

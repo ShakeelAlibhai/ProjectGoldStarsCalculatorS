@@ -2,6 +2,7 @@ package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
 import components.Labels;
+import components.ResultField;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,6 +12,7 @@ import javax.swing.JTextField;
 public class Rectangles
 {
     private static JTextField lengthField, widthField;
+    private static ResultField areaField, perimeterField;
     
     public Rectangles()
     {
@@ -20,7 +22,7 @@ public class Rectangles
     private void calcRectangleInformation()
     {
         ProgramWindow frame = new ProgramWindow("Rectangles");
-        frame.setLayout(new GridLayout(3, 2));
+        frame.setLayout(new GridLayout(5, 2));
         frame.setSize(800 * Main.multiplier, 425 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the area and perimeter:");
         frame.add(Labels.standardLabel("Length:"));
@@ -31,6 +33,12 @@ public class Rectangles
         frame.add(widthField);
         frame.add(new JLabel());
         frame.add(Buttons.button2("Calculate", new CalculateListener()));
+        frame.add(Labels.standardLabel("Area:"));
+        areaField = new ResultField();
+        frame.add(areaField);
+        frame.add(Labels.standardLabel("Perimeter:"));
+        perimeterField = new ResultField();
+        frame.add(perimeterField);
         frame.makeVisible();
     }
     
@@ -91,9 +99,8 @@ public class Rectangles
             //Calculate the perimeter.
             double perimeter = lengthD + lengthD + widthD + widthD;
             //Display the area and perimeter.
-            output = "Area of the Rectangle: " + area + "\n"
-                    + "Perimeter of the Rectangle: " + perimeter;
-            JOptionPane.showMessageDialog(null, output, "Rectangles", JOptionPane.INFORMATION_MESSAGE);
+            areaField.updateText("" + area);
+            perimeterField.updateText("" + perimeter);
         }
     }
 }

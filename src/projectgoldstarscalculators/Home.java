@@ -10,7 +10,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
 import listeners.HomeListeners;
-public class Home extends JFrame
+public class Home
 {
     public Home()
     {

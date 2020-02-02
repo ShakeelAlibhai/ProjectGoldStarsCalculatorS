@@ -62,13 +62,13 @@ public class SquareAndCubeRoots implements ActionListener
     
     private class ComputeListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             double input;
             try
             {
-                String temp = numberField.getText();
-                input = Double.parseDouble(temp);
+                input = Double.parseDouble(numberField.getText());
             }
             catch(Exception e2)
             {

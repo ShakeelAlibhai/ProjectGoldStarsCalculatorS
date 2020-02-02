@@ -65,13 +65,13 @@ public class TemperatureConversions
     */
     private class ConvertFromCelsiusListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             double c = 0.0;
             try
             {
-                String temp = celsiusField.getText();
-                c = Double.parseDouble(temp);
+                c = Double.parseDouble(celsiusField.getText());
             }
             catch(Exception e2)
             {
@@ -90,13 +90,13 @@ public class TemperatureConversions
     */
     private class ConvertFromFahrenheitListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             double f = 0.0;
             try
             {
-                String temp = fahrenheitField.getText();
-                f = Double.parseDouble(temp);
+                f = Double.parseDouble(fahrenheitField.getText());
             }
             catch(Exception e2)
             {
@@ -115,13 +115,13 @@ public class TemperatureConversions
     */
     private class ConvertFromKelvinListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             double k = 0.0;
             try
             {
-                String temp = kelvinField.getText();
-                k = Double.parseDouble(temp);
+                k = Double.parseDouble(kelvinField.getText());
             }
             catch(Exception e2)
             {

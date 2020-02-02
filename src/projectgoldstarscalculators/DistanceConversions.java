@@ -65,13 +65,13 @@ public class DistanceConversions
     */
     private class ConvertFromFeetListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
-            double c = 0.0;
+            double c;
             try
             {
-                String temp = feetField.getText();
-                c = Double.parseDouble(temp);
+                c = Double.parseDouble(feetField.getText());
             }
             catch(Exception e2)
             {
@@ -90,13 +90,13 @@ public class DistanceConversions
     */
     private class ConvertFromMilesListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
-            double f = 0.0;
+            double f;
             try
             {
-                String temp = milesField.getText();
-                f = Double.parseDouble(temp);
+                f = Double.parseDouble(milesField.getText());
             }
             catch(Exception e2)
             {
@@ -115,13 +115,13 @@ public class DistanceConversions
     */
     private class ConvertFromKilometersListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
-            double k = 0.0;
+            double k;
             try
             {
-                String temp = kilometersField.getText();
-                k = Double.parseDouble(temp);
+                k = Double.parseDouble(kilometersField.getText());
             }
             catch(Exception e2)
             {

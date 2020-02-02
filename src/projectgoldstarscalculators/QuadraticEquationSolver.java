@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 public class QuadraticEquationSolver implements ActionListener
 {
     private static JTextField aField, bField, cField;
-    private static ResultField rf;
+    private static ResultField resultField;
     
     public QuadraticEquationSolver()
     {
@@ -37,8 +37,8 @@ public class QuadraticEquationSolver implements ActionListener
         frame.add(new JLabel());
         frame.add(Buttons.button2("Solve", new SolveQuadraticEquationListener()));
         frame.add(Labels.standardLabel("Solution(s):"));
-        rf = new ResultField();
-        frame.add(rf);
+        resultField = new ResultField();
+        frame.add(resultField);
         frame.makeVisible();
     }
     
@@ -65,38 +65,34 @@ public class QuadraticEquationSolver implements ActionListener
     
     public static class SolveQuadraticEquationListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
-            String a, b, c;
-            
-            //Get the values of aField, bField, and CField and store them in Strings a, b, and c, respectively
-            a = aField.getText();
-            b = bField.getText();
-            c = cField.getText();
-            
-            //Attempt to convert Strings a, b, and c to doubles and store them in aNum, bNum, and cNum, respectively
             double aNum, bNum, cNum;
+            
             try
             {
-                aNum = Double.parseDouble(a);
+                aNum = Double.parseDouble(aField.getText());
             }
             catch(Exception e2)
             {
                 JOptionPane.showMessageDialog(null, "ERROR", "Quadratic Equation Solver", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            
             try
             {
-                bNum = Double.parseDouble(b);
+                bNum = Double.parseDouble(bField.getText());
             }
             catch(Exception e2)
             {
                 JOptionPane.showMessageDialog(null, "ERROR", "Quadratic Equation Solver", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            
             try
             {
-                cNum = Double.parseDouble(c);
+                cNum = Double.parseDouble(cField.getText());
             }
             catch(Exception e2)
             {
@@ -117,11 +113,11 @@ public class QuadraticEquationSolver implements ActionListener
             
             if(x1 == x2)    //If there is one unique solution
             {
-                rf.updateText("There is 1 possible solution: " + x1);
+                resultField.updateText("There is 1 possible solution: " + x1);
             }
             else
             {
-                rf.updateText("There are 2 possible solutions: " + x1 + " and " + x2);
+                resultField.updateText("There are 2 possible solutions: " + x1 + " and " + x2);
             }
         }
     }

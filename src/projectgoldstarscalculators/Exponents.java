@@ -16,10 +16,10 @@ public class Exponents
     
     public Exponents()
     {
-        exponent();
+        exponents();
     }
     
-    private void exponent()
+    private void exponents()
     {
         ProgramWindow frame = new ProgramWindow("Exponents");
         frame.setLayout(new GridLayout(4, 2));
@@ -55,14 +55,13 @@ public class Exponents
     
     public static class CalculateListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
-            String baseStr = baseField.getText();
-            String exponentStr = exponentField.getText();
-            double baseD, exponentD;
+            double base, exponent;
             try
             {
-                baseD = Double.parseDouble(baseStr);
+                base = Double.parseDouble(baseField.getText());
             }
             catch(Exception e2)
             {
@@ -71,14 +70,14 @@ public class Exponents
             }
             try
             {
-                exponentD = Double.parseDouble(exponentStr);
+                exponent = Double.parseDouble(exponentField.getText());
             }
             catch(Exception e2)
             {
                 JOptionPane.showMessageDialog(null, "ERROR", "Exponents", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            rf.updateText("" + Math.pow(baseD, exponentD));
+            rf.updateText("" + Math.pow(base, exponent));
         }
     }
 }

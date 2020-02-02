@@ -49,15 +49,15 @@ public class Logarithms implements ActionListener
     
     private class ComputeListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
-            String temp = numberField.getText();
             double input;
             //Attempt to convert the user's input from a String to a double.
             //If the conversion fails, display an error message and exit the method.
             try
             {
-                input = Double.parseDouble(temp);
+                input = Double.parseDouble(numberField.getText());
             }
             catch(Exception e2)
             {

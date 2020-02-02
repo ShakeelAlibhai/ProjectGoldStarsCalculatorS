@@ -2,6 +2,7 @@ package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
 import components.Labels;
+import components.ResultField;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +11,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class Circles
 {
-    private static JTextField radiusField, areaField, circumferenceField;
+    private static JTextField radiusField;
+    private static ResultField areaField, circumferenceField;
     
     public Circles()
     {
@@ -28,11 +30,11 @@ public class Circles
         frame.add(radiusField);
         frame.add(Buttons.button2("Calculate", new CalculateListener()));
         frame.add(Labels.standardLabel("Area:"));
-        setupAreaField();
+        areaField = new ResultField();
         frame.add(areaField);
         frame.add(new JLabel());
         frame.add(Labels.standardLabel("Circumference:"));
-        setupCircumferenceField();
+        circumferenceField = new ResultField();
         frame.add(circumferenceField);
         frame.add(Labels.disclaimerLabel("Note: Values may not be exact."));
         frame.makeVisible();
@@ -43,20 +45,6 @@ public class Circles
         radiusField = new JTextField("0");
         radiusField.setFont(Main.bodyText2);
         radiusField.addActionListener(new CalculateListener());
-    }
-    
-    private void setupAreaField()
-    {
-        areaField = new JTextField("0");
-        areaField.setEditable(false);
-        areaField.setFont(Main.bodyText2);
-    }
-    
-    private void setupCircumferenceField()
-    {
-        circumferenceField = new JTextField("0");
-        circumferenceField.setEditable(false);
-        circumferenceField.setFont(Main.bodyText2);
     }
     
     public static class CalculateListener implements ActionListener
@@ -90,8 +78,8 @@ public class Circles
             //Calculate the circumference.
             double circumference = 2 * Math.PI * radiusD;
             //Display the area and circumference.
-            areaField.setText("" + area);
-            circumferenceField.setText("" + circumference);
+            areaField.updateText("" + area);
+            circumferenceField.updateText("" + circumference);
         }
     }
 }

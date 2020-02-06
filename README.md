@@ -11,7 +11,9 @@ It can serve as a useful tool for people who need a calculator, as well as for p
 * Log Base 10 and Natural Log
 * Quadratic Equation Solver
 * Angle Conversions
+* Distance Conversions
 * Temperature Conversions
+* Volume Conversions
 * Area and Circumference of a Circle
 * Area and Perimeter of a Rectangle
 * Area of a Triangle

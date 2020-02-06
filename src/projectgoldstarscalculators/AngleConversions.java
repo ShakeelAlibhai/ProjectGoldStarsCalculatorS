@@ -20,8 +20,8 @@ public class AngleConversions
     {
         ProgramWindow frame = new ProgramWindow("Angle Conversions");
         frame.setLayout(new GridLayout(2, 3));
-        frame.setSize(750 * Main.multiplier, 375 * Main.multiplier);
-        frame.setInstructionsMenuBar("Please fill one of the fields and then press the button to convert to the other unit.");
+        frame.setSize(875 * Main.multiplier, 475 * Main.multiplier);
+        frame.setInstructionsMenuBar("Please fill in one of the fields, and then press the corresponding button to convert to the other unit.");
         frame.add(descriptionLabel("Degrees:"));
         setupDegreesField();
         frame.add(degreesField);

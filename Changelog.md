@@ -1,11 +1,12 @@
 # Project GoldStars Calculator S Changelog
 
 ## Version 3.0.x
-### Version 3.0
+### Version 3.0 (February 6, 2020)
 * Add a new theme, "Dawn".
 * Add Distance Conversions.
 * Add Volume Conversions.
 * In the Quadratic Equation Solver, pressing Enter in one of the input fields has the same effect as clicking the Solve button.
+* Update the instructions in and default size of the Angle Conversions window.
 * Update the instructions in the Quadratic Equation Solver.
 * Update the interface of the Pythagorean Triple Finder.
 * Update the interface of the Quadratic Equation Solver.

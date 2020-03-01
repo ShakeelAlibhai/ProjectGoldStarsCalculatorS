@@ -1,5 +1,9 @@
 # Project GoldStars Calculator S Changelog
 
+## Version 3.1.x
+### Version 3.1
+* In the "Distance Conversions" window, pressing Enter in one of the input fields has the same effect as clicking the corresponding button.
+
 ## Version 3.0.x
 ### Version 3.0 (February 6, 2020)
 * Add a new theme, "Dawn".

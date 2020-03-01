@@ -44,18 +44,21 @@ public class DistanceConversions
     {
         feetField = new JTextField("0");
         feetField.setFont(Main.bodyText2);
+        feetField.addActionListener(new ConvertFromFeetListener());
     }
     
     private void setupMilesField()
     {
         milesField = new JTextField("0");
         milesField.setFont(Main.bodyText2);
+        milesField.addActionListener(new ConvertFromMilesListener());
     }
     
     private void setupKilometersField()
     {
         kilometersField = new JTextField("0");
         kilometersField.setFont(Main.bodyText2);
+        kilometersField.addActionListener(new ConvertFromKilometersListener());
     }
     
     /*

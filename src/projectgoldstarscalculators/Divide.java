@@ -126,6 +126,7 @@ public class Divide implements ActionListener
     
     private class DivideListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             String[] arrayOfStrings = new String[10];

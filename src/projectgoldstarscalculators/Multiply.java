@@ -136,6 +136,7 @@ public class Multiply implements ActionListener
     
     private class MultiplyListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             String[] arrayOfStrings = new String[10];
@@ -172,6 +173,7 @@ public class Multiply implements ActionListener
     
     private class MultiplyMoreThan10NumbersListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             String output;

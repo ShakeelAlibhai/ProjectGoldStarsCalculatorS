@@ -53,6 +53,7 @@ public class Triangles
     
     public static class CalculateListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             String output;

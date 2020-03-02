@@ -136,6 +136,7 @@ public class Add implements ActionListener
     
     private class AddListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             String[] arrayOfStrings = new String[10];
@@ -172,6 +173,7 @@ public class Add implements ActionListener
     
     private class AddMoreThan10NumbersListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             String output;

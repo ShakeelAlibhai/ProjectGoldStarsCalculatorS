@@ -60,6 +60,7 @@ public class AngleConversions
     */
     private class ConvertFromDegreesListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             double d = 0.0, r = 0.0;
@@ -84,6 +85,7 @@ public class AngleConversions
     */
     private class ConvertFromRadiansListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             double d = 0.0, r = 0.0;

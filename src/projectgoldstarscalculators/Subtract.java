@@ -126,6 +126,7 @@ public class Subtract implements ActionListener
     
     private class SubtractListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             String[] arrayOfStrings = new String[10];

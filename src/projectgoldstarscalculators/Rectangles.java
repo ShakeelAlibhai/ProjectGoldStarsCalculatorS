@@ -56,6 +56,7 @@ public class Rectangles
     
     public static class CalculateListener implements ActionListener
     {
+        @Override
         public void actionPerformed(ActionEvent e)
         {
             String output;

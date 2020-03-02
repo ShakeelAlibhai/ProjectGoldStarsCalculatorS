@@ -2,6 +2,7 @@
 
 ## Version 3.1.x
 ### Version 3.1
+* Add the ability to convert to and from inches in Distance Conversions.
 * In the "Distance Conversions" window, pressing Enter in one of the input fields has the same effect as clicking the corresponding button.
 
 ## Version 3.0.x

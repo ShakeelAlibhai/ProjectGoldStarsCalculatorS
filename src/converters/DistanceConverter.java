@@ -1,18 +1,41 @@
 package converters;
 public class DistanceConverter
 {
+    public double toInches(String fromType, double fromValue)
+    {
+        double i = 0.0;
+        
+        if(!fromType.equals("Feet"))
+        {
+            fromValue = this.toFeet(fromType, fromValue);
+        }
+        
+        //At this point, assume that fromValue is in feet
+        
+        i = fromValue * 12;
+        
+        return i;
+    }
+    
     public double toFeet(String fromType, double fromValue)
     {
         double f = 0.0;
         
-        if(fromType.equals("Kilometers"))
+        if(!fromType.equals("Inches"))
         {
-            fromValue = this.toMiles("Kilometers", fromValue);
+            if(fromType.equals("Kilometers"))
+            {
+                fromValue = this.toMiles("Kilometers", fromValue);
+            }
+
+            //At this point, assume that fromValue is in miles
+
+            f = fromValue * 5280;
         }
-        
-        //At this point, assume that fromValue is in miles
-        
-        f = fromValue * 5280;
+        else    //fromValue is in inches
+        {
+            f = fromValue / 12;
+        }
         
         return f;
     }
@@ -21,14 +44,24 @@ public class DistanceConverter
     {
         double m = 0.0;
         
-        if(fromType.equals("Feet"))
+        switch(fromType)
         {
-            m = fromValue / 5280;
-        }
-        
-        if(fromType.equals("Kilometers"))
-        {
-            m = fromValue * 0.62137119;
+            case "Inches":
+            {
+                m = fromValue / 5280;
+                m *= 12;
+                break;
+            }
+            case "Feet":
+            {
+                m = fromValue / 5280;
+                break;
+            }
+            case "Kilometers":
+            {
+                m = fromValue * 0.62137119;
+                break;
+            }
         }
         
         return m;
@@ -38,9 +71,9 @@ public class DistanceConverter
     {
         double k = 0.0;
         
-        if(fromType.equals("Feet"))
+        if(!fromType.equals("Miles"))
         {
-            fromValue = this.toMiles("Feet", fromValue);
+            fromValue = this.toMiles(fromType, fromValue);
         }
         
         //At this point, assume that fromValue is in miles

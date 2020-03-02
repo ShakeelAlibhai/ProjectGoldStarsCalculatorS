@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class DistanceConversions
 {
-    private static JTextField feetField, milesField, kilometersField;
+    private static JTextField inchesField, feetField, milesField, kilometersField;
     private DistanceConverter conv;
     
     public DistanceConversions()
@@ -22,12 +22,16 @@ public class DistanceConversions
     {
         conv = new DistanceConverter();
         ProgramWindow frame = new ProgramWindow("Distance Conversions");
-        frame.setLayout(new GridLayout(3, 3));
+        frame.setLayout(new GridLayout(4, 3));
         frame.setSize(875 * Main.multiplier, 475 * Main.multiplier);
         frame.setInstructionsMenuBar("Please fill in one of the fields, and then press the corresponding button to convert to the other units.");
+        setupInchesField();
         setupFeetField();
         setupMilesField();
         setupKilometersField();
+        frame.add(Labels.standardLabel("Inches:"));
+        frame.add(inchesField);
+        frame.add(Buttons.button2("Convert From Inches", new ConvertFromInchesListener()));
         frame.add(Labels.standardLabel("Feet:"));
         frame.add(feetField);
         frame.add(Buttons.button2("Convert From Feet", new ConvertFromFeetListener()));
@@ -38,6 +42,13 @@ public class DistanceConversions
         frame.add(kilometersField);
         frame.add(Buttons.button2("Convert From Kilometers", new ConvertFromKilometersListener()));
         frame.makeVisible();
+    }
+    
+    private void setupInchesField()
+    {
+        inchesField = new JTextField("0");
+        inchesField.setFont(Main.bodyText2);
+        inchesField.addActionListener(new ConvertFromInchesListener());
     }
     
     private void setupFeetField()
@@ -61,11 +72,27 @@ public class DistanceConversions
         kilometersField.addActionListener(new ConvertFromKilometersListener());
     }
     
-    /*
-    This is executed when the user attempts to convert from Feet.
-    It attempts to convert the value in the Feet text field to Miles and Kilometers,
-    and then updates the Miles and Kilometers text fields to equal the value in the Feet text field.
-    */
+    private class ConvertFromInchesListener implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            double c;
+            try
+            {
+                c = Double.parseDouble(inchesField.getText());
+            }
+            catch(Exception e2)
+            {
+                JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            feetField.setText("" + conv.toFeet("Inches", c));
+            milesField.setText("" + conv.toMiles("Inches", c));
+            kilometersField.setText("" + conv.toKilometers("Inches", c));
+        }
+    }
+    
     private class ConvertFromFeetListener implements ActionListener
     {
         @Override
@@ -81,16 +108,12 @@ public class DistanceConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            inchesField.setText("" + conv.toInches("Feet", c));
             milesField.setText("" + conv.toMiles("Feet", c));
             kilometersField.setText("" + conv.toKilometers("Feet", c));
         }
     }
     
-    /*
-    This is executed when the user attempts to convert from Miles.
-    It attempts to convert the value in the Miles text field to Feet and Kilometers,
-    and then updates the Feet and Kilometers text fields to equal the value in the Miles text field.
-    */
     private class ConvertFromMilesListener implements ActionListener
     {
         @Override
@@ -106,16 +129,12 @@ public class DistanceConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            inchesField.setText("" + conv.toInches("Miles", f));
             feetField.setText("" + conv.toFeet("Miles", f));
             kilometersField.setText("" + conv.toKilometers("Miles", f));
         }
     }
     
-    /*
-    This is executed when the user attempts to convert from Kilometers.
-    It attempts to convert the value in the Kilometers text field to Feet and Miles,
-    and then updates the Feet and Miles text fields to equal the value in the Kilometers text field.
-    */
     private class ConvertFromKilometersListener implements ActionListener
     {
         @Override
@@ -131,6 +150,7 @@ public class DistanceConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            inchesField.setText("" + conv.toInches("Kilometers", k));
             feetField.setText("" + conv.toFeet("Kilometers", k));
             milesField.setText("" + conv.toMiles("Kilometers", k));
         }

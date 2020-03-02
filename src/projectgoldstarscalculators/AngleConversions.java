@@ -73,9 +73,7 @@ public class AngleConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            r = Math.toRadians(d);
-            String temp2 = "" + r;
-            radiansField.setText(temp2);
+            radiansField.setText("" + Math.toRadians(d));
         }
     }
     
@@ -99,9 +97,7 @@ public class AngleConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            d = Math.toDegrees(r);
-            String temp2 = "" + d;
-            degreesField.setText(temp2);
+            degreesField.setText("" + Math.toDegrees(r));
         }
     }
 }

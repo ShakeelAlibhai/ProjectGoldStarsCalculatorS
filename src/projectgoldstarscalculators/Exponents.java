@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
-import components.Labels;
 import components.ResultField;
+import components.StandardLabel;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,15 +25,15 @@ public class Exponents
         frame.setLayout(new GridLayout(4, 2));
         frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information:");
-        frame.add(Labels.standardLabel("Base:"));
+        frame.add(new StandardLabel("Base:"));
         setupBaseField();
         frame.add(baseField);
-        frame.add(Labels.standardLabel("Exponent:"));
+        frame.add(new StandardLabel("Exponent:"));
         setupExponentField();
         frame.add(exponentField);
         frame.add(new JLabel());
         frame.add(Buttons.button2("Calculate", new CalculateListener()));
-        frame.add(Labels.standardLabel("Result:"));
+        frame.add(new StandardLabel("Result:"));
         rf = new ResultField();
         frame.add(rf);
         frame.makeVisible();

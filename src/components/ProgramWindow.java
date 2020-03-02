@@ -22,6 +22,16 @@ public class ProgramWindow extends StandardWindow
         frame.add(label);
     }
     
+    public void add(StandardLabel label)
+    {
+        frame.add(label.getLabel());
+    }
+    
+    public void add(DisclaimerLabel label)
+    {
+        frame.add(label.getLabel());
+    }
+    
     public void add(JPanel panel)
     {
         frame.add(panel);

@@ -1,8 +1,9 @@
 package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
-import components.Labels;
+import components.DisclaimerLabel;
 import components.ResultField;
+import components.StandardLabel;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,18 +26,18 @@ public class Circles
         frame.setLayout(new GridLayout(3, 3));
         frame.setSize(800 * Main.multiplier, 425 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the radius of the circle, and then press Calculate to find its area and circumference:");
-        frame.add(Labels.standardLabel("Radius:"));
+        frame.add(new StandardLabel("Radius:"));
         setupRadiusField();
         frame.add(radiusField);
         frame.add(Buttons.button2("Calculate", new CalculateListener()));
-        frame.add(Labels.standardLabel("Area:"));
+        frame.add(new StandardLabel("Area:"));
         areaField = new ResultField();
         frame.add(areaField);
         frame.add(new JLabel());
-        frame.add(Labels.standardLabel("Circumference:"));
+        frame.add(new StandardLabel("Circumference:"));
         circumferenceField = new ResultField();
         frame.add(circumferenceField);
-        frame.add(Labels.disclaimerLabel("Note: Values may not be exact."));
+        frame.add(new DisclaimerLabel("Note: Values may not be exact."));
         frame.makeVisible();
     }
     

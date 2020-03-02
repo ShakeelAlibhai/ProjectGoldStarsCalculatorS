@@ -1,8 +1,8 @@
 package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
-import components.Labels;
 import components.ResultField;
+import components.StandardLabel;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,15 +25,15 @@ public class Triangles
         frame.setLayout(new GridLayout(4, 2));
         frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the area:");
-        frame.add(Labels.standardLabel("Base:"));
+        frame.add(new StandardLabel("Base:"));
         setupBaseField();
         frame.add(baseField);
-        frame.add(Labels.standardLabel("Height:"));
+        frame.add(new StandardLabel("Height:"));
         setupHeightField();
         frame.add(heightField);
         frame.add(new JLabel());
         frame.add(Buttons.button2("Calculate", new CalculateListener()));
-        frame.add(Labels.standardLabel("Area:"));
+        frame.add(new StandardLabel("Area:"));
         areaField = new ResultField();
         frame.add(areaField);
         frame.makeVisible();

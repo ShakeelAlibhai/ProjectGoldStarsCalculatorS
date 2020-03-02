@@ -1,7 +1,7 @@
 package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
-import components.Labels;
+import components.StandardLabel;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,13 +23,13 @@ public class MilesPerGallonCalculator
         frame.setLayout(new GridLayout(4, 2));
         frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter the following information, and then press Calculate to find the results:");
-        frame.add(Labels.standardLabel("Beginning Odometer Reading:"));
+        frame.add(new StandardLabel("Beginning Odometer Reading:"));
         setupBeginningField();
         frame.add(beginningField);
-        frame.add(Labels.standardLabel("Ending Odometer Reading:"));
+        frame.add(new StandardLabel("Ending Odometer Reading:"));
         setupEndingField();
         frame.add(endingField);
-        frame.add(Labels.standardLabel("Gallons of Gas Used:"));
+        frame.add(new StandardLabel("Gallons of Gas Used:"));
         setupGallonsField();
         frame.add(gallonsField);
         frame.add(new JLabel());

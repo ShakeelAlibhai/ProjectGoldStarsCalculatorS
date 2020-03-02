@@ -1,7 +1,8 @@
 package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
-import components.Labels;
+import components.DisclaimerLabel;
+import components.StandardLabel;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,18 +25,18 @@ public class SquareAndCubeRoots implements ActionListener
         frame.setLayout(new GridLayout(3, 3));
         frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find its square and cube roots:");
-        frame.add(Labels.standardLabel("Number:"));
+        frame.add(new StandardLabel("Number:"));
         setupNumberField();
         frame.add(numberField);
         frame.add(Buttons.button2("Compute", new ComputeListener()));
-        frame.add(Labels.standardLabel("Square Root:"));
+        frame.add(new StandardLabel("Square Root:"));
         setupSquareRootField();
         frame.add(squareRootField);
         frame.add(new JLabel());
-        frame.add(Labels.standardLabel("Cube Root:"));
+        frame.add(new StandardLabel("Cube Root:"));
         setupCubeRootField();
         frame.add(cubeRootField);
-        frame.add(Labels.disclaimerLabel("Note: Values may not be exact."));
+        frame.add(new DisclaimerLabel("Note: Values may not be exact."));
         frame.makeVisible();
     }
     

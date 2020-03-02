@@ -1,8 +1,9 @@
 package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
-import components.Labels;
+import components.DisclaimerLabel;
 import components.ResultField;
+import components.StandardLabel;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,18 +26,18 @@ public class Logarithms implements ActionListener
         frame.setLayout(new GridLayout(3, 3));
         frame.setSize(850 * Main.multiplier, 475 * Main.multiplier);
         frame.setInstructionsMenuBar("Please enter a number, and then press Compute to find the log base 10 and log base e of that number:");
-        frame.add(Labels.standardLabel("Number:"));
+        frame.add(new StandardLabel("Number:"));
         setupNumberField();
         frame.add(numberField);
         frame.add(Buttons.button2("Compute", new ComputeListener()));
-        frame.add(Labels.standardLabel("Log Base 10:"));
+        frame.add(new StandardLabel("Log Base 10:"));
         logBase10Field = new ResultField();
         frame.add(logBase10Field);
         frame.add(new JLabel());
-        frame.add(Labels.standardLabel("Log Base e:"));
+        frame.add(new StandardLabel("Log Base e:"));
         logBaseEField = new ResultField();
         frame.add(logBaseEField);
-        frame.add(Labels.disclaimerLabel("Note: Values may not be exact."));
+        frame.add(new DisclaimerLabel("Note: Values may not be exact."));
         frame.makeVisible();
     }
     

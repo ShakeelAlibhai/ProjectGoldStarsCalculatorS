@@ -1,7 +1,7 @@
 package projectgoldstarscalculators;
 import components.ProgramWindow;
 import components.Buttons;
-import components.Labels;
+import components.StandardLabel;
 import converters.VolumeConverter;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -27,10 +27,10 @@ public class VolumeConversions
         frame.setInstructionsMenuBar("Please fill in one of the fields, and then press the corresponding button to convert to the other units.");
         setupGallonsField();
         setupLitersField();
-        frame.add(Labels.standardLabel("Gallons:"));
+        frame.add(new StandardLabel("Gallons:"));
         frame.add(gallonsField);
         frame.add(Buttons.button2("Convert From Gallons", new ConvertFromGallonsListener()));
-        frame.add(Labels.standardLabel("Liters:"));
+        frame.add(new StandardLabel("Liters:"));
         frame.add(litersField);
         frame.add(Buttons.button2("Convert From Liters", new ConvertFromLitersListener()));
         frame.makeVisible();

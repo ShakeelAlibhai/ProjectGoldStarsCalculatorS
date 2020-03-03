@@ -21,7 +21,7 @@ public class Home
     {
         JFrame frame = new JFrame("Project GoldStars Calculator S");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1100 * Main.multiplier, 500 * Main.multiplier);
+        frame.setSize(1175 * Main.multiplier, 650 * Main.multiplier);
         frame.setExtendedState(frame.MAXIMIZED_BOTH);
         frame.setIconImage(Icon.getImage());
         frame.setLayout(new GridLayout(5, 5));

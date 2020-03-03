@@ -5,23 +5,38 @@ Project GoldStars Calculator S is a simple yet useful calculator coded in the Ja
 It can serve as a useful tool for people who need a calculator, as well as for people who are trying to learn and/or experiment with Java.
 
 ## Features
-* Basic Calculations (Add, Subtract, Multiply, and Divide)
-* Square and Cube Roots
+### Calculations
+* Addition
+* Subtraction
+* Multiplication
+* Division
+* Square Roots
+* Cube Roots
 * Exponents
-* Log Base 10 and Natural Log
 * Quadratic Equation Solver
-* Angle Conversions
-* Distance Conversions
-* Temperature Conversions
-* Volume Conversions
-* Area and Circumference of a Circle
-* Area and Perimeter of a Rectangle
-* Area of a Triangle
-* Sine, Cosine, and Tangent
 * Average Calculator
 * Miles Per Gallon Calculator
 * Pythagorean Triple Finder
-* Themes
+* Logarithms: Log Base 10 and Natural Log
+
+### Conversions
+* Angle Conversions: Degrees and Radians
+* Distance Conversions: Inches, Feet, Miles, and Kilometers
+* Temperature Conversions: Celsius, Fahrenheit, and Kelvin
+* Volume Conversions: Gallons and Liters
+
+### Geometry
+* Circles: Area and Circumference
+* Rectangles: Area and Perimeter
+* Triangles: Area
+
+### Trigonometry
+* Sine
+* Cosine
+* Tangent
+
+### More
+Customize Project GoldStars Calculator S by choosing from a variety of themes!
 
 ## Disclaimer
 1. Neither Project GoldStars Calculator S, nor the programmer(s) of Project GoldStars Calculator S, nor the distributor(s) of Project GoldStars Calculator S,

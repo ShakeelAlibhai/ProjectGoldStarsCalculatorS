@@ -24,7 +24,7 @@ public class Exponents
         ProgramWindow frame = new ProgramWindow("Exponents");
         frame.setLayout(new GridLayout(4, 2));
         frame.setSize(750 * Main.multiplier, 400 * Main.multiplier);
-        frame.setInstructionsMenuBar("Please enter the following information:");
+        frame.setInstructionsMenuBar("Please enter the base and exponent, and then press Calculate to find the reuslt:");
         frame.add(new StandardLabel("Base:"));
         setupBaseField();
         frame.add(baseField);

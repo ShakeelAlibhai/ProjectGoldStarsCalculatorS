@@ -1,6 +1,9 @@
 # Project GoldStars Calculator S Changelog
 
 ## Version 3.1.x
+### Version 3.1.1 (April 29, 2020)
+* Updated the "Exponents" window.
+
 ### Version 3.1 (March 3, 2020)
 * Add the ability to convert to and from inches in Distance Conversions.
 * In the "Distance Conversions" window, pressing Enter in one of the input fields has the same effect as clicking the corresponding button.

@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 public class VolumeConversions
 {
-    private static JTextField gallonsField, litersField;
+    private static JTextField cubicMetersField, gallonsField, litersField;
     private VolumeConverter conv;
     
     public VolumeConversions()
@@ -22,11 +22,15 @@ public class VolumeConversions
     {
         conv = new VolumeConverter();
         ProgramWindow frame = new ProgramWindow("Volume Conversions");
-        frame.setLayout(new GridLayout(2, 3));
+        frame.setLayout(new GridLayout(3, 3));
         frame.setSize(875 * Main.multiplier, 475 * Main.multiplier);
         frame.setInstructionsMenuBar("Please fill in one of the fields, and then press the corresponding button to convert to the other units.");
+        setupCubicMetersField();
         setupGallonsField();
         setupLitersField();
+        frame.add(new StandardLabel("Cubic Meters:"));
+        frame.add(cubicMetersField);
+        frame.add(Buttons.button2("Convert From Cubic Meters", new ConvertFromCubicMetersListener()));
         frame.add(new StandardLabel("Gallons:"));
         frame.add(gallonsField);
         frame.add(Buttons.button2("Convert From Gallons", new ConvertFromGallonsListener()));
@@ -34,6 +38,12 @@ public class VolumeConversions
         frame.add(litersField);
         frame.add(Buttons.button2("Convert From Liters", new ConvertFromLitersListener()));
         frame.makeVisible();
+    }
+    
+    private void setupCubicMetersField()
+    {
+        cubicMetersField = new JTextField("0");
+        cubicMetersField.setFont(Main.bodyText2);
     }
     
     private void setupGallonsField()
@@ -46,6 +56,27 @@ public class VolumeConversions
     {
         litersField = new JTextField("0");
         litersField.setFont(Main.bodyText2);
+    }
+    
+    private class ConvertFromCubicMetersListener implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            double vol = 0.0;
+            try
+            {
+                String volStr = cubicMetersField.getText();
+                vol = Double.parseDouble(volStr);
+            }
+            catch(Exception e2)
+            {
+                JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            gallonsField.setText("" + conv.toGallons("Cubic Meters", vol));
+            litersField.setText("" + conv.toLiters("Cubic Meters", vol));
+        }
     }
     
     /*
@@ -69,6 +100,7 @@ public class VolumeConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            cubicMetersField.setText("" + conv.toCubicMeters("Gallons", c));
             litersField.setText("" + conv.toLiters("Gallons", c));
         }
     }
@@ -94,6 +126,7 @@ public class VolumeConversions
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            cubicMetersField.setText("" + conv.toCubicMeters("Liters", f));
             gallonsField.setText("" + conv.toGallons("Liters", f));
         }
     }

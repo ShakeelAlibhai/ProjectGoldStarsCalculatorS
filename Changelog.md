@@ -1,5 +1,9 @@
 # Project GoldStars Calculator S Changelog
 
+## Version 3.2.x
+### Version 3.2
+* Add the ability to convert to and from cubic meters in Volume Conversions.
+
 ## Version 3.1.x
 ### Version 3.1.1 (April 29, 2020)
 * Updated the "Exponents" window.

@@ -58,78 +58,63 @@ public class TemperatureConversions
         kelvinField.setFont(Main.bodyText2);
     }
     
-    /*
-    This is executed when the user attempts to convert from Celsius.
-    It attempts to convert the value in the Celsius text field to Fahrenheit and Kelvin,
-    and then updates the Fahrenheit and Kelvin text fields to equal the value in the Celsius text field.
-    */
     private class ConvertFromCelsiusListener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            double c = 0.0;
+            double temp = 0.0;
             try
             {
-                c = Double.parseDouble(celsiusField.getText());
+                temp = Double.parseDouble(celsiusField.getText());
             }
             catch(Exception e2)
             {
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            fahrenheitField.setText("" + conv.toFahrenheit("Celsius", c));
-            kelvinField.setText("" + conv.toKelvin("Celsius", c));
+            fahrenheitField.setText("" + conv.toFahrenheit("Celsius", temp));
+            kelvinField.setText("" + conv.toKelvin("Celsius", temp));
         }
     }
     
-    /*
-    This is executed when the user attempts to convert from Fahrenheit.
-    It attempts to convert the value in the Fahrenheit text field to Celsius and Kelvin,
-    and then updates the Celsius and Kelvin text fields to equal the value in the Fahrenheit text field.
-    */
     private class ConvertFromFahrenheitListener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            double f = 0.0;
+            double temp = 0.0;
             try
             {
-                f = Double.parseDouble(fahrenheitField.getText());
+                temp = Double.parseDouble(fahrenheitField.getText());
             }
             catch(Exception e2)
             {
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            celsiusField.setText("" + conv.toCelsius("Fahrenheit", f));
-            kelvinField.setText("" + conv.toKelvin("Fahrenheit", f));
+            celsiusField.setText("" + conv.toCelsius("Fahrenheit", temp));
+            kelvinField.setText("" + conv.toKelvin("Fahrenheit", temp));
         }
     }
     
-    /*
-    This is executed when the user attempts to convert from Kelvin.
-    It attempts to convert the value in the Kelvin text field to Celsius and Fahrenheit,
-    and then updates the Celsius and Fahrenheit text fields to equal the value in the Kelvin text field.
-    */
     private class ConvertFromKelvinListener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            double k = 0.0;
+            double temp = 0.0;
             try
             {
-                k = Double.parseDouble(kelvinField.getText());
+                temp = Double.parseDouble(kelvinField.getText());
             }
             catch(Exception e2)
             {
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            celsiusField.setText("" + conv.toCelsius("Kelvin", k));
-            fahrenheitField.setText("" + conv.toFahrenheit("Kelvin", k));
+            celsiusField.setText("" + conv.toCelsius("Kelvin", temp));
+            fahrenheitField.setText("" + conv.toFahrenheit("Kelvin", temp));
         }
     }
 }

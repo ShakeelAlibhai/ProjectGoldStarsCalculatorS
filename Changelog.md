@@ -3,6 +3,7 @@
 ## Version 3.2.x
 ### Version 3.2
 * Add the ability to convert to and from cubic meters in Volume Conversions.
+* Other minor changes.
 
 ## Version 3.1.x
 ### Version 3.1.1 (April 29, 2020)

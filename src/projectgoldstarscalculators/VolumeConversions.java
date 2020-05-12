@@ -44,18 +44,21 @@ public class VolumeConversions
     {
         cubicMetersField = new JTextField("0");
         cubicMetersField.setFont(Main.bodyText2);
+        cubicMetersField.addActionListener(new ConvertFromCubicMetersListener());
     }
     
     private void setupGallonsField()
     {
         gallonsField = new JTextField("0");
         gallonsField.setFont(Main.bodyText2);
+        gallonsField.addActionListener(new ConvertFromGallonsListener());
     }
     
     private void setupLitersField()
     {
         litersField = new JTextField("0");
         litersField.setFont(Main.bodyText2);
+        litersField.addActionListener(new ConvertFromLitersListener());
     }
     
     private class ConvertFromCubicMetersListener implements ActionListener

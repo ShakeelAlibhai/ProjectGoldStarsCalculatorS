@@ -3,6 +3,7 @@
 ## Version 3.2.x
 ### Version 3.2
 * Add the ability to convert to and from cubic meters in Volume Conversions.
+* In the "Volume Conversions" window, pressing Enter in one of the input fields has the same effect as clicking the corresponding button.
 * Other minor changes.
 
 ## Version 3.1.x

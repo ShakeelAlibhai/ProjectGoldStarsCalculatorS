@@ -79,55 +79,45 @@ public class VolumeConversions
         }
     }
     
-    /*
-    This is executed when the user attempts to convert from Gallons.
-    It attempts to convert the value in the Gallons text field to Liters and Kelvin,
-    and then updates the Liters and Kelvin text fields to equal the value in the Gallons text field.
-    */
     private class ConvertFromGallonsListener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            double c = 0.0;
+            double vol = 0.0;
             try
             {
-                String temp = gallonsField.getText();
-                c = Double.parseDouble(temp);
+                String volStr = gallonsField.getText();
+                vol = Double.parseDouble(volStr);
             }
             catch(Exception e2)
             {
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            cubicMetersField.setText("" + conv.toCubicMeters("Gallons", c));
-            litersField.setText("" + conv.toLiters("Gallons", c));
+            cubicMetersField.setText("" + conv.toCubicMeters("Gallons", vol));
+            litersField.setText("" + conv.toLiters("Gallons", vol));
         }
     }
     
-    /*
-    This is executed when the user attempts to convert from Liters.
-    It attempts to convert the value in the Liters text field to Gallons and Kelvin,
-    and then updates the Gallons and Kelvin text fields to equal the value in the Liters text field.
-    */
     private class ConvertFromLitersListener implements ActionListener
     {
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            double f = 0.0;
+            double vol = 0.0;
             try
             {
-                String temp = litersField.getText();
-                f = Double.parseDouble(temp);
+                String volStr = litersField.getText();
+                vol = Double.parseDouble(volStr);
             }
             catch(Exception e2)
             {
                 JOptionPane.showMessageDialog(null, "ERROR", "Calculator", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            cubicMetersField.setText("" + conv.toCubicMeters("Liters", f));
-            gallonsField.setText("" + conv.toGallons("Liters", f));
+            cubicMetersField.setText("" + conv.toCubicMeters("Liters", vol));
+            gallonsField.setText("" + conv.toGallons("Liters", vol));
         }
     }
 }

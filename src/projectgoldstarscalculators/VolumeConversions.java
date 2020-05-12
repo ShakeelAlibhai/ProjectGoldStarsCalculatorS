@@ -69,8 +69,7 @@ public class VolumeConversions
             double vol = 0.0;
             try
             {
-                String volStr = cubicMetersField.getText();
-                vol = Double.parseDouble(volStr);
+                vol = Double.parseDouble(cubicMetersField.getText());
             }
             catch(Exception e2)
             {
@@ -90,8 +89,7 @@ public class VolumeConversions
             double vol = 0.0;
             try
             {
-                String volStr = gallonsField.getText();
-                vol = Double.parseDouble(volStr);
+                vol = Double.parseDouble(gallonsField.getText());
             }
             catch(Exception e2)
             {
@@ -111,8 +109,7 @@ public class VolumeConversions
             double vol = 0.0;
             try
             {
-                String volStr = litersField.getText();
-                vol = Double.parseDouble(volStr);
+                vol = Double.parseDouble(litersField.getText());
             }
             catch(Exception e2)
             {

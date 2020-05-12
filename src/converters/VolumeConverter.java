@@ -12,7 +12,7 @@ public class VolumeConverter
         
         //At this point, assume that fromValue is in liters
         
-        c = fromValue * 1000;
+        c = fromValue / 1000;
         
         return c;
     }
@@ -29,7 +29,7 @@ public class VolumeConverter
         if(fromType.equals("Cubic Meters"))
         {
             g = fromValue * 0.26417;
-            g /= 1000;
+            g *= 1000;
         }
         
         return g;
@@ -46,7 +46,7 @@ public class VolumeConverter
         
         if(fromType.equals("Cubic Meters"))
         {
-            l = fromValue / 1000;
+            l = fromValue * 1000;
         }
         
         return l;

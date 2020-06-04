@@ -23,7 +23,7 @@ It can serve as a useful tool for people who need a calculator, as well as for p
 * Angle Conversions: Degrees and Radians
 * Distance Conversions: Inches, Feet, Miles, and Kilometers
 * Temperature Conversions: Celsius, Fahrenheit, and Kelvin
-* Volume Conversions: Gallons and Liters
+* Volume Conversions: Cubic Meters, Gallons, and Liters
 
 ### Geometry
 * Circles: Area and Circumference
